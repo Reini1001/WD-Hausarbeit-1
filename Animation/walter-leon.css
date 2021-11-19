@@ -1,0 +1,29 @@
+:root {
+    --green: #0A5;
+    --red: crimson;
+    --darkest: #111;
+    --medium-dark: #202020;
+    --light-dark: #333;
+}
+
+* {
+    color: white;
+}
+
+.spacer05 {height: 0.5rem;}
+.spacer1 {height: 1rem;}
+.spacer2 {height: 2rem;}
+
+main, #fakebody {
+    width: fit-content;
+    padding: 1rem 1rem 0;
+    background: var(--light-dark);
+    margin: 3rem auto auto;
+    text-align: center;
+    border-radius: 2rem;
+    border: solid black 0.3rem;
+}
+
+body {
+    background: var(--medium-dark);
+}
