@@ -1,3 +1,57 @@
-* {
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, hsl(240deg, 10%, 35%) 0%, var(--backgroundColor) 5%, var(--backgroundColor) 95%, hsl(240deg, 10%, 35%) 100%);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, transparent 0%, hsl(240deg, 10%, 35%) 5%, hsl(240deg, 10%, 35%) 95%, transparent 100%);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, transparent 0%, white 5%, white 95%, transparent 100%);
+}
 
+:root {
+    --backgroundColor: hsl(240deg, 10%, 18.75%);
+    --fontColor: hsl(0deg, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: JetBrainsMono, monospace;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
+}
+
+nav {
+    position: sticky;
+}
+
+main {
+    padding: 2rem 0 0 0;
+    overflow-y: auto;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    width: 80%;
+    margin: 0 10%;
+}
+
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    text-align: center;
 }

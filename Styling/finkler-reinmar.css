@@ -1,0 +1,36 @@
+:root {
+    --backgroundColor: hsl(240deg, 10%, 18.75%);
+    --fontColor: hsl(0deg, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+main {
+    height: 150vh;
+}
+
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    text-align: center;
+}

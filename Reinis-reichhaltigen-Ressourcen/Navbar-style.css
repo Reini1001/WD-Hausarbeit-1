@@ -1,0 +1,29 @@
+#nav-list-horizontal, #nav-list-vertikal {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(240deg, 10%, 25%);
+}
+.nav-list-item {
+    transition: background-color linear 0.25s;
+}
+#nav-list-horizontal .nav-list-item {
+    float: left;
+    border-right: 3px solid var(--fontColor);
+}
+#nav-list-horizontal .nav-list-item:last-child {
+    float: right;
+    border-right: 0;
+}
+.nav-list-item:hover {
+    background-color: hsl(240deg, 10%, 15%);
+}
+.nav-list-item.active {
+    background-color: hsl(120deg, 100%, 18.75%);
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    text-align: center;
+}
