@@ -1,0 +1,32 @@
+#nav-horizontal, #nav-vertikal {
+    margin: 0;
+    padding: 0;
+    background-color: var(--liteBackgroudColor)
+}
+.nav-item {
+    transition: background-color linear 0.25s;
+}
+#nav-horizontal .nav-item {
+    float: left;
+    border-right: 3px solid var(--fontColor);
+}
+#nav-vertikal .nav-item {
+    float: top;
+}
+#nav-horizontal .nav-item:last-child {
+    float: right;
+    border-right: 0;
+}
+.nav-item:hover {
+    background-color: var(--darkHighlightColor);
+}
+.nav-item.active {
+    background-color: var(--activColor);
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    text-align: center;
+}

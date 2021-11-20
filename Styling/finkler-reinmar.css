@@ -1,6 +1,10 @@
 :root {
     --backgroundColor: hsl(240deg, 10%, 18.75%);
+    --liteBackgroudColor: hsl(240deg, 10%, 35%);
+    --darkHighlightColor: hsl(240deg, 10%, 15%);
+    --liteHighlightColor: hsl(0deg, 0%, 100%);
     --fontColor: hsl(0deg, 0%, 100%);
+    --activColor: hsl(120deg, 100%, 18.75%);
 }
 * {
     padding: 0;
@@ -19,7 +23,24 @@ body {
 
 nav {
     position: sticky;
-    top: 0;
+    background-color: var(--liteBackgroudColor)
+}
+.nav-item {
+    transition: background-color linear 0.25s;
+    float: top;
+}
+.nav-item:hover {
+    background-color: var(--darkHighlightColor);
+}
+.nav-item.active {
+    background-color: var(--activColor);
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    text-align: center;
 }
 
 main {

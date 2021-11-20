@@ -1,19 +1,11 @@
-::-webkit-scrollbar {
-    width: 1rem;
-}
-::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, hsl(240deg, 10%, 35%) 0%, var(--backgroundColor) 5%, var(--backgroundColor) 95%, hsl(240deg, 10%, 35%) 100%);
-}
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, transparent 0%, hsl(240deg, 10%, 35%) 5%, hsl(240deg, 10%, 35%) 95%, transparent 100%);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, transparent 0%, white 5%, white 95%, transparent 100%);
-}
-
 :root {
+    font-size: 12px;
     --backgroundColor: hsl(240deg, 10%, 18.75%);
+    --liteBackgroudColor: hsl(240deg, 10%, 35%);
+    --darkHighlightColor: hsl(240deg, 10%, 15%);
+    --liteHighlightColor: hsl(0deg, 0%, 100%);
     --fontColor: hsl(0deg, 0%, 100%);
+    --activColor: hsl(120deg, 100%, 18.75%);
 }
 * {
     padding: 0;
@@ -33,25 +25,154 @@ body {
 
 nav {
     position: sticky;
+    background-color: var(--liteBackgroudColor)
+}
+.nav-item {
+    transition: background-color linear 0.25s;
+    float: top;
+}
+.nav-item:hover {
+    background-color: var(--darkHighlightColor);
+}
+.nav-item.active {
+    background-color: var(--activColor);
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    text-align: center;
 }
 
 main {
-    padding: 2rem 0 0 0;
-    overflow-y: auto;
+    padding: 2rem 10%;
 }
+
+/* --index.html Style-- */
 h1 {
+    margin-bottom: 1rem;
     text-align: center;
 }
-#container {
-    width: 80%;
-    margin: 0 10%;
+.article-container {
+
+}
+.article-container article {
+    margin: 2rem 0;
+}
+.article-container article h2 {
+    margin-bottom: 1rem;
+}
+.article-container article p {
+
+}
+
+#card-container {
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+}
+#card-container .card {
+    padding: 0.5rem;
+    aspect-ratio: 2/1;
+    border: 1px solid white;
+    background: var(--backgroundColor);
+    box-shadow: 1rem 1rem 1rem hsla(230deg, 10%, 10%, 0.75);
+    color: var(--fontColor);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+#card-container .card:hover {
+    border-width: 2px;
+    box-shadow: 0.5rem 0.5rem 0.5rem hsla(230deg, 10%, 10%, 1);
+}
+#card-container .card h3 {
+    margin-bottom: 1rem;
+}
+#card-container .card p {
+
+}
+
+/* --Smooth-Brain-Gang.html Style-- */
+#SBG-container {
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 2rem;
+}
+#SBG-container .card {
+    padding: 0.5rem;
+    aspect-ratio: 2/1;
+    border: 1px solid var(--liteHighlightColor);
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem hsla(230deg, 10%, 10%, 0.75);
+}
+#SBG-container .card h2{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#SBG-container .card p{
+    text-align: center;
 }
 
 footer {
     box-sizing: border-box;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--backgroundColor);
     text-align: center;
+}
+
+/*Mobile Geräte*/
+@media screen and (min-width: 300px) {
+    :root {
+        font-size: 14px;
+    }
+}
+/*Tablets*/
+@media screen and (min-width: 426px) {
+    #card-container, #SBG-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+/*Mobile Geräte & Tablets horizontal*/
+@media screen and (min-width: 426px) and (min-aspect-ratio: 1/1) {
+
+}
+/*Laptop (klein)*/
+@media screen and (min-width: 769px) {
+    .nav-item {
+        float: left;
+        border-right: 2px solid var(--liteHighlightColor);
+    }
+    .nav-item:last-child {
+        float: right;
+        border-right: 0;
+    }
+    #card-container, #SBG-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+/*Rechner*/
+@media screen and (min-width: 1025px) {
+    :root {
+        font-size: 16px;
+    }
+    .nav-item {
+        border-right: 3px solid var(--liteHighlightColor);
+    }
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    #card-container, #SBG-container {
+         grid-template-columns: repeat(5, 1fr);
+         grid-template-rows: repeat(1, 1fr);
+    }
 }

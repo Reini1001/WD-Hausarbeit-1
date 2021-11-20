@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: var(--darkHighlightColor);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--liteBackgroudColor);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--liteHighlightColor);
+}
