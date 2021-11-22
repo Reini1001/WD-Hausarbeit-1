@@ -1,0 +1,60 @@
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: var(--liteBackgroudColor);
+}
+.nav-item {
+    float: top;
+    transition: background-color linear 0.25s;
+    border-bottom: 1px solid var(--fontColor);
+}
+.nav-item:last-child {
+    border-bottom: 0;
+}
+.nav-item:hover {
+    background-color: var(--darkHighlightColor);
+}
+.nav-item.active {
+    background-color: var(--activColor);
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Mobile Geräte*/
+@media screen and (min-width: 300px) {
+
+}
+/*Tablets*/
+@media screen and (min-width: 426px) {
+
+}
+/*Mobile Geräte & Tablets horizontal*/
+@media screen and (min-width: 426px) and (min-aspect-ratio: 1/1) {
+
+}
+/*Laptop (klein)*/
+@media screen and (min-width: 769px) {
+    .nav-item {
+        float: left;
+        border-bottom: 0;
+        border-right: 2px solid var(--liteHighlightColor);
+    }
+    .nav-item:last-child {
+        float: right;
+        border-right: 0;
+    }
+}
+/*Rechner*/
+@media screen and (min-width: 1025px) {
+    .nav-item {
+        border-right: 3px solid var(--liteHighlightColor);
+    }
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
