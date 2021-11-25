@@ -2,6 +2,7 @@ nav {
     margin: 0;
     padding: 0;
     background-color: var(--liteBackgroudColor);
+    width: 100vw;
 }
 .nav-item {
     float: top;
@@ -56,5 +57,9 @@ nav {
     }
     .nav-link {
         padding: 0.5rem 1rem;
+    }
+    .nav-item:last-child {
+        float: right;
+        border-right: 0;
     }
 }

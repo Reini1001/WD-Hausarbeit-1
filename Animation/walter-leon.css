@@ -27,3 +27,40 @@ main, #fakebody {
 body {
     background: var(--medium-dark);
 }
+
+nav {
+    position: fixed;
+    top: 0;
+}
+.nav-item {
+
+}
+.nav-item:hover {
+
+}
+.nav-item.active {
+
+}
+.nav-link {
+
+}
+
+.expand-this {
+    width: auto;
+    height: 9vh;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    opacity: 0;
+    transition: opacity 350ms ease-in-out, width 350ms ease-in-out, height 350ms ease-in-out;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.image-expander > .expander:focus + .expand-this {
+    opacity: 1;
+    pointer-events: auto;
+    width: auto;
+    height: 90vh;
+}
