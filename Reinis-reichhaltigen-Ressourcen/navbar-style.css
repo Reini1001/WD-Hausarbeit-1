@@ -1,22 +1,22 @@
 nav {
     margin: 0;
     padding: 0;
-    background-color: var(--liteBackgroudColor);
-    width: 100vw;
+    background-color: var(--navBgColor);
+    width: 100%;
 }
 .nav-item {
     float: top;
     transition: background-color linear 0.25s;
-    border-bottom: 1px solid var(--fontColor);
+    border-bottom: 1px solid var(--navBorderColor);
 }
 .nav-item:last-child {
     border-bottom: 0;
 }
 .nav-item:hover {
-    background-color: var(--darkHighlightColor);
+    background-color: var(--navHoverColor);
 }
 .nav-item.active {
-    background-color: var(--activColor);
+    background-color: var(--navActivColor);
 }
 .nav-link {
     display: block;
@@ -42,8 +42,8 @@ nav {
 @media screen and (min-width: 769px) {
     .nav-item {
         float: left;
+        border-right: 2px solid  var(--navBorderColor);
         border-bottom: 0;
-        border-right: 2px solid var(--liteHighlightColor);
     }
     .nav-item:last-child {
         float: right;
@@ -53,13 +53,9 @@ nav {
 /*Rechner*/
 @media screen and (min-width: 1025px) {
     .nav-item {
-        border-right: 3px solid var(--liteHighlightColor);
+        border-right: 3px solid  var(--navBorderColor);
     }
     .nav-link {
         padding: 0.5rem 1rem;
-    }
-    .nav-item:last-child {
-        float: right;
-        border-right: 0;
     }
 }

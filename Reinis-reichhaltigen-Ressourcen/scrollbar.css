@@ -2,11 +2,11 @@
     width: 1rem;
 }
 ::-webkit-scrollbar-track {
-    background: var(--darkHighlightColor);
+    background: var(--scrollBgColor);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--liteBackgroudColor);
+    background: var(--scrollThumbColor);
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--liteHighlightColor);
+    background: var(--scrollHoverColor);
 }

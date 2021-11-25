@@ -1,14 +1,23 @@
 :root {
-    --backgroundColor: hsl(240deg, 10%, 18.75%);
-    --liteBackgroudColor: hsl(240deg, 10%, 35%);
-    --darkHighlightColor: hsl(240deg, 10%, 15%);
-    --liteHighlightColor: hsl(0deg, 0%, 100%);
     --fontColor: hsl(0deg, 0%, 100%);
-    --activColor: hsl(120deg, 100%, 18.75%);
+    --backgroundColor: hsl(240deg, 10%, 18.75%);
+    --borderColor: hsl(0deg, 0%, 100%);
+
+    /* --nav-- */
+    --navBgColor: hsl(240deg, 10%, 35%);
+    --navBorderColor: hsl(0deg, 0%, 100%);
+    --navHoverColor: hsl(240deg, 10%, 15%);
+    --navActivColor: hsl(120deg, 100%, 18.75%);
+
+    /* --scrollbar-- */
+    --scrollBgColor: hsl(240deg, 10%, 15%);
+    --scrollThumbColor: hsl(240deg, 10%, 35%);
+    --scrollHoverColor: hsl(0deg, 0%, 100%);
 }
 * {
     padding: 0;
     margin: 0;
+    font-family: JetBrainsMono, monospace;
 }
 
 html, body {
@@ -23,35 +32,47 @@ body {
 
 nav {
     position: sticky;
-    background-color: var(--liteBackgroudColor)
-}
-.nav-item {
-    transition: background-color linear 0.25s;
-    float: top;
-}
-.nav-item:hover {
-    background-color: var(--darkHighlightColor);
-}
-.nav-item.active {
-    background-color: var(--activColor);
-}
-.nav-link {
-    display: block;
-    padding: 0.5rem;
-    color: var(--fontColor);
-    text-decoration: none;
-    text-align: center;
 }
 
 main {
-    height: 150vh;
+    padding: 2rem 10%;
+}
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 footer {
     box-sizing: border-box;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--backgroundColor);
     text-align: center;
+}
+
+/*Mobile Geräte*/
+@media screen and (min-width: 300px) {
+    :root {
+        font-size: 14px;
+    }
+}
+/*Tablets*/
+@media screen and (min-width: 426px) {
+
+}
+/*Mobile Geräte & Tablets horizontal*/
+@media screen and (min-width: 426px) and (min-aspect-ratio: 1/1) {
+
+}
+/*Laptop (klein)*/
+@media screen and (min-width: 769px) {
+
+}
+/*Rechner*/
+@media screen and (min-width: 1025px) {
+    :root {
+        font-size: 16px;
+    }
 }

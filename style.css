@@ -1,11 +1,18 @@
 :root {
-    font-size: 12px;
-    --backgroundColor: hsl(240deg, 10%, 18.75%);
-    --liteBackgroudColor: hsl(240deg, 10%, 35%);
-    --darkHighlightColor: hsl(240deg, 10%, 15%);
-    --liteHighlightColor: hsl(0deg, 0%, 100%);
     --fontColor: hsl(0deg, 0%, 100%);
-    --activColor: hsl(120deg, 100%, 18.75%);
+    --backgroundColor: hsl(240deg, 10%, 18.75%);
+    --borderColor: hsl(0deg, 0%, 100%);
+
+    /* --nav-- */
+    --navBgColor: hsl(240deg, 10%, 35%);
+    --navBorderColor: hsl(0deg, 0%, 100%);
+    --navHoverColor: hsl(240deg, 10%, 15%);
+    --navActivColor: hsl(120deg, 100%, 18.75%);
+
+    /* --scrollbar-- */
+    --scrollBgColor: hsl(240deg, 10%, 15%);
+    --scrollThumbColor: hsl(240deg, 10%, 35%);
+    --scrollHoverColor: hsl(0deg, 0%, 100%);
 }
 * {
     padding: 0;
@@ -30,12 +37,12 @@ nav {
 main {
     padding: 2rem 10%;
 }
-
-/* --index.html Style-- */
 h1 {
     margin-bottom: 1rem;
     text-align: center;
 }
+
+/* --index.html Style-- */
 .article-container {
 
 }
@@ -48,7 +55,6 @@ h1 {
 .article-container article p {
 
 }
-
 #card-container {
     padding-bottom: 2rem;
     display: grid;
@@ -59,7 +65,7 @@ h1 {
 #card-container .card {
     padding: 0.5rem;
     aspect-ratio: 2/1;
-    border: 1px solid white;
+    border: 1px solid var(--borderColor);
     background: var(--backgroundColor);
     box-shadow: 1rem 1rem 1rem hsla(230deg, 10%, 10%, 0.75);
     color: var(--fontColor);
@@ -88,7 +94,7 @@ h1 {
 #SBG-container .card {
     padding: 0.5rem;
     aspect-ratio: 2/1;
-    border: 1px solid var(--liteHighlightColor);
+    border: 1px solid  var(--borderColor);
     border-radius: 1rem;
     box-shadow: 1rem 1rem 1rem hsla(230deg, 10%, 10%, 0.75);
 }
@@ -129,14 +135,6 @@ footer {
 }
 /*Laptop (klein)*/
 @media screen and (min-width: 769px) {
-    .nav-item {
-        float: left;
-        border-right: 2px solid var(--liteHighlightColor);
-    }
-    .nav-item:last-child {
-        float: right;
-        border-right: 0;
-    }
     #card-container, #SBG-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -146,12 +144,6 @@ footer {
 @media screen and (min-width: 1025px) {
     :root {
         font-size: 16px;
-    }
-    .nav-item {
-        border-right: 3px solid var(--liteHighlightColor);
-    }
-    .nav-link {
-        padding: 0.5rem 1rem;
     }
     #card-container, #SBG-container {
          grid-template-columns: repeat(5, 1fr);
