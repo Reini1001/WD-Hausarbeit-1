@@ -1,9 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../Reinis-reichhaltigen-Ressourcen/JetBrainsMono-font-nav-footer.css" rel="stylesheet" type="text/css">
     <link href="../Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css">
-    <link href="../Reinis-reichhaltigen-Ressourcen/navbar-style.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="walter-leon.css">
     <link type="image/icon" rel="shortcut icon" href="../images/HSF-favicon.ico">
     <title></title>
@@ -11,20 +9,114 @@
 <body>
 <nav>
     <div class="nav-item"><a class="nav-link" href="../index.html">Home</a></div>
-    <div class="nav-item active"><a class="nav-link" href="">Styling</a></div>
-    <div class="nav-item"><a class="nav-link" href="../Animation/walter-leon.html">Animation</a></div>
+    <div class="nav-item"><a class="nav-link" href="../Styling/finkler-reinmar.html">Styling</a></div>
+    <div class="nav-item active"><a class="nav-link" href="">Animation</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Filter</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Painting</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Coordinate Systems, Transformations and Units</a></div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
 <main>
-    <!--
+    <h1>Animation</h1>
+    <p>There are two major ways of animating an SVG in html:</p>
+    <p>
+        <a href="#">Using the animate-tag and</a><br>
+        <a href="#example_two">using the animateTransform-tag</a>
+    </p>
+    <p>
+        Additionally, there are several ways to customize SVG animations. We'll be using a few of them and take a
+        closer look at:
+    </p>
+    <p>
+        <a href="#">starting animations under different conditions,</a><br>
+        <a href="#">defining how often an animation should play</a><br>
+        <a href="#">and restarting animations</a>
+    </p>
+    <h2><a id="example_two">Example 2: Clockhands</a></h2>
+    <p>text here</p>
     <div class="image-expander">
-        <button class="expander">button content</button>
-        <img src="../images/" class="expand-this">
+        <button class="expander">Show code</button>
+        <!-- Das SVG von der Uhr, escaped mit https://www.freeformatter.com/html-escape.html -->
+        <pre class="expand-this">
+            <code>
+HTML:
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;clock&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;
+
+    &lt;!-- The clock --&gt;
+
+    &lt;circle r=&quot;40%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;white&quot; stroke-width=&quot;2%&quot; stroke=&quot;black&quot;&gt;&lt;/circle&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot;&gt;&lt;/line&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(30)&quot;&gt;&lt;/line&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(60)&quot;&gt;&lt;/line&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(90)&quot;&gt;&lt;/line&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(120)&quot;&gt;&lt;/line&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(150)&quot;&gt;&lt;/line&gt;
+    &lt;circle r=&quot;35%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;white&quot; stroke-width=&quot;0&quot;&gt;&lt;/circle&gt;
+    &lt;circle r=&quot;4%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;black&quot; stroke-width=&quot;0&quot;&gt;&lt;/circle&gt;
+
+    &lt;!-- The clock hands --&gt;
+
+    &lt;line x1=&quot;50%&quot; y1=&quot;50%&quot; x2=&quot;50%&quot; y2=&quot;18%&quot; stroke-width=&quot;2%&quot; stroke=&quot;black&quot;&gt;
+        &lt;animateTransform attributeName=&quot;transform&quot;
+                          attributeType=&quot;XML&quot;
+                          type=&quot;rotate&quot;
+                          from=&quot;0&quot;
+                          to=&quot;360&quot;
+                          dur=&quot;5s&quot;
+                          repeatCount=&quot;indefinite&quot;/&gt;
+    &lt;/line&gt;
+    &lt;line x1=&quot;50%&quot; y1=&quot;50%&quot; x2=&quot;50%&quot; y2=&quot;30%&quot; stroke-width=&quot;3%&quot; stroke=&quot;black&quot;&gt;
+        &lt;animateTransform attributeName=&quot;transform&quot;
+                          attributeType=&quot;XML&quot;
+                          type=&quot;rotate&quot;
+                          from=&quot;0&quot;
+                          to=&quot;360&quot;
+                          dur=&quot;60s&quot;
+                          repeatCount=&quot;indefinite&quot;/&gt;
+    &lt;/line&gt;
+&lt;/svg&gt;
+
+CSS:
+line {
+    transform-origin: center;
+}
+            </code>
+        </pre>
     </div>
-    -->
+    <svg xmlns="http://www.w3.org/2000/svg" id="clock" width="200px" height="200px">
+        <!-- Die Uhr selber -->
+        <circle r="40%" cx="50%" cy="50%" fill="white" stroke-width="2%" stroke="black"></circle>
+        <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black"></line>
+        <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black" transform="rotate(30)"></line>
+        <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black" transform="rotate(60)"></line>
+        <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black" transform="rotate(90)"></line>
+        <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black" transform="rotate(120)"></line>
+        <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black" transform="rotate(150)"></line>
+        <circle r="35%" cx="50%" cy="50%" fill="white" stroke-width="0"></circle>
+        <circle r="4%" cx="50%" cy="50%" fill="black" stroke-width="0"></circle>
+        <!-- Die Uhrzeiger -->
+        <line x1="50%" y1="50%" x2="50%" y2="18%" stroke-width="2%" stroke="black">
+            <animateTransform attributeName="transform"
+                              attributeType="XML"
+                              type="rotate"
+                              from="0"
+                              to="360"
+                              dur="5s"
+                              repeatCount="indefinite"/>
+        </line>
+        <line x1="50%" y1="50%" x2="50%" y2="30%" stroke-width="3%" stroke="black">
+            <animateTransform attributeName="transform"
+                              attributeType="XML"
+                              type="rotate"
+                              from="0"
+                              to="360"
+                              dur="60s"
+                              repeatCount="indefinite"/>
+        </line>
+    </svg>
 </main>
+<footer>
+    Copyright &copy; 2021 &#8226; ElGurkus
+</footer>
 </body>
 </html>

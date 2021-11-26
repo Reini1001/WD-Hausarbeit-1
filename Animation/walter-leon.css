@@ -1,48 +1,104 @@
 :root {
     --green: #0A5;
-    --red: crimson;
+    --red: #DC143C;                 /* Crimson, aber als Hex falls ich ähnliche Farben bauen möchte */
+    --fontColor: #FFF;
+
     --darkest: #111;
+    --darkest-hover: #0B0B0B;
+    --darkest-active: #050505;
+
     --medium-dark: #202020;
+    --medium-dark-hover: #1B1B1B;
+    --medium-dark-active:#151515;
+
     --light-dark: #333;
+    --light-dark-hover: #2E2E2E;
+    --light-dark-active: #262626;
+
+    --link-color: #DDD;
+    --link-color-hover: #BBB;
+    --link-color-active: #AAA;
 }
 
 * {
-    color: white;
+    color: var(--fontColor);
+}
+
+a[href] {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover[href] {
+    color: var(--link-color-hover);
+}
+
+a:active[href] {
+    color: var(--link-color-active);
+}
+
+h2, h2:hover, h2:active {
+    color: var(--fontColor);
+}
+
+line {
+    transform-origin: center;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: var(--medium-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--darkest);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darkest-hover);
+}
+::-webkit-scrollbar-thumb:active {
+    background: var(--darkest-active);
 }
 
 .spacer05 {height: 0.5rem;}
 .spacer1 {height: 1rem;}
 .spacer2 {height: 2rem;}
 
-main, #fakebody {
-    width: fit-content;
-    padding: 1rem 1rem 0;
-    background: var(--light-dark);
-    margin: 3rem auto auto;
+main {
+    padding: 1rem 5rem;
     text-align: center;
-    border-radius: 2rem;
-    border: solid black 0.3rem;
+    font-size: 20px;
 }
 
 body {
     background: var(--medium-dark);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
-nav {
-    position: fixed;
-    top: 0;
+code {
+    font-family: JetBrainsMono, monospace;
 }
-.nav-item {
 
+.expander {
+    background-color: var(--medium-dark);
+    border: 0.2em solid var(--darkest);
+    border-radius: 1em;
+    padding: 0.3em 0.8em;
+    font-size: 16px;
 }
-.nav-item:hover {
 
+.expander:hover {
+    background-color: var(--medium-dark-hover);
+    border: 0.2em solid var(--darkest-hover);
 }
-.nav-item.active {
 
-}
-.nav-link {
-
+.expander:active {
+    background-color: var(--medium-dark-active);
+    border: 0.2em solid var(--darkest-active);
 }
 
 .expand-this {
@@ -50,17 +106,117 @@ nav {
     height: 9vh;
     position: fixed;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-52%);
     top: 50%;
     opacity: 0;
-    transition: opacity 350ms ease-in-out, width 350ms ease-in-out, height 350ms ease-in-out;
+    transition: opacity 350ms ease-in-out, width 350ms ease-in-out, height 350ms ease-in-out, background-color 350ms ease-in-out;
     pointer-events: none;
     z-index: 100;
+    border-radius: 1em;
+    border: 0.2rem ;
+    text-align: left;
+    font-size: 15px;
+    padding: 0 1em;
+    overflow: hidden;
 }
 
+/* Mit JS könnte man dies ein wenig besser Lösen, aber das hier ist das beste mit purem CSS */
 .image-expander > .expander:focus + .expand-this {
     opacity: 1;
     pointer-events: auto;
-    width: auto;
-    height: 90vh;
+    width: fit-content;
+    max-width: 96vw;
+    height: 88vh;
+    background-color: var(--light-dark);
+    overflow: auto;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-dark);
+    width: 100%;
+    position: sticky;
+}
+.nav-item {
+    float: top;
+    transition: background-color linear 0.25s;
+    border-bottom: 1px solid var(--fontColor);
+}
+.nav-item:last-child {
+    border-bottom: 0;
+}
+.nav-item:hover {
+    background-color: var(--medium-dark);
+}
+.nav-item.active {
+    background-color: var(--green);
+}
+.nav-item.active:hover {
+    background-color: var(--red);
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--fontColor);
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Laptop (klein)*/
+@media screen and (min-width: 768px) {
+    nav {
+        font-size: 13px;
+    }
+    .nav-item {
+        float: left;
+        border-bottom: 0;
+        border-right: 2px solid var(--fontColor);
+    }
+    .nav-item:last-child {
+        float: right;
+        border-right: 0;
+    }
+
+    main {
+        width: fit-content;
+        max-width: 28em;
+        margin: 4rem auto;
+        background: var(--light-dark);
+        border-radius: 2rem;
+        border: solid var(--darkest) 0.3rem;
+        padding: 1rem;
+    }
+
+    .expand-this {
+        font-size: 18px;
+    }
+}
+/*Rechner*/
+@media screen and (min-width: 1024px) {
+    nav {
+        font-size: 20px;
+    }
+    .nav-item {
+        border-right: 3px solid var(--fontColor);
+    }
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    .nav-item:last-child {
+        float: right;
+        border-right: 0;
+    }
+}
+
+/* footer ab hier */
+
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--medium-dark);
 }
