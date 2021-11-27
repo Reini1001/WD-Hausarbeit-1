@@ -1,0 +1,37 @@
+body {
+    background-color: #BC986A;
+}
+
+nav {
+    position: sticky;
+    text-align: center;
+}
+
+
+h1 {
+    margin-top:3rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+}
+.content {
+    text-align: center;
+}
+
+svg {
+    border: 2px solid #CAFAFE;
+    border-radius: 20px;
+    background-color: #659DBD;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
