@@ -1,5 +1,9 @@
 body {
     background-color: #BC986A;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 nav {
@@ -11,6 +15,25 @@ nav {
 h1 {
     margin-top:3rem;
     text-align: center;
+    font-family: JetBrainsMono;
+}
+
+p {
+    font-family: "JetBrainsMono";
+}
+
+.center {
+   display: inline-block;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    border: 2px solid #CAFAFE;
+    background-color: #659DBD;
+    border-radius: 20px;
+    width: 50%;
+    margin: 1rem auto 0 auto;
 }
 
 .container {
@@ -27,11 +50,47 @@ svg {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     text-align: center;
+    margin-top:auto;
+}
+/* Der Rote Punkt bewegt sich von der einen Ecke zu der anderen */
+.move {
+    animation: move 5s infinite linear;
+}
+
+@keyframes move {
+    60% {transform: translate(-350px, 350px);}
+    100% {transform: translate(-350px, 350px);}
+}
+
+.fadeOut {
+    animation: fadeOut 5s infinite;
+}
+/* Die Koordinaten x=420 und y=70 werden langsam ausgefaded */
+@keyframes fadeOut {
+    20% { opacity:1}
+    50% {opacity:0;}
+    100% {opacity:0;}
+}
+
+/* Die Koordinaten x=70 und y=420 werden langsam angezeigt */
+.fadeIn {
+    animation:fadeIn 5s infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity:0}
+    40% {opacity:0;}
+    90% {opacity:1;}
+}
+
+/* Hier werden die beiden Grünen Vierecke verändert */
+.skew:hover {
+    transform:skewY(20deg)
+}
+
+.scale:hover {
+    transform: scale(1.1,1.1);
 }
 
 
