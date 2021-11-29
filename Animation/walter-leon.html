@@ -18,20 +18,57 @@
 </nav>
 <main>
     <h1>Animation</h1>
-    <p>There are two major ways of animating an SVG in html:</p>
     <p>
-        <a href="#">Using the animate-tag and</a><br>
-        <a href="#example_two">using the animateTransform-tag</a>
+        text here
     </p>
     <p>
-        Additionally, there are several ways to customize SVG animations. We'll be using a few of them and take a
-        closer look at:
+        <a href="#example_one">text here</a><br>
+        <a href="#example_two">text here</a><br>
+        <a href="#example_three">text here</a>
     </p>
     <p>
-        <a href="#">starting animations under different conditions,</a><br>
-        <a href="#">defining how often an animation should play</a><br>
-        <a href="#">and restarting animations</a>
+        text here
     </p>
+
+    <h2><a id="example_one">Example 1: Vanishing Square</a></h2>
+    <p>text here</p>
+    <div class="image-expander">
+        <button class="expander">Show code</button>
+        <!-- Das SVG vom Quadrat, escaped mit https://www.freeformatter.com/html-escape.html -->
+        <pre class="expand-this">
+            <code>
+HTML:
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;square&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;
+        &lt;rect height=&quot;180px&quot; width=&quot;180px&quot; x=&quot;10px&quot; y=&quot;10px&quot;&gt;
+            &lt;animate attributeType=&quot;CSS&quot;
+                     attributeName=&quot;opacity&quot;
+                     values=&quot;1 ; 0 ; 1&quot;
+                     keyTimes=&quot;0 ; 0.5 ; 1&quot;
+                     dur=&quot;5s&quot;
+                     repeatCount=&quot;indefinite&quot;/&gt;
+        &lt;/rect&gt;
+    &lt;/svg&gt;
+
+CSS:
+#square > rect {
+    fill: var(--green);
+    stroke: var(--darkest);
+    stroke-width: 3px;
+}
+            </code>
+        </pre>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" id="square" width="200px" height="200px">
+        <rect height="180px" width="180px" x="10px" y="10px">
+            <animate attributeType="CSS"
+                     attributeName="opacity"
+                     values="1 ; 0 ; 1"
+                     keyTimes="0 ; 0.5 ; 1"
+                     dur="5s"
+                     repeatCount="indefinite"/>
+        </rect>
+    </svg>
+
     <h2><a id="example_two">Example 2: Clockhands</a></h2>
     <p>text here</p>
     <div class="image-expander">
@@ -114,6 +151,59 @@ line {
                               repeatCount="indefinite"/>
         </line>
     </svg>
+
+    <h2><a id="example_three">Example 3: Moving Circle</a></h2>
+    <p>text here</p>
+    <div class="image-expander">
+        <button class="expander">Show code</button>
+        <!-- Das SVG vom Kreis, escaped mit https://www.freeformatter.com/html-escape.html -->
+        <pre class="expand-this">
+            <code>
+HTML:
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;circle&quot; width=&quot;200px&quot; height=&quot;80px&quot;&gt;
+        &lt;circle id=&quot;moving_circle&quot; r=&quot;20px&quot; cx=&quot;25px&quot; cy=&quot;40px&quot; /&gt;
+        &lt;!-- The animation is linked with an xlink instead of being nested in the circle --&gt;
+        &lt;animate xlink:href=&quot;#moving_circle&quot;
+                 attributeName=&quot;cx&quot;
+                 from=&quot;25&quot;
+                 to=&quot;400&quot;
+                 dur=&quot;3.5s&quot;
+                 repeatCount=&quot;1&quot;
+                 begin=&quot;click&quot;
+                 restart=&quot;whenNotActive&quot; /&gt;
+    &lt;/svg&gt;
+
+CSS:
+#circle {
+    background-color: #FFFFFF4F;
+    border: 3px solid var(--darkest);
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+#circle > #moving_circle {
+    fill: var(--red);
+    stroke: var(--darkest);
+    stroke-width: 3px;
+}
+            </code>
+        </pre>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" id="circle" width="200px" height="80px">
+        <circle id="moving_circle" r="20px" cx="25px" cy="40px" />
+        <!-- The animation is linked with an xlink instead of being nested in the circle -->
+        <animate xlink:href="#moving_circle"
+                 attributeName="cx"
+                 from="25"
+                 to="400"
+                 dur="3.5s"
+                 repeatCount="1"
+                 begin="click"
+                 restart="whenNotActive" />
+    </svg>
+
+    <h2>Ending Words</h2>
+    <p>Text here</p>
 </main>
 <footer>
     Copyright &copy; 2021 &#8226; ElGurkus

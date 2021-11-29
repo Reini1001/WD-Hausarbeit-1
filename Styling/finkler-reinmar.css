@@ -1,5 +1,5 @@
 :root {
-    --fontColor: hsl(0deg, 0%, 100%);
+    --fontColor: hsla(0, 0%, 100%, 0.31);
     --backgroundColor: hsl(240deg, 10%, 18.75%);
     --borderColor: hsl(0deg, 0%, 100%);
 

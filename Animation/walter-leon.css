@@ -41,8 +41,27 @@ h2, h2:hover, h2:active {
     color: var(--fontColor);
 }
 
-line {
+#clock > line {
     transform-origin: center;
+}
+
+#square > rect {
+    fill: var(--green);
+    stroke: var(--darkest);
+    stroke-width: 3px;
+}
+
+#circle {
+    background-color: #FFFFFF4F;
+    border: 3px solid var(--darkest);
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+#circle > #moving_circle {
+    fill: var(--red);
+    stroke: var(--darkest);
+    stroke-width: 3px;
 }
 
 ::-webkit-scrollbar {
@@ -126,7 +145,7 @@ code {
     pointer-events: auto;
     width: fit-content;
     max-width: 96vw;
-    height: 88vh;
+    height: 90vh;
     background-color: var(--light-dark);
     overflow: auto;
 }
