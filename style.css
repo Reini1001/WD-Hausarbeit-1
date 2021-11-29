@@ -55,6 +55,12 @@ h1 {
 .article-container article p {
 
 }
+
+.quelle {
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
 #card-container {
     padding-bottom: 2rem;
     display: grid;

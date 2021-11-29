@@ -13,6 +13,12 @@
     --scrollBgColor: hsl(240deg, 10%, 15%);
     --scrollThumbColor: hsl(240deg, 10%, 35%);
     --scrollHoverColor: hsl(0deg, 0%, 100%);
+
+    /* --styling-- */
+    --hrColor: hsl(240deg, 10%, 35%);
+
+    --svgBgColor: hsl(240deg, 10%, 15%);
+    --svgBorderColor: hsl(240deg, 10%, 35%);
 }
 * {
     padding: 0;
@@ -40,6 +46,39 @@ main {
 h1 {
     margin-bottom: 1rem;
     text-align: center;
+}
+hr {
+    border: 1px solid var(--hrColor);
+    border-radius: 1px;
+}
+
+article {
+    display: grid;
+    padding: 2rem;
+    grid-template-rows: 2rem 1fr;
+    grid-gap: 1rem;
+}
+article:nth-child(4n - 4) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "headline svg" "text svg";
+}
+article:nth-child(4n - 2) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "svg headline" "svg text";
+}
+article h2 {
+    grid-area: headline;
+}
+article p {
+    grid-area: text;
+}
+article svg {
+    grid-area: svg;
+    width: available;
+    aspect-ratio: 1/1;
+    background-color: var(--svgBgColor);
+    border: 2px solid var(--svgBorderColor);
+    border-radius: 1rem;
 }
 
 footer {
