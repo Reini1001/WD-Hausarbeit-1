@@ -28,8 +28,17 @@ body {
     color: var(--fontColor);
 }
 
-#dsa:checked ~ svg > polygon {
-    fill-rule: evenodd;
+polygon {
+    transition: all 0.5s linear;
+    fill: #00AA55;
+}
+
+#paint:checked ~ * polygon {
+    fill: #FF3333;
+}
+
+#basic:checked ~ * polygon {
+    fill: #FFFFFF;
 }
 
 
