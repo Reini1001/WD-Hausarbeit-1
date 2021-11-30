@@ -1,0 +1,29 @@
+:root {
+    --fontColor: hsl(0deg, 0%, 100%);
+    --backgroundColor: hsl(155, 23%, 21%);
+    --borderColor: hsl(0deg, 0%, 100%);
+
+    /* --nav-- */
+    --navBgColor: hsl(291, 10%, 14%);
+    --navBorderColor: hsl(0deg, 0%, 100%);
+    --navHoverColor: hsl(240deg, 10%, 15%);
+    --navActivColor: hsl(120deg, 100%, 18.75%);
+
+    /* --scrollbar-- */
+    --scrollBgColor: hsl(240deg, 10%, 15%);
+    --scrollThumbColor: hsl(240deg, 10%, 35%);
+    --scrollHoverColor: hsl(0deg, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: JetBrainsMono, monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
+}
