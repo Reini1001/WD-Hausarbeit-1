@@ -27,3 +27,30 @@ body {
     background-color: var(--backgroundColor);
     color: var(--fontColor);
 }
+
+#dsa:checked ~ svg > polygon {
+    fill-rule: evenodd;
+}
+
+
+
+/*Mobile Geräte*/
+@media screen and (min-width: 300px) {
+
+}
+/*Tablets*/
+@media screen and (min-width: 426px) {
+
+}
+/*Mobile Geräte & Tablets horizontal*/
+@media screen and (min-width: 426px) and (min-aspect-ratio: 1/1) {
+
+}
+/*Laptop (klein)*/
+@media screen and (min-width: 769px) {
+
+}
+/*Rechner*/
+@media screen and (min-width: 1025px) {
+
+}
