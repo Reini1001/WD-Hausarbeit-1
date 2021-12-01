@@ -34,6 +34,8 @@ body {
     color: var(--fontColor);
 }
 
+
+/* Button Formatting */
 input[type="radio"] {
     display: none;
 }
@@ -46,24 +48,24 @@ input[type="radio"] {
     background-color: var(--buttonHoverColor);
 }
 
-.description p {
-    display: none;
+
+/* Code Formatting */
+.code-tag {
+    font-weight: bolder;
+}
+.code-layer {
+    margin-left: 2em;
+    display: flex; flex-direction: column;
+}
+.code-string {
+    font-weight: normal;
 }
 
-#paint-description-fill:checked ~ * #paint-description-fill-text,
-#paint-description-stroke:checked ~ * #paint-description-stroke-text
-{
-    display: block;
-}
 
-.paint-code-dynamic-text {
-    display:none;
-}
-
+/* Display Property Tabs*/
 article {
     display: none;
 }
-
 #property-tab-paint:checked ~ #paint,
 #property-tab-basic:checked ~ #basic,
 #property-tab-linecaps:checked ~ #linecaps,
@@ -72,14 +74,45 @@ article {
     display: block;
 }
 
+
+/* Display Code */
+.paint-code-dynamic-text {
+    display:none;
+}
+#paint-fill-white:checked ~ * #paint-code-fill-white-text,
+#paint-fill-black:checked ~ * #paint-code-fill-black-text,
+#paint-fill-green:checked ~ * #paint-code-fill-green-text,
+#paint-fill-blue:checked ~ * #paint-code-fill-blue-text,
+
+#paint-stroke-white:checked ~ * #paint-code-stroke-white-text,
+#paint-stroke-black:checked ~ * #paint-code-stroke-black-text,
+#paint-stroke-green:checked ~ * #paint-code-stroke-green-text,
+#paint-stroke-blue:checked ~ * #paint-code-stroke-blue-text
+{
+    display: inline;
+}
+
+
+/* Display Descriptions */
+.description p {
+    display: none;
+}
+#paint-description-fill:checked ~ * #paint-description-fill-text,
+#paint-description-stroke:checked ~ * #paint-description-stroke-text
+{
+    display: block;
+}
+
+
+/*Paint*/
 #paint .shape {
     transition: all 0.6s ease;
-    fill: #FFFFFF;
-    stroke: #FFFFFF;
+    fill: white;
+    stroke: white;
 }
 
 #paint-fill-black:checked ~ .example .shape {
-    fill: #000000;
+    fill: black;
 }
 #paint-fill-green:checked ~ .example .shape {
     fill: #289819;
@@ -89,7 +122,7 @@ article {
 }
 
 #paint-stroke-black:checked ~ .example .shape {
-    stroke: #000000;
+    stroke: black;
 }
 #paint-stroke-green:checked ~ .example .shape {
     stroke: #289819;
@@ -98,6 +131,18 @@ article {
     stroke: #3faef8;
 }
 
+
+/* Basic */
+/*todo*/
+
+/* Linecaps */
+/*todo*/
+
+/* Dash */
+/*todo*/
+
+
+/* Button Active State */
 #property-tab-paint:checked ~ * label[for="property-tab-paint"],
 #property-tab-basic:checked ~ * label[for="property-tab-basic"],
 #property-tab-linecaps:checked ~ * label[for="property-tab-linecaps"],
@@ -119,16 +164,6 @@ article {
     background-color: var(--buttonActiveColor);
 }
 
-.code-tag {
-    font-weight: bolder;
-}
-.code-layer {
-    margin-left: 2em;
-    display: flex; flex-direction: column;
-}
-.code-string {
-    font-weight: normal;
-}
 
 
 /*Mobile Geräte*/

@@ -66,19 +66,19 @@
         <section class="properties">
             <!-- multiple <label> -->
             <div id="paint-fill-group" class="selector-group">
-                <span>Fill</span>
-                <label for="paint-fill-white">White</label>
-                <label for="paint-fill-black">Black</label>
-                <label for="paint-fill-green">Green</label>
-                <label for="paint-fill-blue">Blue</label>
+                <span>fill</span>
+                <label for="paint-fill-white">white</label>
+                <label for="paint-fill-black">black</label>
+                <label for="paint-fill-green">#289819</label>
+                <label for="paint-fill-blue">#3faef8</label>
                 <label for="paint-description-fill">i</label>
             </div>
             <div id="paint-stroke-group" class="selector-group">
-                <span>Stroke</span>
-                <label for="paint-stroke-white">White</label>
-                <label for="paint-stroke-black">Black</label>
-                <label for="paint-stroke-green">Green</label>
-                <label for="paint-stroke-blue">Blue</label>
+                <span>stroke</span>
+                <label for="paint-stroke-white">white</label>
+                <label for="paint-stroke-black">black</label>
+                <label for="paint-stroke-green">#289819</label>
+                <label for="paint-stroke-blue">#3faef8</label>
                 <label for="paint-description-stroke">i</label>
             </div>
 
@@ -86,22 +86,30 @@
         <section class="code">
             <code id="paint-code-text">
                 <code class="code-tag">
-                    &ltsvg id=<code class="code-string">"test"</code>&gt<br>
+                    &ltsvg&gt<br>
                 </code>
                 <code class="code-layer">
                     <code class="code-tag">
-                        &ltcircle fill=
+                        &ltcircle cx=<code class="code-string">"60"</code> cy=<code class="code-string">"60"</code> r=<code class="code-string">"50"</code> fill=
                         <code class="code-string">
-                            <code id="paint-code-fill-white-text" class="paint-code-fill-text paint-code-dynamic-textd">"e1"</code>
-                            <code id="paint-code-fill-black-text" class="paint-code-fill-text paint-code-dynamic-text">e2</code>
-                            <code id="paint-code-fill-green-text" class="paint-code-fill-text paint-code-dynamic-text">e3</code>
-                            <code id="paint-code-fill-blue-text" class="paint-code-fill-text paint-code-dynamic-text">e4</code>
+                            <code id="paint-code-fill-white-text" class="paint-code-fill-text paint-code-dynamic-text">"white"</code>
+                            <code id="paint-code-fill-black-text" class="paint-code-fill-text paint-code-dynamic-text">"black"</code>
+                            <code id="paint-code-fill-green-text" class="paint-code-fill-text paint-code-dynamic-text">"#289819"</code>
+                            <code id="paint-code-fill-blue-text" class="paint-code-fill-text paint-code-dynamic-text">"#3faef8"</code>
                         </code>
+                        stroke=
+                        <code class="code-string">
+                            <code id="paint-code-stroke-white-text" class="paint-code-stroke-text paint-code-dynamic-text">"white"</code>
+                            <code id="paint-code-stroke-black-text" class="paint-code-stroke-text paint-code-dynamic-text">"black"</code>
+                            <code id="paint-code-stroke-green-text" class="paint-code-stroke-text paint-code-dynamic-text">"#289819"</code>
+                            <code id="paint-code-stroke-blue-text" class="paint-code-stroke-text paint-code-dynamic-text">"#3faef8"</code>
+                        </code>
+                        stroke-width=<code class="code-string">"5"</code>
                         /&gt<br>
                     </code>
                 </code>
                 <code class="code-tag">
-                    &lt/div&gt<br>
+                    &lt/svg&gt<br>
                 </code>
             </code>
         </section>
