@@ -13,6 +13,12 @@
     --scrollBgColor: hsl(240deg, 10%, 15%);
     --scrollThumbColor: hsl(240deg, 10%, 35%);
     --scrollHoverColor: hsl(0deg, 0%, 100%);
+
+
+    --buttonNormalColor: #775511;
+    --buttonHoverColor: #a68e8e;
+    --buttonActiveColor: #c0a55d;
+
 }
 
 * {
@@ -28,17 +34,85 @@ body {
     color: var(--fontColor);
 }
 
-polygon {
-    transition: all 0.5s linear;
-    fill: #00AA55;
+input[type="radio"] {
+    display: none;
 }
 
-#paint:checked ~ * polygon {
-    fill: #FF3333;
+.selector-group label {
+    background-color: var(--buttonNormalColor);
 }
 
-#basic:checked ~ * polygon {
+.selector-group label:hover {
+    background-color: var(--buttonHoverColor);
+}
+
+.description p {
+    display: none;
+}
+
+#paint-description-fill:checked ~ * #paint-description-fill-text,
+#paint-description-stroke:checked ~ * #paint-description-stroke-text
+{
+    display: block;
+}
+
+article {
+    display: none;
+}
+
+#property-tab-paint:checked ~ #paint,
+#property-tab-basic:checked ~ #basic,
+#property-tab-linecaps:checked ~ #linecaps,
+#property-tab-dash:checked ~ #dash
+{
+    display: block;
+}
+
+#paint .shape {
+    transition: all 0.6s ease;
     fill: #FFFFFF;
+    stroke: #FFFFFF;
+}
+
+#paint-fill-black:checked ~ .example .shape {
+    fill: #000000;
+}
+#paint-fill-green:checked ~ .example .shape {
+    fill: #289819;
+}
+#paint-fill-blue:checked ~ .example .shape {
+    fill: #3faef8;
+}
+
+#paint-stroke-black:checked ~ .example .shape {
+    stroke: #000000;
+}
+#paint-stroke-green:checked ~ .example .shape {
+    stroke: #289819;
+}
+#paint-stroke-blue:checked ~ .example .shape {
+    stroke: #3faef8;
+}
+
+#property-tab-paint:checked ~ * label[for="property-tab-paint"],
+#property-tab-basic:checked ~ * label[for="property-tab-basic"],
+#property-tab-linecaps:checked ~ * label[for="property-tab-linecaps"],
+#property-tab-dash:checked ~ * label[for="property-tab-dash"],
+
+#paint-fill-white:checked ~ * label[for="paint-fill-white"],
+#paint-fill-black:checked ~ * label[for="paint-fill-black"],
+#paint-fill-green:checked ~ * label[for="paint-fill-green"],
+#paint-fill-blue:checked ~ * label[for="paint-fill-blue"],
+
+#paint-stroke-white:checked ~ * label[for="paint-stroke-white"],
+#paint-stroke-black:checked ~ * label[for="paint-stroke-black"],
+#paint-stroke-green:checked ~ * label[for="paint-stroke-green"],
+#paint-stroke-blue:checked ~ * label[for="paint-stroke-blue"],
+
+#paint-description-fill:checked ~ * label[for="paint-description-fill"],
+#paint-description-stroke:checked ~ * label[for="paint-description-stroke"]
+{
+    background-color: var(--buttonActiveColor);
 }
 
 

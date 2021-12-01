@@ -25,23 +25,39 @@
 </nav>
 
 <main>
-    <input type="radio" id="paint" name="property-tabs" checked>
-    <input type="radio" id="basic" name="property-tabs">
-    <input type="radio" id="linecaps" name="property-tabs">
-    <input type="radio" id="dash" name="property-tabs">
+    <input type="radio" id="property-tab-paint" name="property-tab-select" checked>
+    <input type="radio" id="property-tab-basic" name="property-tab-select">
+    <input type="radio" id="property-tab-linecaps" name="property-tab-select">
+    <input type="radio" id="property-tab-dash" name="property-tab-select">
 
-    <section id="property-tabs">
-        <label for="paint">Paint</label>
-        <label for="basic">Basic</label>
-        <label for="linecaps">Linecaps</label>
-        <label for="dash">Dash</label>
+    <section id="property-tab-group" class="selector-group">
+        <label for="property-tab-paint">Paint</label>
+        <label for="property-tab-basic">Basic</label>
+        <label for="property-tab-linecaps">Linecaps</label>
+        <label for="property-tab-dash">Dash</label>
     </section>
     <article id="paint">
-        <!-- inputs -->
+
+        <input type="radio" id="paint-fill-white" name="paint-fill-select" checked>
+        <input type="radio" id="paint-fill-black" name="paint-fill-select">
+        <input type="radio" id="paint-fill-green" name="paint-fill-select">
+        <input type="radio" id="paint-fill-blue" name="paint-fill-select">
+
+        <input type="radio" id="paint-stroke-white" name="paint-stroke-select">
+        <input type="radio" id="paint-stroke-black" name="paint-stroke-select" checked>
+        <input type="radio" id="paint-stroke-green" name="paint-stroke-select">
+        <input type="radio" id="paint-stroke-blue" name="paint-stroke-select">
+
+        <input type="radio" id="paint-description-fill" name="paint-description-select" checked>
+        <input type="radio" id="paint-description-stroke" name="paint-description-select">
+
         <figure class="example">
             <svg height="210" width="500">
-                <polygon points="100,10 40,198 190,78 10,78 160,198" style="stroke:purple;stroke-width:5;"/>
-                <polygon points="100,10 40,198 190,78 10,78 160,198" style="stroke:purple;stroke-width:5;"/>
+                <!--
+                <polygon points="100,10 40,198 190,78 10,78 160,300" style="stroke:purple;stroke-width:5;"/>
+                <polygon class="test1" points="100,10 40,198 190,78 10,78 160,198" style="stroke-width:5;"/>
+                -->
+                <circle class="shape" cx="60" cy="60" r="50" stroke-width="5"/>
             </svg>
         </figure>
         <section class="show-code">
@@ -49,12 +65,31 @@
         </section>
         <section class="properties">
             <!-- multiple <label> -->
+            <div id="paint-fill-group" class="selector-group">
+                <span>Fill</span>
+                <label for="paint-fill-white">White</label>
+                <label for="paint-fill-black">Black</label>
+                <label for="paint-fill-green">Green</label>
+                <label for="paint-fill-blue">Blue</label>
+                <label for="paint-description-fill">i</label>
+            </div>
+            <div id="paint-stroke-group" class="selector-group">
+                <span>Stroke</span>
+                <label for="paint-stroke-white">White</label>
+                <label for="paint-stroke-black">Black</label>
+                <label for="paint-stroke-green">Green</label>
+                <label for="paint-stroke-blue">Blue</label>
+                <label for="paint-description-stroke">i</label>
+            </div>
+
         </section>
         <section class="code">
             <!-- multiple <code> -->
         </section>
         <section class="description">
             <!-- multiple <p> -->
+            <p id="paint-description-fill-text">Fill Desc.</p>
+            <p id="paint-description-stroke-text">Stroke Desc.</p>
         </section>
     </article>
     <article id="basic">
