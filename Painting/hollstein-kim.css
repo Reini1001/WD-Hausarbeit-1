@@ -6,7 +6,7 @@
     /* --nav-- */
     --navBgColor: hsl(291, 10%, 14%);
     --navBorderColor: hsl(0deg, 0%, 100%);
-    --navHoverColor: hsl(240deg, 10%, 15%);
+    --navHoverColor: hsl(240, 11%, 27%);
     --navActivColor: hsl(120deg, 100%, 18.75%);
 
     /* --scrollbar-- */
@@ -17,6 +17,7 @@
 
     --buttonNormalColor: #775511;
     --buttonHoverColor: #a68e8e;
+    --buttonClickColor: #332d2d;
     --buttonActiveColor: #c0a55d;
 
 }
@@ -46,6 +47,10 @@ input[type="radio"] {
 
 .selector-group label:hover {
     background-color: var(--buttonHoverColor);
+}
+
+.selector-group label:active {
+    background-color: var(--buttonClickColor);
 }
 
 
@@ -163,6 +168,25 @@ article {
 {
     background-color: var(--buttonActiveColor);
 }
+
+
+/* Show Code (Mobile Only)*/
+.code {
+    display: none;
+}
+#code-show:checked ~ * .code {
+    display: block;
+}
+
+/* Show Description (Mobile Only)*/
+.description {
+    display: block;
+}
+#paint-description-none:checked ~ .description
+{
+    display: none;
+}
+
 
 
 
