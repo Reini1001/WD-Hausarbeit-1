@@ -16,23 +16,46 @@
     <div class="nav-item"><a class="nav-link" href="../Animation/walter-leon.html">Animation</a></div>
     <div class="nav-item active"><a class="nav-link" href="../Filter/gottbrecht-kevin.html">Filter</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Painting</a></div>
-    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems and Transformations</a></div>
+    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems and Transformations</a>
+    </div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
 <div id="wrapper" class="wrapper">
-    <div id="headline" class="headline"> <h1>SVG Filters</h1></div>
+    <div id="headline" class="headline"><h1>SVG Filters</h1></div>
     <div id="text" class="text">
         <p>
-            SVG filters are the bomb 💣, if I say so myself! They allow to apply visual effects like drop shadows, gaussian blurs, color manipulation or even distortion on any HTML or SVG element on your page. You read that right, SVG filters are not just for SVGs, they are defined in SVG markup, but can then be applied to any element, as you’ll see here.
+            SVG filters are the bomb 💣, if I say so myself! They allow to apply visual effects like drop shadows,
+            gaussian blurs, color manipulation or even distortion on any HTML or SVG element on your page. You read that
+            right, SVG filters are not just for SVGs, they are defined in SVG markup, but can then be applied to any
+            element, as you’ll see here.
         </p>
         <p id="Source" class="source">Source: https://alligator.io/svg/svg-filters/</p>
     </div>
 
-<div class="example" id="example1">
-    <h3>1. Example</h3>
+    <div class="example" id="example1">
+        <h3>Use in SVG</h3>
+<div id="svg1">
+        <svg id="svgfilter">
+            <rect width="300" height="300" fill="blue"/>
+            <text fill="#ffffff" font-size="50" font-family="Verdana" x="75" y="75">Hover</text>
+        </svg>
+
 </div>
+        <div id="svg2">
+<svg height="400px" width="300px">
+    <rect width="300px" height="400px" fill="lightblue"></rect>
+    <rect width="300px" height="40px" fill="green" x="0" y="360"></rect>
+    <rect width="10px" height="180px" fill="saddlebrown" x="50%" y="180px"></rect>
+    <circle r="65" fill="green" cx="52%" cy="180"></circle>
+
+</svg>
+        </div>
+    </div>
+
+
     <div class="example" id="example2">
-        <h3>2. Example</h3>
+        <h3>Use in HTML</h3>
+        <img src="../images/Filterimg/Html1.jpg" id="HTMLfilter1" alt="">
     </div>
 
 </div>
