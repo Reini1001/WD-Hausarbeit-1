@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../Reinis-reichhaltigen-Ressourcen/JetBrainsMono-font-nav-footer.css">
     <link rel="stylesheet" href="../Reinis-reichhaltigen-Ressourcen/navbar-style.css">
     <link rel="stylesheet" href="../Reinis-reichhaltigen-Ressourcen/rgb-flow-keyframes.css">
-
 </head>
+
 <body>
 <nav>
     <div class="nav-item"><a class="nav-link" href="">Home</a></div>
@@ -16,10 +16,10 @@
     <div class="nav-item"><a class="nav-link" href="../Animation/walter-leon.html">Animation</a></div>
     <div class="nav-item active"><a class="nav-link" href="../Filter/gottbrecht-kevin.html">Filter</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Painting</a></div>
-    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems and Transformations</a>
-    </div>
+    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems and Transformations</a></div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
+
 <div id="wrapper" class="wrapper">
     <div id="headline" class="headline"><h1>SVG Filters</h1></div>
     <div id="text" class="text">
@@ -34,7 +34,7 @@
 
     <div class="example" id="example1">
         <h3>Use in SVG</h3>
-<div id="svg1">
+        <div id="svg1">
         <svg id="svgfilter">
             <rect width="300" height="300" fill="blue"/>
             <text fill="#ffffff" font-size="50" font-family="Verdana" x="75" y="75">Hover</text>
@@ -47,7 +47,6 @@
     <rect width="300px" height="40px" fill="green" x="0" y="360"></rect>
     <rect width="10px" height="180px" fill="saddlebrown" x="50%" y="180px"></rect>
     <circle r="65" fill="green" cx="52%" cy="180"></circle>
-
 </svg>
         </div>
     </div>
@@ -55,12 +54,21 @@
 
     <div class="example" id="example2">
         <h3>Use in HTML</h3>
-        <img src="../images/Filterimg/Html1.jpg" id="HTMLfilter1" alt="">
+        <img src="../images/Filter_IMG/Html1.jpg" id="HTMLfilter1" alt="" height="300" width="300"><br>
+        <img src="../images/Filter_IMG/hsfl.jpg" id="HTMLfilter2" height="300" width="300" alt=""/></div>
     </div>
 
-</div>
+
+<svg>
+    <filter id="blurfilter">
+        <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+    </filter>
+    <filter id="colorfilter">
+        <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 1 0, 0 0 0 1 0"/>
+    </filter>
+</svg>
 <footer>
-    Copyright &copy; 2021 &#8226; Kevin Gottbrecht & Sources
+    Copyright &copy; 2021 &#8226; Kevin Gottbrecht
 </footer>
 </body>
 </html>

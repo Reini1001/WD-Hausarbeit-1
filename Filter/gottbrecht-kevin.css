@@ -1,21 +1,23 @@
 :root {
- /* Navbar */
+    /* Navbar */
     --navBgColor: darkgrey;
-    --navBorderColor:black;
-    --navHoverColor:silver;
-    --navActivColor:lightslategrey;
+    --navBorderColor: black;
+    --navHoverColor: silver;
+    --navActivColor: lightslategrey;
 }
-body{
+
+body {
     background-color: darkslategray;
-margin: 0;
+    margin: 0;
 }
-nav{
+
+nav {
     position: sticky;
     display: flex;
 
 }
 
-.wrapper{
+.wrapper {
     color: white;
     font-family: Verdana, sans-serif;
     display: grid;
@@ -25,13 +27,15 @@ nav{
 
 
 }
-.headline{
-    grid-column:1/4;
+
+.headline {
+    grid-column: 1/4;
     grid-row: 1;
--webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px black;
     text-align: center;
 }
-.text{
+
+.text {
     grid-column: 2;
     grid-row: 2;
     padding: 1em;
@@ -39,33 +43,39 @@ nav{
     background-color: rgb(31, 54, 54);
     margin-bottom: 1em;
 }
-.source{
+
+.source {
     font-size: 8px;
-    color:lightgray;
+    color: lightgray;
 }
 
-.example{
+.example {
     padding: 1em;
     border-radius: 2em;
     background-color: rgb(31, 54, 54);
     text-align: center;
 
 }
-.row{
+
+.row {
     grid-row: 3;
 }
-#example1{
+
+#example1 {
     margin-left: 0.5em;
     grid-row: 3;
-    grid-column:1;
+    grid-column: 1;
     padding-bottom: 1em;
 }
-#example2{
+
+#example2 {
     margin-right: 0.5em;
     grid-row: 3;
     grid-column: 3;
+    padding-bottom: 1em;
 }
-footer{
+
+footer {
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
@@ -74,15 +84,26 @@ footer{
     text-align: center;
     filter: blur();
 }
+
 #svgfilter:hover {
-    filter: blur(10px);
+    filter: url(#blurfilter);
 }
+
 #HTMLfilter1:hover {
-    filter: blur(10px);
+    filter: url(#blurfilter);
 }
-#svg1{
+
+#svg1 {
     padding-bottom: 1em;
 }
-#svg2{
+#HTMLfilter1 {
+    padding-bottom: 1em;
+}
 
+#svg2:hover {
+    filter: url(#colorfilter)
+}
+
+#HTMLfilter2:hover {
+    filter: url(#colorfilter)
 }
