@@ -56,6 +56,10 @@ input[type="radio"] {
     display: block;
 }
 
+.paint-code-dynamic-text {
+    display:none;
+}
+
 article {
     display: none;
 }
@@ -115,6 +119,16 @@ article {
     background-color: var(--buttonActiveColor);
 }
 
+.code-tag {
+    font-weight: bolder;
+}
+.code-layer {
+    margin-left: 2em;
+    display: flex; flex-direction: column;
+}
+.code-string {
+    font-weight: normal;
+}
 
 
 /*Mobile Geräte*/
