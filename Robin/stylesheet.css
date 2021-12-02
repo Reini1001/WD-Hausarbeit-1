@@ -1,9 +1,9 @@
 body {
     background-color: #BC986A;
-    display:flex;
-    flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -39,19 +39,31 @@ p {
 
 .container {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  auto 1fr;
+    align-content: center;
 }
 .content {
     text-align: center;
 }
 
+.content:first-child {
+    grid-row: 1;
+    grid-column: 1/ -1;
+}
+
+.content:nth-child(2) {
+    text-align: center;
+    margin-top:1rem;
+    grid-row: 2;
+    grid-column: 1;
+}
+
 .content:nth-child(3) {
     text-align: center;
     margin-top:1rem;
-}
-
-.content:nth-child(4) {
-    text-align: center;
-    margin-top:1rem;
+    grid-row:2;
+    grid-column: 3;
 }
 
 svg {
@@ -106,14 +118,19 @@ footer {
 
 /* Anpassungen für mobile Versionen */
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 650px) {
 
     h1 {
         font-size: 1.5rem;
     }
 
     .description {
-        width: 70%;
+        width: 310px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
     }
 
 }
