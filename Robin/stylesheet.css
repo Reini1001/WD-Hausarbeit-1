@@ -44,6 +44,16 @@ p {
     text-align: center;
 }
 
+.content:nth-child(3) {
+    text-align: center;
+    margin-top:1rem;
+}
+
+.content:nth-child(4) {
+    text-align: center;
+    margin-top:1rem;
+}
+
 svg {
     border: 2px solid #CAFAFE;
     border-radius: 20px;

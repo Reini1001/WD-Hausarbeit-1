@@ -23,33 +23,43 @@
     <h1>Coordinate Systems and Transformation</h1>
     <!-- Ein SVG Feld von den Maßen 500x500, in dem ein roter Punkt sich bewegt und die Koordinaten dessen position anzeigt -->
     <div class="content">
-    <svg height="320" width=320px>
-        <circle class="move" cx="280" cy="40" r="30" stroke="black" stroke-width="2" fill="#DB4437" />
-        <text class="move, fadeOut" x="220" y="15" font-size="13" font-family="JetBrainsMono" > x=280 y=40 </text>
-        <text class="fadeIn" x="20" y="240" font-size="13" font-family="JetBrainsMono" > x=40 y=280</text>
-
-    <!-- Zwei Grüne Vierecke kann man mittels hovern manipulieren -->
-     <!--   <text class x="28" y="25" font-size="13" font-family="JetBrainsMono"> Hover to skew </text>
-        <rect class="skew" x="35" y="35" width="70" height="70" rx="10" ry="10" stroke="black" stroke-width="2" fill="#0F9D58" />
-        <text x="350" y="350" font-size="13" font-family="JetBrainsMono"> Hover to scale </text>
-        <rect class="scale" x="360" y="360" width="70" height="70" rx="10" ry="10" stroke="black" stroke-width="2" fill="#0F9D58" />
-        -->
-    </svg>
+        <svg height="320" width=320px>
+            <circle class="move" cx="280" cy="40" r="30" stroke="black" stroke-width="2" fill="#DB4437"/>
+            <text class="move, fadeOut" x="220" y="15" font-size="13" font-family="JetBrainsMono"> x=280 y=40</text>
+            <text class="fadeIn" x="20" y="240" font-size="13" font-family="JetBrainsMono"> x=40 y=280</text>
+        </svg>
+        <p class="description">
+            Here we have a coordinate system of the dimensions 320 x 320 pixel. The red circle
+            can be placed everywhere inside this coordinate system with its specific dimensions.
+            In this example it starts at the point (280,40) and moves the
+            coordinates (40,280).
+        </p>
     </div>
-    <p class="description">
-        Here we have a coordinate system of the dimensions 320 x 320 pixel. The red circle
-        can be placed everywhere inside this coordinate system with its specific dimensions.
-        In this example it starts at the point (280,40) and moves the
-        coordinates (40,280).
-    </p>
-   <!-- <p>
-        The green rectangles can be manipulated by hovering over them. The rectangle in the upper left corner is
-        skewed in an angle of 20 degrees.
-        In the lower right corner the rectangle is scaled by 1.1.
-    </p> -->
+    <div class="content">
+        <svg height="320" width=320px>
+            <text class x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to skew </text>
+            <rect class="skew" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black" stroke-width="2"
+                  fill="#0F9D58"/>
+        </svg>
+        <p class="description">
+            The green rectangle can be manipulated by hovering over it. If you hover over it, it skews in an angle of
+            20 degree.
+        </p>
+    </div>
+        <div class="content">
+            <svg height="320" width="320">
+                <text class x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to scale </text>
+                <rect class="scale" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black" stroke-width="2"
+                      fill="#0F9D58"/>
+            </svg>
+            <p class="description">
+                If you hover over this rectangle it is scaled by 1.1
+            </p>
+        </div>
+
 </main>
-    <footer>
-        <p>Copyright &#169; 2021 Robin Antonjuk</p>
-    </footer>
+<footer>
+    <p>Copyright &#169; 2021 Robin Antonjuk</p>
+</footer>
 </body>
 </html>
