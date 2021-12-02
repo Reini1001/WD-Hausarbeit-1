@@ -3,6 +3,9 @@
     --backgroundColor: hsl(155, 23%, 21%);
     --borderColor: hsl(0deg, 0%, 100%);
 
+    --contentBoxColor: hsl(0, 4%, 32%);
+    --tabGroupColor: hsl(0, 5%, 52%);
+
     /* --nav-- */
     --navBgColor: hsl(291, 10%, 14%);
     --navBorderColor: hsl(0deg, 0%, 100%);
@@ -35,6 +38,71 @@ body {
     color: var(--fontColor);
 }
 
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+main > * {
+    margin: 1vw;
+}
+
+article {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "example code"
+                         "properties description";
+    grid-gap: 1vw;
+}
+
+.content-box {
+    background-color: var(--contentBoxColor);
+    padding: 1vw;
+    border: 0.2vw solid black;
+    border-radius: 1vw;
+}
+
+#property-tab-group {
+    background-color: var(--tabGroupColor);
+    padding: 1vw;
+    border: 0.2vw solid black;
+    border-radius: 1vw;
+}
+
+.example {
+    grid-area: example;
+    display:flex;
+    align-content: center;
+}
+
+.example svg {
+    display: block;
+    margin: auto;
+}
+
+.code {
+    grid-area: code;
+}
+
+.properties {
+    grid-area: properties;
+}
+
+.description {
+    grid-area: description;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
 
 /* Button Formatting */
 input[type="radio"] {
@@ -76,7 +144,7 @@ article {
 #property-tab-linecaps:checked ~ #linecaps,
 #property-tab-dash:checked ~ #dash
 {
-    display: block;
+    display: grid;
 }
 
 
@@ -170,29 +238,35 @@ article {
 }
 
 
-/* Show Code (Mobile Only)*/
-.code {
-    display: none;
-}
-#code-show:checked ~ * .code {
-    display: block;
+@media screen and (max-width: 300px) {
+    /* Show Code (Mobile Only)*/
+    .code {
+        display: none;
+    }
+    #code-show:checked ~ * .code {
+        display: block;
+    }
+
+    /* Show Description (Mobile Only)*/
+    .description {
+        display: block;
+    }
+    #paint-description-none:checked ~ .description
+    {
+        display: none;
+    }
 }
 
-/* Show Description (Mobile Only)*/
-.description {
-    display: block;
-}
-#paint-description-none:checked ~ .description
-{
-    display: none;
-}
+
 
 
 
 
 /*Mobile Geräte*/
 @media screen and (min-width: 300px) {
-
+    .compact-element {
+        display: none;
+    }
 }
 /*Tablets*/
 @media screen and (min-width: 426px) {
