@@ -80,14 +80,22 @@ h2, h2:hover, h2:active {
     background: var(--darkest-active);
 }
 
-.spacer05 {height: 0.5rem;}
-.spacer1 {height: 1rem;}
-.spacer2 {height: 2rem;}
+/* Generische spacer, habe ich immer dabei falls ich die mal brauche */
+.line_spacer {width: 100%; border-bottom: solid var(--darkest) 0.1em; display: block}
+.spacer1 {height: 1em;}
+.spacer2 {height: 2em;}
+
+/* Farben für <span> elemente um Code in farbe zu zeigen */
+.cyan {color: #1a8069;}
+.lime {color: #50a150;}
+.blue {color: #3f88ce;}
+.orange {color: #fdac53;}
 
 main {
     padding: 1rem 5rem;
     text-align: center;
     font-size: 20px;
+    margin-bottom: 1em;
 }
 
 body {
@@ -166,10 +174,11 @@ nav {
     border-bottom: 0;
 }
 .nav-item:hover {
-    background-color: var(--medium-dark);
+    background-color: var(--light-dark-hover);
 }
 .nav-item.active {
     background-color: var(--green);
+
 }
 .nav-item.active:hover {
     background-color: var(--red);
@@ -183,14 +192,17 @@ nav {
 }
 
 /*Laptop (klein)*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
     nav {
-        font-size: 13px;
+        font-size: calc(0.46rem + 1vw);
+        position: fixed;
+        box-shadow: 0 0 0.6em 0.8em var(--medium-dark);
     }
+
     .nav-item {
         float: left;
         border-bottom: 0;
-        border-right: 2px solid var(--fontColor);
+        border-right: 0.15em solid var(--fontColor);
     }
     .nav-item:last-child {
         float: right;
@@ -199,33 +211,26 @@ nav {
 
     main {
         width: fit-content;
-        max-width: 28em;
-        margin: 4rem auto;
+        font-size: calc(1rem + 0.5vw);
+        max-width: 34em;
+        margin: 3em auto;
         background: var(--light-dark);
-        border-radius: 2rem;
-        border: solid var(--darkest) 0.3rem;
-        padding: 1rem;
+        border-radius: 1.5em;
+        border: solid var(--darkest) 0.2em;
+        padding: 1em;
     }
 
     .expand-this {
-        font-size: 18px;
+        font-size: 0.75em;
     }
 }
-/*Rechner*/
+/*Laptop (groß)*/
+@media screen and (min-width: 900px) {
+
+}
+
 @media screen and (min-width: 1024px) {
-    nav {
-        font-size: 20px;
-    }
-    .nav-item {
-        border-right: 3px solid var(--fontColor);
-    }
-    .nav-link {
-        padding: 0.5rem 1rem;
-    }
-    .nav-item:last-child {
-        float: right;
-        border-right: 0;
-    }
+
 }
 
 /* footer ab hier */
@@ -235,7 +240,8 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
-    padding: 0.5rem;
+    padding: 0 0.5rem 0.5rem;
     text-align: center;
     background-color: var(--medium-dark);
+    box-shadow: 0 0 1.2em 1.5em var(--medium-dark);
 }

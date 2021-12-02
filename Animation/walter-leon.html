@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="walter-leon.css">
     <link type="image/icon" rel="shortcut icon" href="../images/HSF-favicon.ico">
@@ -13,7 +14,7 @@
     <div class="nav-item active"><a class="nav-link" href="">Animation</a></div>
     <div class="nav-item"><a class="nav-link" href="../Filter/gottbrecht-kevin.html">Filter</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Painting</a></div>
-    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems, Transformations and Units</a></div>
+    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems and Transformation</a></div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
 <main>
@@ -38,16 +39,16 @@
         <pre class="expand-this">
             <code>
 HTML:
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;square&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;
-        &lt;rect height=&quot;180px&quot; width=&quot;180px&quot; x=&quot;10px&quot; y=&quot;10px&quot;&gt;
-            &lt;animate attributeType=&quot;CSS&quot;
+<span class="cyan">&lt;</span>svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;square&quot; width=&quot;200px&quot; height=&quot;200px&quot;<span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span>rect height=&quot;180px&quot; width=&quot;180px&quot; x=&quot;10px&quot; y=&quot;10px&quot;<span class="cyan">&gt;</span>
+            <span class="cyan">&lt;</span>animate attributeType=&quot;CSS&quot;
                      attributeName=&quot;opacity&quot;
                      values=&quot;1 ; 0 ; 1&quot;
                      keyTimes=&quot;0 ; 0.5 ; 1&quot;
                      dur=&quot;5s&quot;
-                     repeatCount=&quot;indefinite&quot;/&gt;
-        &lt;/rect&gt;
-    &lt;/svg&gt;
+                     repeatCount=&quot;indefinite&quot;<span class="cyan">/&gt;</span>
+        <span class="cyan">&lt;/</span>rect<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;/</span>svg<span class="cyan">&gt;</span>
 
 CSS:
 #square > rect {
@@ -77,41 +78,41 @@ CSS:
         <pre class="expand-this">
             <code>
 HTML:
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;clock&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt;
+<span class="cyan">&lt;</span>svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;clock&quot; width=&quot;200px&quot; height=&quot;200px&quot;<span class="cyan">&gt;</span>
 
     &lt;!-- The clock --&gt;
 
-    &lt;circle r=&quot;40%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;white&quot; stroke-width=&quot;2%&quot; stroke=&quot;black&quot;&gt;&lt;/circle&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot;&gt;&lt;/line&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(30)&quot;&gt;&lt;/line&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(60)&quot;&gt;&lt;/line&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(90)&quot;&gt;&lt;/line&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(120)&quot;&gt;&lt;/line&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(150)&quot;&gt;&lt;/line&gt;
-    &lt;circle r=&quot;35%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;white&quot; stroke-width=&quot;0&quot;&gt;&lt;/circle&gt;
-    &lt;circle r=&quot;4%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;black&quot; stroke-width=&quot;0&quot;&gt;&lt;/circle&gt;
+    <span class="cyan">&lt;</span>circle r=&quot;40%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;white&quot; stroke-width=&quot;2%&quot; stroke=&quot;black&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>circle<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(30)&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(60)&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(90)&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(120)&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;90%&quot; x2=&quot;50%&quot; y2=&quot;10%&quot; stroke-width=&quot;1%&quot; stroke=&quot;black&quot; transform=&quot;rotate(150)&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>circle r=&quot;35%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;white&quot; stroke-width=&quot;0&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>circle<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>circle r=&quot;4%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; fill=&quot;black&quot; stroke-width=&quot;0&quot;<span class="cyan">&gt;</span><span class="cyan">&lt;/</span>circle<span class="cyan">&gt;</span>
 
     &lt;!-- The clock hands --&gt;
 
-    &lt;line x1=&quot;50%&quot; y1=&quot;50%&quot; x2=&quot;50%&quot; y2=&quot;18%&quot; stroke-width=&quot;2%&quot; stroke=&quot;black&quot;&gt;
-        &lt;animateTransform attributeName=&quot;transform&quot;
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;50%&quot; x2=&quot;50%&quot; y2=&quot;18%&quot; stroke-width=&quot;2%&quot; stroke=&quot;black&quot;<span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span>animateTransform attributeName=&quot;transform&quot;
                           attributeType=&quot;XML&quot;
                           type=&quot;rotate&quot;
                           from=&quot;0&quot;
                           to=&quot;360&quot;
                           dur=&quot;5s&quot;
-                          repeatCount=&quot;indefinite&quot;/&gt;
-    &lt;/line&gt;
-    &lt;line x1=&quot;50%&quot; y1=&quot;50%&quot; x2=&quot;50%&quot; y2=&quot;30%&quot; stroke-width=&quot;3%&quot; stroke=&quot;black&quot;&gt;
-        &lt;animateTransform attributeName=&quot;transform&quot;
+                          repeatCount=&quot;indefinite&quot;<span class="cyan">/&gt;</span>
+    <span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span>line x1=&quot;50%&quot; y1=&quot;50%&quot; x2=&quot;50%&quot; y2=&quot;30%&quot; stroke-width=&quot;3%&quot; stroke=&quot;black&quot;<span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span>animateTransform attributeName=&quot;transform&quot;
                           attributeType=&quot;XML&quot;
                           type=&quot;rotate&quot;
                           from=&quot;0&quot;
                           to=&quot;360&quot;
                           dur=&quot;60s&quot;
-                          repeatCount=&quot;indefinite&quot;/&gt;
-    &lt;/line&gt;
-&lt;/svg&gt;
+                          repeatCount=&quot;indefinite&quot;<span class="cyan">/&gt;</span>
+    <span class="cyan">&lt;/</span>line<span class="cyan">&gt;</span>
+<span class="cyan">&lt;/</span>svg<span class="cyan">&gt;</span>
 
 CSS:
 line {
@@ -160,18 +161,18 @@ line {
         <pre class="expand-this">
             <code>
 HTML:
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;circle&quot; width=&quot;200px&quot; height=&quot;80px&quot;&gt;
-        &lt;circle id=&quot;moving_circle&quot; r=&quot;20px&quot; cx=&quot;25px&quot; cy=&quot;40px&quot; /&gt;
+<span class="cyan">&lt;</span>svg xmlns=&quot;http://www.w3.org/2000/svg&quot; id=&quot;circle&quot; width=&quot;200px&quot; height=&quot;80px&quot;<span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span>circle id=&quot;moving_circle&quot; r=&quot;20px&quot; cx=&quot;25px&quot; cy=&quot;40px&quot; <span class="cyan">/&gt;</span>
         &lt;!-- The animation is linked with an xlink instead of being nested in the circle --&gt;
-        &lt;animate xlink:href=&quot;#moving_circle&quot;
+        <span class="cyan">&lt;</span>animate xlink:href=&quot;#moving_circle&quot;
                  attributeName=&quot;cx&quot;
                  from=&quot;25&quot;
                  to=&quot;400&quot;
                  dur=&quot;3.5s&quot;
                  repeatCount=&quot;1&quot;
                  begin=&quot;click&quot;
-                 restart=&quot;whenNotActive&quot; /&gt;
-    &lt;/svg&gt;
+                 restart=&quot;whenNotActive&quot; <span class="cyan">/&gt;</span>
+    <span class="cyan">&lt;/</span>svg<span class="cyan">&gt;</span>
 
 CSS:
 #circle {
@@ -203,7 +204,7 @@ CSS:
     </svg>
 
     <h2>Ending Words</h2>
-    <p>Text here</p>
+    <p>text here</p>
 </main>
 <footer>
     Copyright &copy; 2021 &#8226; ElGurkus
