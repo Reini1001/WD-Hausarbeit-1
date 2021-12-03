@@ -5,6 +5,8 @@
 
     --contentBoxColor: hsl(0, 4%, 32%);
     --tabGroupColor: hsl(0, 5%, 52%);
+    --boxBorderColor: hsl(0, 0%, 0%);
+    --transparentBackplate: hsla(0, 0%, 42%, 0.67);
 
     /* --nav-- */
     --navBgColor: hsl(291, 10%, 14%);
@@ -68,7 +70,7 @@ article {
 #property-tab-group {
     background-color: var(--tabGroupColor);
     padding: 1vw;
-    border: 0.2vw solid black;
+    border: 0.2vw solid var(--boxBorderColor);
     border-radius: 1vw;
 }
 
@@ -109,15 +111,77 @@ input[type="radio"] {
     display: none;
 }
 
-.selector-group label {
-    background-color: var(--buttonNormalColor);
+.show-code {
+    grid-area: show-code;
 }
 
-.selector-group label:hover {
+.selector-group {
+    background-color: #999999;
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+}
+
+.selector-group > div {
+    height: 100%;
+}
+
+.selector-label {
+    flex-basis: 10%;
+    flex-grow: 1;
+}
+
+.selector-buttons {
+    flex-basis: 50%;
+    flex-grow: 4;
+    display:flex;
+    gap: 3px;
+    justify-content: center;
+}
+
+.selector-i {
+    flex-basis: 10%;
+    flex-grow: 1;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.selector-i label {
+    background-color: #0B0B0B;
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.selector-i label .button {
+
+}
+
+.selector-buttons label .button {
+    display: block;
+    width: 6em;
+    text-align: center;
+}
+
+.selector-buttons label {
+    display: flex;
+    background-color: var(--buttonNormalColor);
+    border: 0.2vw solid var(--boxBorderColor);
+    align-content: center;
+    height: 100%;
+}
+
+.selector-buttons label:hover {
     background-color: var(--buttonHoverColor);
 }
 
-.selector-group label:active {
+.selector-buttons label:active {
     background-color: var(--buttonClickColor);
 }
 
@@ -128,7 +192,8 @@ input[type="radio"] {
 }
 .code-layer {
     margin-left: 2em;
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .code-string {
     font-weight: normal;
@@ -237,24 +302,84 @@ article {
     background-color: var(--buttonActiveColor);
 }
 
-
-@media screen and (max-width: 300px) {
-    /* Show Code (Mobile Only)*/
-    .code {
-        display: none;
-    }
-    #code-show:checked ~ * .code {
-        display: block;
+@keyframes popup {
+    from {
+        opacity: 0;
     }
 
-    /* Show Description (Mobile Only)*/
-    .description {
-        display: block;
+    to {
+        opacity: 1;
     }
+}
+
+@media screen and (max-width: 769px) {
+
+    .description,
+    #code-show:checked ~ * .code
+    {
+        display: grid;
+        animation: popup 0.1s cubic-bezier(0.71, 0.99, 1, 0.4);
+    }
+    .code,
     #paint-description-none:checked ~ .description
     {
         display: none;
     }
+
+    article {
+        grid-template-areas: "example show-code"
+                             "properties properties";
+        grid-template-columns: auto min-content;
+    }
+
+    .description,
+    .code
+    {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: minmax(5vw,max-content) min-content auto minmax(5vw,max-content);
+        grid-template-columns: minmax(5vw,max-content) auto min-content minmax(5vw,max-content);
+        grid-template-areas: ". . . ."
+                             ". title close ."
+                             ". window window ."
+                             ". . . .";
+        background-color: var(--transparentBackplate);
+    }
+
+    .description > *,
+    .code > *
+    {
+        background-color: var(--contentBoxColor);
+        border: 1px solid var(--boxBorderColor);
+    }
+
+
+    .code-close-inner,
+    .description-close-inner {
+        grid-area: close;
+        background-color: red;
+    }
+
+    .code-close-outer,
+    .description-close-outer {
+        grid-row: 1/5;
+        grid-column: 1/5;
+        z-index: -4;
+        background-color: transparent;
+        border: none;
+    }
+    .code-frame,
+    .description-frame {
+        grid-area: window;
+    }
+    .code > h2,
+    .description > h2 {
+        grid-area: title;
+    }
+
 }
 
 
@@ -263,7 +388,7 @@ article {
 
 
 /*Mobile Geräte*/
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 769px) {
     .compact-element {
         display: none;
     }
