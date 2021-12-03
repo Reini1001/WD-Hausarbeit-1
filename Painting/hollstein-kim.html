@@ -11,7 +11,7 @@
     <link href="/Reinis-reichhaltigen-Ressourcen/navbar-style.css" rel="stylesheet" type="text/css">
     <link href="/Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css">
 
-    <title>Title</title>
+    <title>Painting</title>
 </head>
 <body>
 <nav>
@@ -33,7 +33,10 @@
     <input type="radio" id="code-none" name="code-select" checked>
     <input type="radio" id="code-show" name="code-select">
 
-    <header>Intro Text...</header>
+    <header class="content-box">
+        <h1>Painting</h1>
+        Intro Text...<br><br><br>
+    </header>
     <section id="property-tab-group" class="selector-group">
         <label for="property-tab-paint">Paint</label>
         <label for="property-tab-basic">Basic</label>
@@ -56,21 +59,22 @@
         <input type="radio" id="paint-description-fill" name="paint-description-select">
         <input type="radio" id="paint-description-stroke" name="paint-description-select">
 
-        <figure class="example">
-            <svg height="210" width="500">
+        <figure class="example content-box">
+            <svg height="120" width="120">
                 <!--
                 <polygon points="100,10 40,198 190,78 10,78 160,300" style="stroke:purple;stroke-width:5;"/>
                 <polygon class="test1" points="100,10 40,198 190,78 10,78 160,198" style="stroke-width:5;"/>
                 -->
-                <circle class="shape" cx="60" cy="60" r="50" stroke-width="5"/>
+                <circle class="shape" cx="60" cy="60" r="50" stroke-width="10"/>
             </svg>
         </figure>
-        <section class="show-code compact-element">
+        <section class="show-code content-box compact-element">
             <label for="code-show">Show Code</label>
         </section>
-        <section class="properties">
+        <section class="properties content-box">
+            <h2>Properties</h2>
             <div id="paint-fill-group" class="selector-group">
-                <span>fill</span>
+                <span>fill:</span>
                 <label for="paint-fill-white">white</label>
                 <label for="paint-fill-black">black</label>
                 <label for="paint-fill-green">#289819</label>
@@ -78,7 +82,7 @@
                 <label for="paint-description-fill">i</label>
             </div>
             <div id="paint-stroke-group" class="selector-group">
-                <span>stroke</span>
+                <span>stroke:</span>
                 <label for="paint-stroke-white">white</label>
                 <label for="paint-stroke-black">black</label>
                 <label for="paint-stroke-green">#289819</label>
@@ -87,7 +91,8 @@
             </div>
 
         </section>
-        <section class="code">
+        <section class="code content-box">
+            <h2>Code</h2>
             <label for="code-none" class="code-close-outer compact-element">COutside</label>
             <label for="code-none" class="code-close-inner compact-element">CX</label>
             <div class="code-frame">
@@ -111,7 +116,7 @@
                                 <code id="paint-code-stroke-green-text" class="paint-code-stroke-text paint-code-dynamic-text">"#289819"</code>
                                 <code id="paint-code-stroke-blue-text" class="paint-code-stroke-text paint-code-dynamic-text">"#3faef8"</code>
                             </code>
-                            stroke-width=<code class="code-string">"5"</code>
+                            stroke-width=<code class="code-string">"10"</code>
                             /&gt<br>
                         </code>
                     </code>
@@ -121,7 +126,8 @@
                 </code>
             </div>
         </section>
-        <section class="description">
+        <section class="description content-box">
+            <h2>Description</h2>
             <label for="paint-description-none" class="description-close-outer compact-element">DOutside</label>
             <label for="paint-description-none" class="description-close-inner compact-element">DX</label>
             <div class="description-frame">
@@ -140,6 +146,7 @@
         <!-- todo -->
     </article>
 </main>
+<footer>Copyright © 2021 • Wiggel</footer>
 
 
 </body>

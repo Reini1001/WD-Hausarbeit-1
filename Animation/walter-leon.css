@@ -20,30 +20,20 @@
     --link-color-active: #AAA;
 }
 
-* {
-    color: var(--fontColor);
-}
+* {color: var(--fontColor);}
 
 a[href] {
     color: var(--link-color);
     text-decoration: none;
 }
 
-a:hover[href] {
-    color: var(--link-color-hover);
-}
+a:hover[href] {color: var(--link-color-hover);}
 
-a:active[href] {
-    color: var(--link-color-active);
-}
+a:active[href] {color: var(--link-color-active);}
 
-h2, h2:hover, h2:active {
-    color: var(--fontColor);
-}
+h2, h2:hover, h2:active {color: var(--fontColor);}
 
-#clock > line {
-    transform-origin: center;
-}
+#clock > line {transform-origin: center;}
 
 #square > rect {
     fill: var(--green);
@@ -64,21 +54,11 @@ h2, h2:hover, h2:active {
     stroke-width: 3px;
 }
 
-::-webkit-scrollbar {
-    width: 1rem;
-}
-::-webkit-scrollbar-track {
-    background: var(--medium-dark);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--darkest);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--darkest-hover);
-}
-::-webkit-scrollbar-thumb:active {
-    background: var(--darkest-active);
-}
+::-webkit-scrollbar {width: 1rem;}
+::-webkit-scrollbar-track {background: var(--medium-dark);}
+::-webkit-scrollbar-thumb {background: var(--darkest);}
+::-webkit-scrollbar-thumb:hover {background: var(--darkest-hover);}
+::-webkit-scrollbar-thumb:active {background: var(--darkest-active);}
 
 /* Generische spacer, habe ich immer dabei falls ich die mal brauche */
 .line_spacer {width: 100%; border-bottom: solid var(--darkest) 0.1em; display: block}
@@ -87,9 +67,11 @@ h2, h2:hover, h2:active {
 
 /* Farben für <span> elemente um Code in farbe zu zeigen */
 .cyan {color: #1a8069;}
-.lime {color: #50a150;}
-.blue {color: #3f88ce;}
-.orange {color: #fdac53;}
+.lime {color: #8de872;}
+.blue {color: #6ab4ff;}
+.yellow {color: #ffde6d;}
+.orange {color: #dc892b;}
+.purple {color: #8c79ff;}
 
 main {
     padding: 1rem 5rem;
