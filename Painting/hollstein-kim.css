@@ -52,8 +52,7 @@ main > * {
 }
 
 article {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "example code"
                          "properties description";
@@ -83,6 +82,7 @@ article {
 .example svg {
     display: block;
     margin: auto;
+    max-height: 20vh;
 }
 
 .code {
