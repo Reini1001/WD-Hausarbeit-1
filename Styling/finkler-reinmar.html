@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="../images/HSF-favicon.ico" rel="shortcut icon" type="image/icon">
 
     <link href="finkler-reinmar.css" rel="stylesheet" type="text/css">
     <link href="../Reinis-reichhaltigen-Ressourcen/JetBrainsMono-font-nav-footer.css" rel="stylesheet" type="text/css">
     <link href="../Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css">
     <link href="../Reinis-reichhaltigen-Ressourcen/navbar-style.css" rel="stylesheet" type="text/css">
-    <title></title>
+    <title>Styling</title>
 </head>
 <body>
 <nav>
@@ -18,50 +18,241 @@
     <div class="nav-item"><a class="nav-link" href="../Animation/walter-leon.html">Animation</a></div>
     <div class="nav-item"><a class="nav-link" href="../Filter/gottbrecht-kevin.html">Filter</a></div>
     <div class="nav-item"><a class="nav-link" href="#">Painting</a></div>
-    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems, Transformations and Units</a></div>
+    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems, Transformations and
+        Units</a></div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
 <main>
     <h1>Styling</h1>
-    <article>
-        <h2>Thema1</h2>
+    <p id="TopicIntroduction">
+        <!--TODO: Introduction-->
+    </p>
+    <div class="topic">
+        <h2><!--TODO: Headline--></h2>
+        <article>
+            <h3>Font-size</h3>
+            <p>
+                <!--TODO: write tutorial text-->
+            </p>
+            <code>
+                HTML:<br>
+                <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <span class="cBlue tab">&lt;</span><span class="cRed">text</span><span class="cOrange space">id</span><span class="cGreen">="font-size-demo"</span><span class="cOrange space">x</span><span class="cGreen">="50"</span><span class="cOrange space">y</span><span class="cGreen">="80"</span><span class="cOrange space">font-size</span><span class="cGreen">="0.5rem"</span><span class="cBlue">&gt;</span>test text<span class="cBlue">&lt;/</span><span class="cRed">text</span><span class="cBlue">&gt;</span><br>
+                <span class="cYellow">&lt;/</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <br>
+                CSS:<br>
+                <span class="cBlue">#font-size-demo</span><span class="cYellow">{</span><br>
+                <span class="tab">font-size:</span><span class="cOrange space">0.5rem</span>;<br>
+                <span class="cYellow">}</span><br>
+            </code>
+            <svg>
+                <text id="font-size-demo" x="5%" y="25%">small then big</text>
+                <text id="font-size-demo-reverse" x="5%" y="50%">big then small</text>
+            </svg>
+            <hr>
+        </article>
+        <article class="grid-odd">
+            <h3>Direction</h3>
+            <p>
+                <!--TODO: write tutorial text-->
+            </p>
+            <code>
+                HTML:<br>
+                <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <span class="cBlue tab">&lt;</span><span class="cRed">text</span><span class="cOrange space">id</span><span class="cGreen">="direction-demo"</span><span class="cOrange space">x</span><span class="cGreen">="50%"</span><span class="cOrange space">y</span><span class="cGreen">="75%"</span><span class="cOrange space">direction</span><span class="cGreen">="rtl"</span><span class="cBlue">&gt;</span>test text<span class="cBlue">&lt;/</span><span class="cRed">text</span><span class="cBlue">&gt;</span><br>
+                <span class="cYellow">&lt;/</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <br>
+                CSS:<br>
+                <span class="cBlue">#direction-demo</span><span class="cYellow">{</span><br>
+                <span class="tab">direction:</span><span class="space cOrange">ltr</span>;<br>
+                <span class="cYellow">}</span><br>
+            </code>
+            <svg>
+                <line stroke="var(--svgBorderColor)" x1="50%" x2="50%" y1="0%" y2="100%"/>
+                <text id="direction-demo-ltr" x="50%" y="25%">test text</text>
+                <text id="direction-demo-rtl" x="50%" y="75%">test text</text>
+            </svg>
+            <hr>
+        </article>
+        <article>
+            <h3>Fill</h3>
+            <p>
+                <!--TODO: write tutorial text-->
+            </p>
+            <code>
+                HTML:<br>
+                <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <span class="cBlue tab">&lt;</span><span class="cRed">rect</span><span class="cOrange space">id</span><span class="cGreen">="fill-demo"</span><span class="cOrange space">x</span><span class="cGreen">="25%"</span><span class="cOrange space">y</span><span class="cGreen">="25%"</span><span class="cOrange space">width</span><span class="cGreen">="50%"</span><span class="cOrange space">height</span><span class="cGreen">="50%"</span><span class="cOrange space">fill</span><span class="cGreen">="black"</span><span class="cBlue">/&gt;</span><br>
+                <span class="cYellow">&lt;/</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <br>
+                CSS:<br>
+                <span class="cBlue">#fill-demo</span><span class="cYellow">{</span><br>
+                <span class="tab">fill:</span><span class="cOrange space">black</span>;<br>
+                <span class="cYellow">}</span>
+            </code>
+            <svg>
+                <rect height="60%" id="fill-demo" width="60%" x="20%" y="20%" stroke="white"/>
+            </svg>
+            <hr>
+        </article>
+        <article class="grid-odd">
+            <h3>Fill-opacity</h3>
+            <p>
+                <!--TODO: write tutorial text-->
+            </p>
+            <code>
+                HTML:<br>
+                <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <span class="cBlue tab">&lt;</span><span class="cRed">rect</span><span class="cOrange space">id</span><span class="cGreen">="fill-opacity-demo"</span><span class="cOrange space">x</span><span class="cGreen">="25%"</span><span class="cOrange space">y</span><span class="cGreen">="25%"</span><span class="cOrange space">width</span><span class="cGreen">="50%"</span><span class="cOrange space">height</span><span class="cGreen">="50%"</span><span class="cOrange space">fill</span><span class="cGreen">="black"</span><span class="cOrange space">fill-opacity</span><span class="cGreen">="50%"</span><span class="cBlue">/&gt;</span><br>
+                <span class="cYellow">&lt;/</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <br>
+                CSS:<br>
+                <span class="cBlue">#fill-opacity-demo</span><span class="cYellow">{</span><br>
+                <span class="tab">fill-opacity:</span><span class="cOrange space">50%</span>;<br>
+                <span class="cYellow">}</span>
+            </code>
+            <svg>
+                <rect fill="darkslateblue" height="64%" width="64%" x="18%" y="18%"/>
+                <rect fill="black" height="60%" id="fill-opacity-demo" width="60%" x="20%" y="20%"  stroke="white"/>
+            </svg>
+            <hr>
+        </article>
+        <article>
+            <h3>Color</h3>
+            <p>
+                <!--TODO: write tutorial text-->
+            </p>
+            <code>
+                HTML:<br>
+                <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <span class="cBlue tab">&lt;</span><span class="cRed">g</span><span class="cOrange space">id</span><span class="cGreen">="color-demo"</span><span class="cOrange space">color</span><span class="cGreen">="red"</span><span class="cBlue">&gt;</span><br>
+                <span class="cDarkGreen tab2">&lt;</span><span class="cRed">rect</span><span class="cOrange space">x</span><span class="cGreen">="10%"</span><span class="cOrange space">y</span><span class="cGreen">="25%"</span><span class="cOrange space">width</span><span class="cGreen">="50px"</span><span class="cOrange space">height</span><span class="cGreen">="50px"</span><span class="cOrange space">fill</span><span class="cGreen">="currentcolor"</span><span class="cDarkGreen">/&gt;</span><br>
+                <span class="cBlue tab">&lt;/</span><span class="cRed">g</span><span class="cBlue">&gt;</span><br>
+                <span class="cYellow">&lt;/</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <br>
+                CSS:<br>
+                <span class="cBlue">#color-demo</span><span class="cYellow">{</span><br>
+                <span class="tab">color:</span><span class="cOrange space">red</span>;<br>
+                <span class="cYellow">}</span>
+            </code>
+            <svg>
+                <g color="red" id="color-demo">
+                    <rect fill="currentcolor" height="50px" width="50px" x="10%" y="25%"/>
+                    <circle cx="50%" cy="50%" fill="none" r="25px" stroke="currentcolor" stroke-width="5px"/>
+                </g>
+            </svg>
+            <hr>
+        </article>
+        <article class="grid-odd">
+            <h3>Writing-mode</h3>
+            <p>
+                <!--TODO: write tutorial text-->
+            </p>
+            <code>
+                HTML:<br>
+                <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <span class="cBlue tab">&lt;</span><span class="cRed">text</span><span class="cOrange space">id</span><span class="cGreen">="writing-mode-demo"</span><span class="cOrange space">x</span><span class="cGreen">="10%"</span><span class="cOrange space">y</span><span class="cGreen">="10%"</span><span class="cOrange space">writing-mode</span><span class="cGreen">="tb"</span><span class="cBlue">&gt;</span>test text<span class="cBlue">&lt;/</span><span class="cRed">text</span><span class="cBlue">&gt;</span><br>
+                <span class="cYellow">&lt;/</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
+                <br>
+                CSS:<br>
+                <span class="cBlue">#writing-mode-demo</span><span class="cYellow">{</span><br>
+                <span class="tab">writing-mode:</span><span class="cOrange space">tb</span>;<br>
+                <span class="cYellow">}</span>
+            </code>
+            <svg>
+                <text id="writing-mode-demo" x="10%" y="10%">test text</text>
+            </svg>
+        </article>
+    </div>
+    <div class="topic">
+        <h2>SVG's styling properties</h2>
         <p>
-
+            Font properties: <br>
+            <span class="propertyTag">‘font’</span>
+            <span class="propertyTag">‘font-family’</span>
+            <span class="propertyTag">‘font-size’</span>
+            <span class="propertyTag">‘font-size-adjust’</span>
+            <span class="propertyTag">‘font-stretch’</span>
+            <span class="propertyTag">‘font-style’</span>
+            <span class="propertyTag">‘font-variant’</span>
+            <span class="propertyTag">‘font-weight’</span>
+            <br>
+            <br>
+            Text properties: <br>
+            <span class="propertyTag">‘direction’</span>
+            <span class="propertyTag">‘letter-spacing’</span>
+            <span class="propertyTag">‘text-decoration’</span>
+            <span class="propertyTag">‘unicode-bidi’</span>
+            <span class="propertyTag">‘word-spacing’</span>
+            <span class="propertyTag">‘alignment-baseline’</span>
+            <span class="propertyTag">‘baseline-shift’</span>
+            <span class="propertyTag">‘dominant-baseline’</span>
+            <span class="propertyTag">‘glyph-orientation-horizontal’</span>
+            <span class="propertyTag">‘glyph-orientation-vertical’</span>
+            <span class="propertyTag">‘kerning’</span>
+            <span class="propertyTag">‘text-anchor’</span>
+            <span class="propertyTag">‘writing-mode’</span>
+            <br>
+            <br>
+            Other properties for visual media: <br>
+            <span class="propertyTag">‘clip’</span>
+            <span class="propertyTag">‘color’</span>
+            <span class="propertyTag">‘cursor’</span>
+            <span class="propertyTag">‘display’</span>
+            <span class="propertyTag">‘overflow’</span>
+            <span class="propertyTag">‘visibility’</span>
+            <br>
+            <br>
+            Clipping, Masking and Compositing properties: <br>
+            <span class="propertyTag">‘clip-path’</span>
+            <span class="propertyTag">‘clip-rule’</span>
+            <span class="propertyTag">‘mask’</span>
+            <span class="propertyTag">‘opacity’</span>
+            <br>
+            <br>
+            Filter Effects properties: <br>
+            <span class="propertyTag">‘enable-background’</span>
+            <span class="propertyTag">‘filter’</span>
+            <span class="propertyTag">‘flood-color’</span>
+            <span class="propertyTag">‘flood-opacity’</span>
+            <span class="propertyTag">‘lighting-color’</span>
+            <br>
+            <br>
+            Gradient properties: <br>
+            <span class="propertyTag">‘stop-color’</span>
+            <span class="propertyTag">‘stop-opacity’</span>
+            <br>
+            <br>
+            Interactivity properties: <br>
+            <span class="propertyTag">‘pointer-events’</span>
+            <br>
+            <br>
+            Color and Painting properties: <br>
+            <span class="propertyTag">‘color-interpolation’</span>
+            <span class="propertyTag">‘color-interpolation-filters’</span>
+            <span class="propertyTag">‘color-profile’</span>
+            <span class="propertyTag">‘color-rendering’</span>
+            <span class="propertyTag">‘fill’</span>
+            <span class="propertyTag">‘fill-opacity’</span>
+            <span class="propertyTag">‘fill-rule’</span>
+            <span class="propertyTag">‘image-rendering’</span>
+            <span class="propertyTag">‘marker’</span>
+            <span class="propertyTag">‘marker-end’</span>
+            <span class="propertyTag">‘marker-mid’</span>
+            <span class="propertyTag">‘marker-start’</span>
+            <span class="propertyTag">‘shape-rendering’</span>
+            <span class="propertyTag">‘stroke’</span>
+            <span class="propertyTag">‘stroke-dasharray’</span>
+            <span class="propertyTag">‘stroke-dashoffset’</span>
+            <span class="propertyTag">‘stroke-linecap’</span>
+            <span class="propertyTag">‘stroke-linejoin’</span>
+            <span class="propertyTag">‘stroke-miterlimit’</span>
+            <span class="propertyTag">‘stroke-opacity’</span>
+            <span class="propertyTag">‘stroke-width’</span>
+            <span class="propertyTag">‘text-rendering’</span>
         </p>
-        <svg>
-
-        </svg>
-    </article>
+    </div>
     <hr>
-    <article>
-        <h2>Thema2</h2>
-        <p>
-
-        </p>
-        <svg>
-
-        </svg>
-    </article>
-    <hr>
-    <article>
-        <h2>Thema3</h2>
-        <p>
-
-        </p>
-        <svg>
-
-        </svg>
-    </article>
-    <hr>
-    <article>
-        <h2>Thema4</h2>
-        <p>
-
-        </p>
-        <svg>
-
-        </svg>
-    </article>
 </main>
 <footer>
     Copyright &copy; 2021 &#8226; Reini1001

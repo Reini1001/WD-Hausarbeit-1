@@ -1,5 +1,48 @@
+@keyframes font-size-demo {
+    0% { font-size: 0.5rem; }
+    25% { font-size: 0.5rem; }
+    100% { font-size: 1.5rem; }
+}
+@keyframes font-size-demo-reverse {
+    0% {font-size: 1.5rem;}
+    25% {font-size: 1.5rem;}
+    100% {font-size: 0.5rem;}
+}
+
+@keyframes fill-opacity-demo {
+    from {
+        fill-opacity: 100%;
+    }
+    to {
+        fill-opacity: 0;
+    }
+}
+
+@keyframes color-demo {
+    0% {color: hsl(0, 50%, 50%);}
+    5% {color: hsl(18, 50%, 50%);}
+    10% {color: hsl(36, 50%, 50%);}
+    15% {color: hsl(54, 50%, 50%);}
+    20% {color: hsl(72, 50%, 50%);}
+    25% {color: hsl(90, 50%, 50%);}
+    30% {color: hsl(108, 50%, 50%);}
+    35% {color: hsl(126, 50%, 50%);}
+    40% {color: hsl(144, 50%, 50%);}
+    45% {color: hsl(162, 50%, 50%);}
+    50% {color: hsl(180, 50%, 50%);}
+    55% {color: hsl(198, 50%, 50%);}
+    60% {color: hsl(216, 50%, 50%);}
+    65% {color: hsl(234, 50%, 50%);}
+    70% {color: hsl(252, 50%, 50%);}
+    75% {color: hsl(270, 50%, 50%);}
+    80% {color: hsl(288, 50%, 50%);}
+    85% {color: hsl(306, 50%, 50%);}
+    90% {color: hsl(324, 50%, 50%);}
+    95% {color: hsl(342, 50%, 50%);}
+    100% {color: hsl(360, 50%, 50%);}
+}
 :root {
-    --fontColor: hsla(0, 0%, 100%, 0.31);
+    --fontColor: hsl(0, 0%, 100%);
     --backgroundColor: hsl(240deg, 10%, 18.75%);
     --borderColor: hsl(0deg, 0%, 100%);
 
@@ -47,38 +90,126 @@ h1 {
     margin-bottom: 1rem;
     text-align: center;
 }
-hr {
-    border: 1px solid var(--hrColor);
-    border-radius: 1px;
+
+#TopicIntroduction {
+    margin-bottom: 1rem;
+}
+
+.topic {
+    margin-bottom: 1rem;
+}
+.topic h2 {
+    margin-bottom: 1rem;
+}
+
+.propertyTag {
+    padding: 0.2rem 0.4rem;
+    line-height: 2rem;
+    background-color: var(--svgBgColor);
+    border: 1px solid var(--svgBorderColor);
+    border-radius: 1rem;
+    white-space: nowrap;
 }
 
 article {
     display: grid;
-    padding: 2rem;
-    grid-template-rows: 2rem 1fr;
+    padding: 1rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 2rem repeat(3, auto) 2px;
+    grid-template-areas:
+            "headline"
+            "text"
+            "svg"
+            "code"
+            "hr";
     grid-gap: 1rem;
 }
-article:nth-child(4n - 4) {
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "headline svg" "text svg";
-}
-article:nth-child(4n - 2) {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "svg headline" "svg text";
-}
+
 article h2 {
     grid-area: headline;
 }
 article p {
     grid-area: text;
 }
+article code {
+    grid-area: code;
+    padding: 1rem;
+    border: 1px solid var(--svgBorderColor);
+    white-space: nowrap;
+    overflow-x: auto;
+}
 article svg {
     grid-area: svg;
     width: available;
-    aspect-ratio: 1/1;
+    aspect-ratio: 2/1;
     background-color: var(--svgBgColor);
     border: 2px solid var(--svgBorderColor);
     border-radius: 1rem;
+}
+article hr {
+    grid-area: hr;
+    border: 1px solid var(--hrColor);
+    border-radius: 1px;
+}
+svg text {
+    fill: var(--fontColor);
+    transition: font-size 0.5s ease;
+}
+.cGreen {
+    color: #84c170;
+}
+.cDarkGreen {
+    color: #419a53;
+}
+.cRed {
+    color: #ef596f;
+}
+.cOrange {
+     color: #cf9964;
+}
+.cBlue{
+    color: #3398da;
+}
+.cYellow {
+    color: #d8b034;
+}
+.space {
+    padding-left: 0.5rem;
+}
+.tab {
+    padding-left: 2rem;
+}
+.tab2 {
+    padding-left: 4rem;
+}
+#font-size-demo {
+    animation: font-size-demo 2.5s infinite alternate;
+}
+#font-size-demo-reverse {
+    animation: font-size-demo-reverse 2.5s infinite alternate;
+}
+
+#direction-demo-ltr {
+    direction: ltr;
+}
+#direction-demo-rtl {
+    direction: rtl;
+}
+
+#fill-demo {
+    fill: black;
+}
+
+#fill-opacity-demo {
+    animation: fill-opacity-demo 2.5s infinite alternate linear;
+}
+
+#color-demo {
+    animation: color-demo 10s infinite;
+}
+
+#writing-mode-demo {
+    writing-mode: tb;
 }
 
 footer {
@@ -92,23 +223,45 @@ footer {
 }
 
 /*Mobile Geräte*/
-@media screen and (min-width: 300px) {
+@media screen
+and (min-width: 300px) {
     :root {
         font-size: 14px;
     }
 }
+
 /*Tablets*/
-@media screen and (min-width: 426px) {
+@media screen
+and (min-width: 426px) {
 
 }
-/*Mobile Geräte & Tablets horizontal*/
-@media screen and (min-width: 426px) and (min-aspect-ratio: 1/1) {
 
+/*Laptop*/
+@media screen
+and (min-width: 769px) {
+    :root {
+        font-size: 15px;
+    }
+    article {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2rem auto 1fr 2px;
+        grid-template-areas:
+            "headline svg"
+            "text svg"
+            "code code"
+            "hr hr";
+    }
+    article.grid-odd {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2rem auto 1fr 2px;
+        grid-template-areas:
+            "svg headline"
+            "svg text"
+            "code code"
+            "hr hr";
+    }
 }
-/*Laptop (klein)*/
-@media screen and (min-width: 769px) {
 
-}
 /*Rechner*/
 @media screen and (min-width: 1025px) {
     :root {

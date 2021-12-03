@@ -20,26 +20,27 @@ nav {
 }
 .nav-link {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     color: var(--fontColor);
     text-decoration: none;
     text-align: center;
 }
 
 /*Mobile Geräte*/
-@media screen and (min-width: 300px) {
+@media screen
+and (min-width: 300px) {
 
 }
+
 /*Tablets*/
-@media screen and (min-width: 426px) {
+@media screen
+and (min-width: 426px) {
 
 }
-/*Mobile Geräte & Tablets horizontal*/
-@media screen and (min-width: 426px) and (min-aspect-ratio: 1/1) {
 
-}
-/*Laptop (klein)*/
-@media screen and (min-width: 769px) {
+/*Laptop*/
+@media screen
+and (min-width: 769px) {
     .nav-item {
         float: left;
         border-right: 2px solid  var(--navBorderColor);
@@ -50,8 +51,10 @@ nav {
         border-right: 0;
     }
 }
+
 /*Rechner*/
-@media screen and (min-width: 1025px) {
+@media screen
+and (min-width: 1025px) {
     .nav-item {
         border-right: 3px solid  var(--navBorderColor);
     }
