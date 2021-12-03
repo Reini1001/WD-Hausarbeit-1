@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="../Reinis-reichhaltigen-Ressourcen/JetBrainsMono-font-nav-footer.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="walter-leon.css">
     <link type="image/icon" rel="shortcut icon" href="../images/HSF-favicon.ico">
     <title></title>
@@ -20,19 +20,42 @@
 <main>
     <h1>Animation</h1>
     <p>
-        text here
+        Animating with SVGs is similar to animating in CSS. You can, in fact, even animate some SVG-properties with CSS,
+        though we won’t be taking a look at that, since it's the same as any other CSS animation. In this tutorial,
+        I’ll try to showcase some of the most important functions when animating with SVGs using these examples:
     </p>
     <p>
-        <a href="#example_one">text here</a><br>
-        <a href="#example_two">text here</a><br>
-        <a href="#example_three">text here</a>
+        <a href="#example_one">The Vanishing Square</a><br>
+        <a href="#example_two">Two Clockhands</a><br>
+        <a href="#example_three">A Moving Circle</a>
     </p>
     <p>
-        text here
+        It is however important to mention that Animation is a huge topic and that I cannot cover all of it.
+        There will be some links in the <a href="#afterword">afterword</a> for you to get more information.
     </p>
 
+    <div class="spacer1"></div>
     <h2><a id="example_one">Example 1: Vanishing Square</a></h2>
-    <p>text here</p>
+    <p>
+        Before we can animate a shape in SVG, we need to define it. In this case, it's a 180px square in the middle of
+        the SVG.
+        <span class="note">Note: you can look at the code by clicking the button below.</span>
+    </p>
+    <p>
+        Next, you need to define an animate-tag. I usually do this inside the tag of the shape I’m animating
+        <span class="note">(in this case the rect)</span>, but we’ll be looking at another way later.
+    </p>
+    <p>
+        We’re animating the opacity, which is a CSS property, so we have to define the attributeType as CSS.
+        The attributeName is always required and refers to what we’re animating <span class="note">(opacity in this case)</span>.
+        values and keyTimes work very similar to the percentual key-frames in CSS. All it’s saying is, that we want the
+        opacity to change from 1 to 0 and back to 1. dur is the duration that one cycle lasts. Finally, the repeatCount
+        defines how often the animation plays <span class="note">(in this case an infinite amount of times)</span>.
+    </p>
+    <p>
+        Using CSS I simply defined that the square is filled with a variable called green, that its frame
+        <span class="note">(stroke)</span> is 3px wide and that said frame has the color of the variable darkest.
+    </p>
     <div class="image-expander">
         <button class="expander">Show code</button>
         <!-- Das SVG vom Quadrat, escaped mit https://www.freeformatter.com/html-escape.html, gefärbt per Hand, basierend auf
@@ -71,8 +94,11 @@ CSS:
         </rect>
     </svg>
 
+    <div class="spacer2"></div>
     <h2><a id="example_two">Example 2: Clockhands</a></h2>
-    <p>text here</p>
+    <p>
+        text here
+    </p>
     <div class="image-expander">
         <button class="expander">Show code</button>
         <!-- Das SVG von der Uhr, escaped mit https://www.freeformatter.com/html-escape.html, gefärbt per Hand, basierend auf
@@ -155,6 +181,7 @@ CSS:
         </line>
     </svg>
 
+    <div class="spacer2"></div>
     <h2><a id="example_three">Example 3: Moving Circle</a></h2>
     <p>text here</p>
     <div class="image-expander">
@@ -208,7 +235,7 @@ CSS:
                  restart="whenNotActive" />
     </svg>
 
-    <h2>Ending Words</h2>
+    <h2><a id="afterword">Afterword</a></h2>
     <p>text here</p>
 </main>
 <footer>

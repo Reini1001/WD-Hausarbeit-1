@@ -20,7 +20,10 @@
     --link-color-active: #AAA;
 }
 
-* {color: var(--fontColor);}
+* {
+    color: var(--fontColor);
+    font-family: JetBrainsMono, "JetBrains Mono", monospace;
+}
 
 a[href] {
     color: var(--link-color);
@@ -62,8 +65,8 @@ h2, h2:hover, h2:active {color: var(--fontColor);}
 
 /* Generische spacer, habe ich immer dabei falls ich die mal brauche */
 .line_spacer {width: 100%; border-bottom: solid var(--darkest) 0.1em; display: block}
-.spacer1 {height: 1em;}
-.spacer2 {height: 2em;}
+.spacer1 {height: 1em; display: block}
+.spacer2 {height: 2em; display: block}
 
 /* Farben für <span> elemente um Code in farbe zu zeigen */
 .cyan {color: #1a8069;}
@@ -73,11 +76,27 @@ h2, h2:hover, h2:active {color: var(--fontColor);}
 .orange {color: #dc892b;}
 .purple {color: #8c79ff;}
 
+.note {
+    font-size: 0.9em;
+    color: var(--link-color);
+}
+
 main {
     padding: 1rem 5rem;
     text-align: center;
     font-size: 20px;
     margin-bottom: 1em;
+    background: var(--light-dark);
+}
+
+p {
+    background-color: var(--medium-dark);
+    box-shadow: 0 0 0.8em 0.1em var(--medium-dark);
+    text-align: left;
+    width: fit-content;
+    margin: 1.5em auto;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 1em;
 }
 
 body {
@@ -86,10 +105,6 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-}
-
-code {
-    font-family: JetBrainsMono, monospace;
 }
 
 .expander {
@@ -152,9 +167,6 @@ nav {
     transition: background-color linear 0.25s;
     border-bottom: 1px solid var(--fontColor);
 }
-.nav-item:last-child {
-    border-bottom: 0;
-}
 .nav-item:hover {
     background-color: var(--light-dark-hover);
 }
@@ -176,7 +188,7 @@ nav {
 /*Laptop (klein)*/
 @media screen and (min-width: 800px) {
     nav {
-        font-size: calc(0.46rem + 1vw);
+        font-size: calc(0.3rem + 0.83vw);
         position: fixed;
         box-shadow: 0 0 0.6em 0.8em var(--medium-dark);
     }
@@ -193,10 +205,9 @@ nav {
 
     main {
         width: fit-content;
-        font-size: calc(1rem + 0.5vw);
-        max-width: 34em;
-        margin: 3em auto;
-        background: var(--light-dark);
+        font-size: calc(0.6rem + 0.5vw);
+        max-width: 32em;
+        margin: 4em auto;
         border-radius: 1.5em;
         border: solid var(--darkest) 0.2em;
         padding: 1em;
