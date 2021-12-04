@@ -69,12 +69,12 @@ h2, h2:hover, h2:active {color: var(--fontColor);}
 .spacer2 {height: 2em; display: block}
 
 /* Farben für <span> elemente um Code in farbe zu zeigen */
-.cyan {color: #1a8069;}
-.lime {color: #8de872;}
-.blue {color: #6ab4ff;}
-.yellow, .code_in_text {color: #ffde6d;}
-.orange{color: #dc892b;}
-.purple {color: #8c79ff;}
+.cyan {color: #1f8880;}
+.lime {color: #68a560;}
+.blue {color: #5a9697;}
+.yellow, .code_in_text {color: #c9bd59;}
+.orange{color: #ca6f2e;}
+.purple {color: #5e66a9;}
 
 .note {
     font-size: 0.9em;

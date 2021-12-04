@@ -37,8 +37,8 @@
     <div class="spacer1"></div>
     <h2><a id="example_one">Example 1: Vanishing Square</a></h2>
     <p>
-        Before we can animate a shape in SVG, we need to define it. In this case, it's a <span class="code_in_text">180px</span>
-        square in the middle of the SVG.
+        Before we can animate a shape in <span class="code_in_text">SVG</span>, we need to define it. In this case, it's a <span class="code_in_text">180px</span>
+        square in the middle of the <span class="code_in_text">SVG</span>.
         <span class="note">Note: you can look at the code by clicking the button below.</span>
     </p>
     <p>
@@ -71,14 +71,14 @@
         <pre class="expand-this">
             <code>
 HTML:
-<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns=<span class="lime">&quot;http://www.w3.org/2000/svg&quot;</span> id=<span class="lime">&quot;square&quot;</span> width=<span class="lime">&quot;200px&quot;</span> height=<span class="lime">&quot;200px&quot;</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">rect</span> height=<span class="lime">&quot;180px&quot;</span> width=<span class="lime">&quot;180px&quot;</span> x=<span class="lime">&quot;10px&quot;</span> y=<span class="lime">&quot;10px&quot;</span><span class="cyan">&gt;</span>
-        <span class="cyan">&lt;</span><span class="yellow">animate</span> attributeType=<span class="lime">&quot;CSS&quot;</span>
-                 attributeName=<span class="lime">&quot;opacity&quot;</span>
-                 values=<span class="lime">&quot;1 ; 0 ; 1&quot;</span>
-                 keyTimes=<span class="lime">&quot;0 ; 0.5 ; 1&quot;</span>
-                 dur=<span class="lime">&quot;5s&quot;</span>
-                 repeatCount=<span class="lime">&quot;indefinite&quot;</span><span class="cyan">/&gt;</span>
+<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;square&quot;</span> width<span class="lime">=&quot;200px&quot;</span> height<span class="lime">=&quot;200px&quot;</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">rect</span> height<span class="lime">=&quot;180px&quot;</span> width<span class="lime">=&quot;180px&quot;</span> x<span class="lime">=&quot;10px&quot;</span> y<span class="lime">=&quot;10px&quot;</span><span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span><span class="yellow">animate</span> attributeType<span class="lime">=&quot;CSS&quot;</span>
+                 attributeName<span class="lime">=&quot;opacity&quot;</span>
+                 values<span class="lime">=&quot;1 ; 0 ; 1&quot;</span>
+                 keyTimes<span class="lime">=&quot;0 ; 0.5 ; 1&quot;</span>
+                 dur<span class="lime">=&quot;5s&quot;</span>
+                 repeatCount<span class="lime">=&quot;indefinite&quot;</span><span class="cyan">/&gt;</span>
     <span class="cyan">&lt;/</span><span class="yellow">rect</span><span class="cyan">&gt;</span>
 <span class="cyan">&lt;/</span><span class="yellow">svg</span><span class="cyan">&gt;</span>
 
@@ -131,7 +131,7 @@ CSS:
     <p>
         Using CSS, we make sure to set the <span class="code_in_text">transform-origin</span> to <span class="code_in_text">center</span>.
         The <span class="code_in_text">transform-origin</span> defines the point from which all <span class="code_in_text">transform</span>ations
-        originate and resides in the top left corner of the SVG by default. Setting it to <span class="code_in_text">center</span>
+        originate and resides in the top left corner of the <span class="code_in_text">SVG</span> by default. Setting it to <span class="code_in_text">center</span>
         for the <span class="code_in_text">line</span>s makes sure that they <span class="code_in_text">rotate</span> properly.
     </p>
     <div class="image-expander">
@@ -141,39 +141,39 @@ CSS:
         <pre class="expand-this">
             <code>
 HTML:
-<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns=<span class="lime">&quot;http://www.w3.org/2000/svg&quot;</span> id=<span class="lime">&quot;clock&quot;</span> width=<span class="lime">&quot;200px&quot;</span> height=<span class="lime">&quot;200px&quot;</span><span class="cyan">&gt;</span>
+<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;clock&quot;</span> width<span class="lime">=&quot;200px&quot;</span> height<span class="lime">=&quot;200px&quot;</span><span class="cyan">&gt;</span>
 
     &lt;!-- The clock --&gt;
 
-    <span class="cyan">&lt;</span><span class="yellow">circle</span> r=<span class="lime">&quot;40%&quot;</span> cx=<span class="lime">&quot;50%&quot;</span> cy=<span class="lime">&quot;50%&quot;</span> fill=<span class="lime">&quot;white&quot;</span> stroke-width=<span class="lime">&quot;2%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">circle</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;90%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;10%&quot;</span> stroke-width=<span class="lime">&quot;1%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;90%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;10%&quot;</span> stroke-width=<span class="lime">&quot;1%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span> transform=<span class="lime">&quot;rotate(30)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;90%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;10%&quot;</span> stroke-width=<span class="lime">&quot;1%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span> transform=<span class="lime">&quot;rotate(60)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;90%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;10%&quot;</span> stroke-width=<span class="lime">&quot;1%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span> transform=<span class="lime">&quot;rotate(90)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;90%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;10%&quot;</span> stroke-width=<span class="lime">&quot;1%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span> transform=<span class="lime">&quot;rotate(120)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;90%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;10%&quot;</span> stroke-width=<span class="lime">&quot;1%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span> transform=<span class="lime">&quot;rotate(150)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">circle</span> r=<span class="lime">&quot;35%&quot;</span> cx=<span class="lime">&quot;50%&quot;</span> cy=<span class="lime">&quot;50%&quot;</span> fill=<span class="lime">&quot;white&quot;</span> stroke-width=<span class="lime">&quot;0&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">circle</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">circle</span> r=<span class="lime">&quot;4%&quot;</span> cx=<span class="lime">&quot;50%&quot;</span> cy=<span class="lime">&quot;50%&quot;</span> fill=<span class="lime">&quot;black&quot;</span> stroke-width=<span class="lime">&quot;0&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">circle</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">circle</span> r<span class="lime">=&quot;40%&quot;</span> cx<span class="lime">=&quot;50%&quot;</span> cy<span class="lime">=&quot;50%&quot;</span> fill<span class="lime">=&quot;white&quot;</span> stroke-width<span class="lime">=&quot;2%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">circle</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;90%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;10%&quot;</span> stroke-width<span class="lime">=&quot;1%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;90%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;10%&quot;</span> stroke-width<span class="lime">=&quot;1%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span> transform<span class="lime">=&quot;rotate(30)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;90%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;10%&quot;</span> stroke-width<span class="lime">=&quot;1%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span> transform<span class="lime">=&quot;rotate(60)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;90%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;10%&quot;</span> stroke-width<span class="lime">=&quot;1%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span> transform<span class="lime">=&quot;rotate(90)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;90%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;10%&quot;</span> stroke-width<span class="lime">=&quot;1%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span> transform<span class="lime">=&quot;rotate(120)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;90%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;10%&quot;</span> stroke-width<span class="lime">=&quot;1%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span> transform<span class="lime">=&quot;rotate(150)&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">circle</span> r<span class="lime">=&quot;35%&quot;</span> cx<span class="lime">=&quot;50%&quot;</span> cy<span class="lime">=&quot;50%&quot;</span> fill<span class="lime">=&quot;white&quot;</span> stroke-width<span class="lime">=&quot;0&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">circle</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">circle</span> r<span class="lime">=&quot;4%&quot;</span> cx<span class="lime">=&quot;50%&quot;</span> cy<span class="lime">=&quot;50%&quot;</span> fill<span class="lime">=&quot;black&quot;</span> stroke-width<span class="lime">=&quot;0&quot;</span><span class="cyan">&gt;</span><span class="cyan">&lt;/</span><span class="yellow">circle</span><span class="cyan">&gt;</span>
 
     &lt;!-- The clock hands --&gt;
 
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;50%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;18%&quot;</span> stroke-width=<span class="lime">&quot;2%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span><span class="cyan">&gt;</span>
-        <span class="cyan">&lt;</span><span class="yellow">animateTransform</span> attributeName=<span class="lime">&quot;transform&quot;</span>
-                          attributeType=<span class="lime">&quot;XML&quot;</span>
-                          type=<span class="lime">&quot;rotate&quot;</span>
-                          from=<span class="lime">&quot;0&quot;</span>
-                          to=<span class="lime">&quot;360&quot;</span>
-                          dur=<span class="lime">&quot;5s&quot;</span>
-                          repeatCount=<span class="lime">&quot;indefinite&quot;</span><span class="cyan">/&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;50%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;18%&quot;</span> stroke-width<span class="lime">=&quot;2%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span><span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span><span class="yellow">animateTransform</span> attributeName<span class="lime">=&quot;transform&quot;</span>
+                          attributeType<span class="lime">=&quot;XML&quot;</span>
+                          type<span class="lime">=&quot;rotate&quot;</span>
+                          from<span class="lime">=&quot;0&quot;</span>
+                          to<span class="lime">=&quot;360&quot;</span>
+                          dur<span class="lime">=&quot;5s&quot;</span>
+                          repeatCount<span class="lime">=&quot;indefinite&quot;</span><span class="cyan">/&gt;</span>
     <span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">line</span> x1=<span class="lime">&quot;50%&quot;</span> y1=<span class="lime">&quot;50%&quot;</span> x2=<span class="lime">&quot;50%&quot;</span> y2=<span class="lime">&quot;30%&quot;</span> stroke-width=<span class="lime">&quot;3%&quot;</span> stroke=<span class="lime">&quot;black&quot;</span><span class="cyan">&gt;</span>
-        <span class="cyan">&lt;</span><span class="yellow">animateTransform</span> attributeName=<span class="lime">&quot;transform&quot;</span>
-                          attributeType=<span class="lime">&quot;XML&quot;</span>
-                          type=<span class="lime">&quot;rotate&quot;</span>
-                          from=<span class="lime">&quot;0&quot;</span>
-                          to=<span class="lime">&quot;360&quot;</span>
-                          dur=<span class="lime">&quot;60s&quot;</span>
-                          repeatCount=<span class="lime">&quot;indefinite&quot;</span><span class="cyan">/&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">line</span> x1<span class="lime">=&quot;50%&quot;</span> y1<span class="lime">=&quot;50%&quot;</span> x2<span class="lime">=&quot;50%&quot;</span> y2<span class="lime">=&quot;30%&quot;</span> stroke-width<span class="lime">=&quot;3%&quot;</span> stroke<span class="lime">=&quot;black&quot;</span><span class="cyan">&gt;</span>
+        <span class="cyan">&lt;</span><span class="yellow">animateTransform</span> attributeName<span class="lime">=&quot;transform&quot;</span>
+                          attributeType<span class="lime">=&quot;XML&quot;</span>
+                          type<span class="lime">=&quot;rotate&quot;</span>
+                          from<span class="lime">=&quot;0&quot;</span>
+                          to<span class="lime">=&quot;360&quot;</span>
+                          dur<span class="lime">=&quot;60s&quot;</span>
+                          repeatCount<span class="lime">=&quot;indefinite&quot;</span><span class="cyan">/&gt;</span>
     <span class="cyan">&lt;/</span><span class="yellow">line</span><span class="cyan">&gt;</span>
 <span class="cyan">&lt;/</span><span class="yellow">svg</span><span class="cyan">&gt;</span>
 
@@ -218,7 +218,37 @@ CSS:
 
     <div class="spacer2"></div>
     <h2><a id="example_three">Example 3: Moving Circle</a></h2>
-    <p>text here</p>
+    <p>
+        In this final example, we’re moving a <span class="code_in_text">circle</span> from left to right when it's
+        <span class="code_in_text">click</span>ed. This time we’re animating the <span class="code_in_text">circle</span>
+        with a <span class="purple">xlink</span> instead of simply nesting it inside the element. To do this, we need to
+        give the <span class="code_in_text">circle</span> an <span class="code_in_text">id</span>
+        <span class="note">(here we used <span class="code_in_text">moving_circle</span>)</span> and then define the
+        <span class="purple">xlink</span> attribute as a <span class="code_in_text">href</span> and reference the
+        <span class="code_in_text">id</span> <span class="note">(see in the code)</span>. You could also do this with a
+        <span class="code_in_text">class</span>, though the hashtag would need to be replaced with a period
+        <span class="note">(<span class="code_in_text">.moving_circle</span> instead of <span class="code_in_text">#moving_circle</span>)</span>.
+    </p>
+    <p>
+        Another notable difference we have here is the <span class="code_in_text">begin</span> attribute, which specifies
+        an event <span class="note">(here it’s <span class="code_in_text">click</span>)</span>. Only after that event
+        occurs, does the animation start. Since the <span class="code_in_text">repeatCount</span> is set to
+        <span class="code_in_text">1</span>, the animation will play once, every time the <span class="code_in_text">circle</span>
+        is <span class="code_in_text">click</span>ed.
+    </p>
+    <p>
+        Additionally we have defined the <span class="code_in_text">restart</span> attribute as
+        <span class="code_in_text">whenNotActive</span>. This means, that that <span class="code_in_text">click</span>ing
+        the <span class="code_in_text">circle</span> does nothing, as long as it's still moving.
+    </p>
+    <p>
+        Finally, we used CSS to style the <span class="code_in_text">circle</span> <span class="note">(<span class="code_in_text">#moving_circle</span>)</span>
+        and the <span class="code_in_text">SVG</span> <span class="note">(<span class="code_in_text">#circle</span>)</span>.
+        The circle is styled just like the square in <a href="#example_one">example 1</a>
+        <span class="note">(only that it's <span class="code_in_text">fill</span>ed red instead of green)</span>, while
+        the <span class="code_in_text">SVG</span> has a white, semi-transparent <span class="code_in_text">background-color</span>,
+        a <span class="code_in_text">border</span> and a <span class="code_in_text">border-radius</span>.
+    </p>
     <div class="image-expander">
         <button class="expander">Show code</button>
         <!-- Das SVG vom Kreis, escaped mit https://www.freeformatter.com/html-escape.html, gefärbt per Hand, basierend auf
@@ -226,19 +256,19 @@ CSS:
         <pre class="expand-this">
             <code>
 HTML:
-<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns=<span class="lime">&quot;http://www.w3.org/2000/svg&quot;</span> id=<span class="lime">&quot;circle&quot;</span> width=<span class="lime">&quot;200px&quot;</span> height=<span class="lime">&quot;80px&quot;</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">circle</span> id=<span class="lime">&quot;moving_circle&quot;</span> r=<span class="lime">&quot;20px&quot;</span> cx=<span class="lime">&quot;25px&quot;</span> cy=<span class="lime">&quot;40px&quot;</span><span class="cyan">/&gt;</span>
+<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;circle&quot;</span> width<span class="lime">=&quot;200px&quot;</span> height<span class="lime">=&quot;80px&quot;</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">circle</span> id<span class="lime">=&quot;moving_circle&quot;</span> r<span class="lime">=&quot;20px&quot;</span> cx<span class="lime">=&quot;25px&quot;</span> cy<span class="lime">=&quot;40px&quot;</span><span class="cyan">/&gt;</span>
 
     &lt;!-- The animation is linked with an xlink instead of being nested in the circle --&gt;
 
-    <span class="cyan">&lt;</span><span class="yellow">animate</span> <span class="purple">xlink</span>:href=<span class="lime">&quot;#moving_circle&quot;</span>
-             attributeName=<span class="lime">&quot;cx&quot;</span>
-             from=<span class="lime">&quot;25&quot;</span>
-             to=<span class="lime">&quot;400&quot;</span>
-             dur=<span class="lime">&quot;3.5s&quot;</span>
-             repeatCount=<span class="lime">&quot;1&quot;</span>
-             begin=<span class="lime">&quot;click&quot;</span>
-             restart=<span class="lime">&quot;whenNotActive&quot;</span><span class="cyan">/&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">animate</span> <span class="purple">xlink</span>:href<span class="lime">=&quot;#moving_circle&quot;</span>
+             attributeName<span class="lime">=&quot;cx&quot;</span>
+             from<span class="lime">=&quot;25&quot;</span>
+             to<span class="lime">=&quot;400&quot;</span>
+             dur<span class="lime">=&quot;3.5s&quot;</span>
+             repeatCount<span class="lime">=&quot;1&quot;</span>
+             begin<span class="lime">=&quot;click&quot;</span>
+             restart<span class="lime">=&quot;whenNotActive&quot;</span><span class="cyan">/&gt;</span>
 <span class="cyan">&lt;/</span><span class="yellow">svg</span><span class="cyan">&gt;</span>
 
 CSS:
