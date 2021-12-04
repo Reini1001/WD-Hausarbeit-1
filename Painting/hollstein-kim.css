@@ -85,7 +85,7 @@ article {
 .content-box {
     background-color: var(--contentBoxColor);
     padding: 1vw;
-    border: 0.2vw solid black;
+    border: 0.2vw solid var(--boxBorderColor);
     border-radius: 1vw;
 }
 
