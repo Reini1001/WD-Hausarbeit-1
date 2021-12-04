@@ -72,8 +72,8 @@ h2, h2:hover, h2:active {color: var(--fontColor);}
 .cyan {color: #1a8069;}
 .lime {color: #8de872;}
 .blue {color: #6ab4ff;}
-.yellow {color: #ffde6d;}
-.orange {color: #dc892b;}
+.yellow, .code_in_text {color: #ffde6d;}
+.orange{color: #dc892b;}
 .purple {color: #8c79ff;}
 
 .note {
