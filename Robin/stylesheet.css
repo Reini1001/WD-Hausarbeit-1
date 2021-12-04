@@ -12,11 +12,17 @@ nav {
 }
 
 
-h1 {
+h1{
     margin-top:3rem;
     text-align: center;
     font-family: JetBrainsMono;
 }
+
+h2 {
+    text-align: center;
+    font-family: JetBrainsMono;
+}
+
 
 p {
     font-family: "JetBrainsMono";
@@ -37,7 +43,7 @@ p {
     padding: 8px;
 }
 
-.container {
+main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:  auto 1fr;
@@ -45,25 +51,58 @@ p {
 }
 .content {
     text-align: center;
+    margin-top:1rem;
 }
 
 .content:first-child {
     grid-row: 1;
-    grid-column: 1/ -1;
+    grid-column: 1/-1;
 }
 
 .content:nth-child(2) {
-    text-align: center;
-    margin-top:1rem;
     grid-row: 2;
     grid-column: 1;
 }
 
 .content:nth-child(3) {
-    text-align: center;
-    margin-top:1rem;
     grid-row:2;
     grid-column: 3;
+}
+
+.content:nth-child(4) {
+    grid-row:2;
+    grid-column: 2;
+}
+
+
+.content-code {
+    width: 320px;
+    height: 200px;
+    background-color: #2b2b35;
+    text-align: center;
+    margin: 1rem auto;
+    color: white;
+}
+
+.content-code:first-child {
+    grid-row:4;
+    grid-column: 1;
+}
+
+.content-code:nth-child(2) {
+    grid-row:4;
+    grid-column: 2;
+}
+
+.content-code:nth-child(3) {
+    grid-row:4;
+    grid-column: 3;
+}
+
+
+#code {
+    grid-row:3;
+    grid-column: 1 /-1;
 }
 
 svg {
@@ -89,14 +128,14 @@ footer {
 .fadeOut {
     animation: fadeOut 5s infinite;
 }
-/* Die Koordinaten x=420 und y=70 werden langsam ausgefaded */
+/* Die Koordinaten x=280 und y=40 werden langsam ausgefaded */
 @keyframes fadeOut {
     20% { opacity:1}
     50% {opacity:0;}
     100% {opacity:0;}
 }
 
-/* Die Koordinaten x=70 und y=420 werden langsam angezeigt */
+/* Die Koordinaten x=40 und y=280 werden langsam angezeigt */
 .fadeIn {
     animation:fadeIn 5s infinite;
 }
@@ -107,13 +146,21 @@ footer {
     90% {opacity:1;}
 }
 
-/* Hier werden die beiden Grünen Vierecke verändert */
+/* Hier werden die drei Grünen Vierecke verändert */
 .skew:hover {
     transform:skewY(20deg)
 }
 
+.rotate:hover{
+    transform: rotate(45deg);
+}
+
 .scale:hover {
-    transform: scale(1.1,1.1);
+    transform: scale(1.4,1.4);
+}
+
+rect {
+    transform-origin: center;
 }
 
 /* Anpassungen für mobile Versionen */
@@ -128,9 +175,53 @@ footer {
         width: 310px;
     }
 
-    .container {
+    main {
         display: flex;
         flex-direction: column;
+    }
+
+}
+
+@media all and (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  auto 1fr;
+        align-content: center;
+    }
+
+    .content:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .content:nth-child(3) {
+        grid-row:2;
+        grid-column: 2;
+    }
+
+    .content:nth-child(4) {
+        grid-row:3;
+        grid-column: 1 / -1;
+    }
+
+    #code {
+        grid-row:4;
+        grid-column: 1 /-1;
+    }
+
+    .content-code:first-child {
+        grid-row:5;
+        grid-column: 1;
+    }
+
+    .content-code:nth-child(2) {
+        grid-row:5;
+        grid-column: 2;
+    }
+
+    .content-code:nth-child(3) {
+        grid-row:6;
+        grid-column: 2;
     }
 
 }

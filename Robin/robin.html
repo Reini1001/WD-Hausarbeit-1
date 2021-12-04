@@ -22,8 +22,9 @@
 <h1>Coordinate Systems and Transformation</h1>
 <main>
     <!-- Ein SVG Feld von den Maßen 500x500, in dem ein roter Punkt sich bewegt und die Koordinaten dessen position anzeigt -->
-    <div class="container">
+
     <div class="content">
+        <h2> Coordinate System</h2>
         <svg height="320" width=320px>
             <circle class="move" cx="280" cy="40" r="30" stroke="black" stroke-width="2" fill="#DB4437"/>
             <text class="move, fadeOut" x="220" y="15" font-size="13" font-family="JetBrainsMono"> x=280 y=40</text>
@@ -37,28 +38,77 @@
         </p>
     </div>
     <div class="content">
+        <h2>Skewing an element</h2>
         <svg height="320" width=320px>
-            <text class x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to skew </text>
-            <rect class="skew" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black" stroke-width="2"
+            <text x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to skew</text>
+            <rect class="skew" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black"
+                  stroke-width="2"
                   fill="#0F9D58"/>
         </svg>
         <p class="description">
-            The green rectangle can be manipulated by hovering over it. If you hover over it, it skews in an angle of
+            The green rectangle can be manipulated by hovering over it. If you hover over it, it skews in an angle
+            of
             20 degree.
         </p>
     </div>
-        <div class="content">
-            <svg height="320" width="320">
-                <text class x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to scale </text>
-                <rect class="scale" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black" stroke-width="2"
-                      fill="#0F9D58"/>
-            </svg>
-            <p class="description">
-                If you hover over this rectangle it is scaled by 1.1
-            </p>
-        </div>
+    <div class="content">
+        <h2>Rotating an element</h2>
+        <svg height="320" width="320">
+            <text x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to rotate</text>
+            <rect class="rotate" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black"
+                  stroke-width="2"
+                  fill="#0F9D58"/>
+        </svg>
+        <p class="description">
+            If you hover over the rectangle it is rotated in an angle of 45 degree.
+        </p>
+    </div>
+    <div class="content">
+        <h2>Scaling an element</h2>
+        <svg height="320" width="320">
+            <text x="105" y="100" font-size="13" font-family="JetBrainsMono"> Hover to scale</text>
+            <rect class="scale" x="120" y="120" width="70" height="70" rx="10" ry="10" stroke="black"
+                  stroke-width="2"
+                  fill="#0F9D58"/>
+        </svg>
+        <p class="description">
+            If you hover over this rectangle it is scaled by 1.5
+        </p>
     </div>
 
+    <h1 id="code"> The code behind the transformations </h1>
+
+    <div class="content-code">
+        <h2>Code for skewing an element</h2>
+        <pre>
+transform: skewY(20deg) or
+transform: skewX(20deg)  or
+transform: skew(20deg)
+
+to skew it from the center use:
+transform-origin: center;
+        </pre>
+    </div>
+
+    <div class="content-code">
+        <h2>Code for scaling an element</h2>
+        <pre>
+transform: scale(1.4)
+
+to scale it from the center use:
+transform-origin: center;
+
+
+        </pre>
+    </div>
+
+    <div class="content-code">
+        <h2>Code for rotating an element</h2>
+        <pre>
+transform: rotate(45deg)
+
+        </pre>
+    </div>
 
 </main>
 <footer>
