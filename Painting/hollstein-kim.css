@@ -36,6 +36,10 @@
     --iButtonHoverColor: #4545ee;
     --iButtonClickColor: #1717ab;
 
+    --closeButtonNormalColor: #d50707;
+    --closeButtonHoverColor: #fd2727;
+    --closeButtonClickColor: #c50000;
+
     --codeStringColor: #ff4141;
     --codeDynamicColor: #49eeee;
 
@@ -66,7 +70,7 @@ main > * {
     margin: 1vw;
 }
 
-h2 {
+h1, h2 {
     margin-bottom: 1em;
 }
 
@@ -230,8 +234,8 @@ input[type="radio"] {
 
 
 /* Code Formatting */
-.code-tag {
-
+code span {
+    white-space: nowrap;
 }
 .code-layer {
     margin-left: 2em;
@@ -396,7 +400,7 @@ article {
         width: 100%;
         height: 100%;
         grid-template-rows: minmax(5vw,max-content) min-content auto minmax(5vw,max-content);
-        grid-template-columns: minmax(5vw,max-content) auto min-content minmax(5vw,max-content);
+        grid-template-columns: minmax(5vw,max-content) auto 4em minmax(5vw,max-content);
         grid-template-areas: ". . . ."
                              ". title close ."
                              ". window window ."
@@ -416,12 +420,19 @@ article {
 
     .close-inner {
         grid-area: close;
-        background-color: red;
+        background-color: var(--closeButtonNormalColor);
         font-size: 23px;
         font-family: monospace;
         padding: 10px;
         text-align: center;
     }
+    .close-inner:hover {
+        background-color: var(--closeButtonHoverColor);
+    }
+    .close-inner:active {
+        background-color: var(--closeButtonClickColor);
+    }
+
 
     .close-outer {
         grid-row: 1/5;
@@ -434,7 +445,7 @@ article {
     .description-frame {
         grid-area: window;
         overflow-y: scroll;
-        padding-bottom: 4em;
+        padding: 1em 1em 4em 1em;
     }
 
     .code > h2,
@@ -447,7 +458,6 @@ article {
         align-items: center;
         justify-content: center;
     }
-
 }
 
 /* Large Screen Only */
