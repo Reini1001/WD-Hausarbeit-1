@@ -37,24 +37,32 @@
     <div class="spacer1"></div>
     <h2><a id="example_one">Example 1: Vanishing Square</a></h2>
     <p>
-        Before we can animate a shape in SVG, we need to define it. In this case, it's a 180px square in the middle of
-        the SVG.
+        Before we can animate a shape in SVG, we need to define it. In this case, it's a <span class="code_in_text">180px</span>
+        square in the middle of the SVG.
         <span class="note">Note: you can look at the code by clicking the button below.</span>
     </p>
     <p>
-        Next, you need to define an animate-tag. I usually do this inside the tag of the shape I’m animating
-        <span class="note">(in this case the rect)</span>, but we’ll be looking at another way later.
+        Next, you need to define an <span class="code_in_text">animate</span>-tag. I usually do this inside the tag of
+        the shape I’m animating <span class="note">(in this case the <span class="code_in_text">rect</span>)</span>,
+        but we’ll be looking at another way later.
     </p>
     <p>
-        We’re animating the opacity, which is a CSS property, so we have to define the attributeType as CSS.
-        The attributeName is always required and refers to what we’re animating <span class="note">(opacity in this case)</span>.
-        values and keyTimes work very similar to the percentual key-frames in CSS. All it’s saying is, that we want the
-        opacity to change from 1 to 0 and back to 1. dur is the duration that one cycle lasts. Finally, the repeatCount
-        defines how often the animation plays <span class="note">(in this case an infinite amount of times)</span>.
+        We’re animating the <span class="code_in_text">opacity</span>, which is a CSS-property, so we have to define the
+        <span class="code_in_text">attributeType</span> as <span class="code_in_text">CSS</span>. The
+        <span class="code_in_text">attributeName</span> is always required and refers to what we’re animating
+        <span class="note">(<span class="code_in_text">opacity</span> in this case)</span>.
+        <span class="code_in_text">values</span> and <span class="code_in_text">keyTimes</span> work very similar to the
+        percentual key-frames in CSS. All it’s saying is, that we want the <span class="code_in_text">opacity</span> to
+        change from <span class="code_in_text">1</span> to <span class="code_in_text">0</span> and back to
+        <span class="code_in_text">1</span>. <span class="code_in_text">dur</span> is the duration that one cycle lasts.
+        Finally, the <span class="code_in_text">repeatCount</span> defines how often the animation plays
+        <span class="note">(in this case an infinite amount of times)</span>.
     </p>
     <p>
-        Using CSS I simply defined that the square is filled with a variable called green, that its frame
-        <span class="note">(stroke)</span> is 3px wide and that said frame has the color of the variable darkest.
+        Using CSS I simply defined that the square is <span class="code_in_text">fill</span>ed with a <span class="code_in_text">var</span>iable
+        called green, that its frame <span class="note">(<span class="code_in_text">stroke</span>)</span> is
+        <span class="code_in_text">3px</span> wide and that said frame has the color of the
+        <span class="code_in_text">var</span>iable darkest.
     </p>
     <div class="image-expander">
         <button class="expander">Show code</button>
@@ -97,7 +105,34 @@ CSS:
     <div class="spacer2"></div>
     <h2><a id="example_two">Example 2: Clockhands</a></h2>
     <p>
-        text here
+        The clock is just a big white <span class="code_in_text">circle</span> with a black border, six <span class="code_in_text">line</span>s
+        that are <span class="code_in_text">rotate</span>d to fit the hour positions, another white <span class="code_in_text">circle</span>
+        to cut the <span class="code_in_text">line</span>s off and a black <span class="code_in_text">circle</span> as a
+        connection point for the handles.
+        <span class="note">One thing to note here is, that you can use <span class="code_in_text">%</span> instead of
+        <span class="code_in_text">px</span> for almost every attribute, as shown in this example</span>
+    </p>
+    <p>
+        The clock hands are <span class="code_in_text">line</span>s that are rotating. This is done using
+        <span class="code_in_text">animateTransform</span> instead of a normal <span class="code_in_text">animate</span>.
+        The <span class="code_in_text">attributeName</span> needs to be <span class="code_in_text">transform</span> for
+        this one and the <span class="code_in_text">attributeType</span> is <span class="code_in_text">XML</span>.
+        The <span class="code_in_text">type</span> is used to define which <span class="code_in_text">transform</span>ation
+        we want to use <span class="note">(in this case, <span class="code_in_text">rotate</span>)</span>.
+    </p>
+    <p>
+        The attributes <span class="code_in_text">from</span> and <span class="code_in_text">to</span> are used when you
+        only want to define a starting and an ending point in your animation. Since we only want the clock hands to spin
+        in a circle, defining them as <span class="code_in_text">0</span> and <span class="code_in_text">360</span>
+        respectively works just fine. Finally, we only need a <span class="code_in_text">dur</span>
+        <span class="note">(5 seconds and 60 seconds respectively)</span> and a <span class="code_in_text">repeatCount</span>
+        <span class="note">(<span class="code_in_text">indefinite</span>)</span>.
+    </p>
+    <p>
+        Using CSS, we make sure to set the <span class="code_in_text">transform-origin</span> to <span class="code_in_text">center</span>.
+        The <span class="code_in_text">transform-origin</span> defines the point from which all <span class="code_in_text">transform</span>ations
+        originate and resides in the top left corner of the SVG by default. Setting it to <span class="code_in_text">center</span>
+        for the <span class="code_in_text">line</span>s makes sure that they <span class="code_in_text">rotate</span> properly.
     </p>
     <div class="image-expander">
         <button class="expander">Show code</button>
