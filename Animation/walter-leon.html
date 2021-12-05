@@ -37,7 +37,7 @@
     <div class="spacer1"></div>
     <h2><a id="example_one">Example 1: Vanishing Square</a></h2>
     <p>
-        Before we can animate a shape in <span class="code_in_text">SVG</span>, we need to define it. In this case, it's a <span class="code_in_text">180px</span>
+        Before we can animate a shape in <span class="code_in_text">SVG</span>, we need to define it. In this case, it's a <span class="code_in_text">18em</span>
         square in the middle of the <span class="code_in_text">SVG</span>.
         <span class="note">Note: you can look at the code by clicking the button below.</span>
     </p>
@@ -71,8 +71,8 @@
         <pre class="expand-this">
             <code>
 HTML:
-<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;square&quot;</span> width<span class="lime">=&quot;200px&quot;</span> height<span class="lime">=&quot;200px&quot;</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">rect</span> height<span class="lime">=&quot;180px&quot;</span> width<span class="lime">=&quot;180px&quot;</span> x<span class="lime">=&quot;10px&quot;</span> y<span class="lime">=&quot;10px&quot;</span><span class="cyan">&gt;</span>
+<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;square&quot;</span> width<span class="lime">=&quot;20em&quot;</span> height<span class="lime">=&quot;20em&quot;</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">rect</span> height<span class="lime">=&quot;18em&quot;</span> width<span class="lime">=&quot;18em&quot;</span> x<span class="lime">=&quot;1em&quot;</span> y<span class="lime">=&quot;1em&quot;</span><span class="cyan">&gt;</span>
         <span class="cyan">&lt;</span><span class="yellow">animate</span> attributeType<span class="lime">=&quot;CSS&quot;</span>
                  attributeName<span class="lime">=&quot;opacity&quot;</span>
                  values<span class="lime">=&quot;1 ; 0 ; 1&quot;</span>
@@ -91,8 +91,8 @@ CSS:
             </code>
         </pre>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" id="square" width="200px" height="200px">
-        <rect height="180px" width="180px" x="10px" y="10px">
+    <svg xmlns="http://www.w3.org/2000/svg" id="square" width="20em" height="20em">
+        <rect height="18em" width="18em" x="1em" y="1em">
             <animate attributeType="CSS"
                      attributeName="opacity"
                      values="1 ; 0 ; 1"
@@ -110,7 +110,7 @@ CSS:
         to cut the <span class="code_in_text">line</span>s off and a black <span class="code_in_text">circle</span> as a
         connection point for the handles.
         <span class="note">One thing to note here is, that you can use <span class="code_in_text">%</span> instead of
-        <span class="code_in_text">px</span> for almost every attribute, as shown in this example</span>
+        <span class="code_in_text">em</span> or <span class="code_in_text">px</span> for almost every attribute, as shown in this example</span>
     </p>
     <p>
         The clock hands are <span class="code_in_text">line</span>s that are rotating. This is done using
@@ -141,7 +141,7 @@ CSS:
         <pre class="expand-this">
             <code>
 HTML:
-<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;clock&quot;</span> width<span class="lime">=&quot;200px&quot;</span> height<span class="lime">=&quot;200px&quot;</span><span class="cyan">&gt;</span>
+<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;clock&quot;</span> width<span class="lime">=&quot;20em&quot;</span> height<span class="lime">=&quot;20em&quot;</span><span class="cyan">&gt;</span>
 
     &lt;!-- The clock --&gt;
 
@@ -184,7 +184,7 @@ CSS:
             </code>
         </pre>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" id="clock" width="200px" height="200px">
+    <svg xmlns="http://www.w3.org/2000/svg" id="clock" width="20em" height="20em">
         <!-- Die Uhr selber -->
         <circle r="40%" cx="50%" cy="50%" fill="white" stroke-width="2%" stroke="black"></circle>
         <line x1="50%" y1="90%" x2="50%" y2="10%" stroke-width="1%" stroke="black"></line>
@@ -256,15 +256,15 @@ CSS:
         <pre class="expand-this">
             <code>
 HTML:
-<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;circle&quot;</span> width<span class="lime">=&quot;200px&quot;</span> height<span class="lime">=&quot;80px&quot;</span><span class="cyan">&gt;</span>
-    <span class="cyan">&lt;</span><span class="yellow">circle</span> id<span class="lime">=&quot;moving_circle&quot;</span> r<span class="lime">=&quot;20px&quot;</span> cx<span class="lime">=&quot;25px&quot;</span> cy<span class="lime">=&quot;40px&quot;</span><span class="cyan">/&gt;</span>
+<span class="cyan">&lt;</span><span class="yellow">svg</span> xmlns<span class="lime">=&quot;http://www.w3.org/2000/svg&quot;</span> id<span class="lime">=&quot;circle&quot;</span> width<span class="lime">=&quot;20em&quot;</span> height<span class="lime">=&quot;6em&quot;</span><span class="cyan">&gt;</span>
+    <span class="cyan">&lt;</span><span class="yellow">circle</span> id<span class="lime">=&quot;moving_circle&quot;</span> r<span class="lime">=&quot;2em&quot;</span> cx<span class="lime">=&quot;25px&quot;</span> cy<span class="lime">=&quot;3em&quot;</span><span class="cyan">/&gt;</span>
 
     &lt;!-- The animation is linked with an xlink instead of being nested in the circle --&gt;
 
     <span class="cyan">&lt;</span><span class="yellow">animate</span> <span class="purple">xlink</span>:href<span class="lime">=&quot;#moving_circle&quot;</span>
              attributeName<span class="lime">=&quot;cx&quot;</span>
-             from<span class="lime">=&quot;25&quot;</span>
-             to<span class="lime">=&quot;400&quot;</span>
+             from<span class="lime">=&quot;2.5em&quot;</span>
+             to<span class="lime">=&quot;17.5em&quot;</span>
              dur<span class="lime">=&quot;3.5s&quot;</span>
              repeatCount<span class="lime">=&quot;1&quot;</span>
              begin<span class="lime">=&quot;click&quot;</span>
@@ -287,13 +287,13 @@ CSS:
             </code>
         </pre>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" id="circle" width="200px" height="80px">
-        <circle id="moving_circle" r="20px" cx="25px" cy="40px" />
+    <svg xmlns="http://www.w3.org/2000/svg" id="circle" width="20em" height="6em">
+        <circle id="moving_circle" r="2em" cx="2.5em" cy="3em" />
         <!-- The animation is linked with an xlink instead of being nested in the circle -->
         <animate xlink:href="#moving_circle"
                  attributeName="cx"
-                 from="25"
-                 to="400"
+                 from="2.5em"
+                 to="17.5em"
                  dur="3.5s"
                  repeatCount="1"
                  begin="click"
@@ -301,7 +301,21 @@ CSS:
     </svg>
 
     <h2><a id="afterword">Afterword</a></h2>
-    <p>text here</p>
+    <p>
+        I hope that this Tutorial was enough to get you started on animating SVGs. As I’ve stated above, animating is a
+        huge topic and I couldn’t cover all of it, so if you’d like a more expansive tutorial, you can find one here:
+    </p>
+    <p>
+        <a href="https://css-tricks.com/guide-svg-animations-smil">animation-tutorial</a>
+    </p>
+    <p>
+        Additionally, you can read up on the properties in detail on the Mozilla-developer portal:
+    </p>
+    <p class="center_this">
+        <a href="https://developer.mozilla.org/en-US/docs/web/svg/element/animate">animate</a><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform">animateTransform</a>
+
+    </p>
 </main>
 <footer>
     Copyright &copy; 2021 &#8226; ElGurkus
