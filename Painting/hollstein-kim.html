@@ -148,23 +148,32 @@
     </article>
     <article id="basic">
 
-        <input type="radio" id="basic-fill-white" name="basic-fill-select" checked>
-        <input type="radio" id="basic-fill-black" name="basic-fill-select">
-        <input type="radio" id="basic-fill-green" name="basic-fill-select">
-        <input type="radio" id="basic-fill-blue" name="basic-fill-select">
+        <input type="radio" id="basic-fillrule-nonzero" name="basic-fillrule-select" checked>
+        <input type="radio" id="basic-fillrule-evenodd" name="basic-fillrule-select">
 
-        <input type="radio" id="basic-stroke-white" name="basic-stroke-select">
-        <input type="radio" id="basic-stroke-black" name="basic-stroke-select" checked>
-        <input type="radio" id="basic-stroke-green" name="basic-stroke-select">
-        <input type="radio" id="basic-stroke-blue" name="basic-stroke-select">
+        <input type="radio" id="basic-strokewidth-10" name="basic-strokewidth-select" checked>
+        <input type="radio" id="basic-strokewidth-20" name="basic-strokewidth-select">
+        <input type="radio" id="basic-strokewidth-5pc" name="basic-strokewidth-select">
+        <input type="radio" id="basic-strokewidth-10pc" name="basic-strokewidth-select">
+
+        <input type="radio" id="basic-fillopacity-p5" name="basic-fillopacity-select">
+        <input type="radio" id="basic-fillopacity-80pc" name="basic-fillopacity-select" checked>
+        <input type="radio" id="basic-fillopacity-1" name="basic-fillopacity-select">
+
+        <input type="radio" id="basic-strokeopacity-p5" name="basic-strokeopacity-select">
+        <input type="radio" id="basic-strokeopacity-80pc" name="basic-strokeopacity-select">
+        <input type="radio" id="basic-strokeopacity-1" name="basic-strokeopacity-select" checked>
 
         <input type="radio" id="basic-description-none" name="basic-description-select" checked>
-        <input type="radio" id="basic-description-fill" name="basic-description-select">
-        <input type="radio" id="basic-description-stroke" name="basic-description-select">
+        <input type="radio" id="basic-description-fillrule" name="basic-description-select">
+        <input type="radio" id="basic-description-strokewidth" name="basic-description-select">
+        <input type="radio" id="basic-description-fillopacity" name="basic-description-select">
+        <input type="radio" id="basic-description-strokeopacity" name="basic-description-select">
 
         <figure class="example content-box">
             <svg viewBox="0 0 220 230">
-                <polygon class="shape" points="110,20 50,208 200,88 20,88 170,208" style="stroke-linejoin:round;stroke-width:10;fill:#FFFFFF;stroke:#00AA55;"/>
+                <circle cx="110" cy="121" r="60" stroke-width="10" fill="white" stroke="#CC2222"/>
+                <polygon class="shape" points="110,20 50,208 200,88 20,88 170,208" stroke-linejoin="round" fill="#2b2b35" stroke="#CC8844"/>
             </svg>
         </figure>
         <section class="show-code content-box compact-element">
@@ -174,32 +183,56 @@
         </section>
         <section class="properties content-box">
             <h2>Properties</h2>
-            <div id="basic-fill-group" class="selector-group">
+            <div id="basic-fillrule-group" class="selector-group">
                 <div class="selector-label">
-                    <span>fill:</span>
+                    <span>fill-rule:</span>
                 </div>
                 <div class="selector-buttons">
-                    <label for="basic-fill-white"><span class="button">white</span></label>
-                    <label for="basic-fill-black"><span class="button">black</span></label>
-                    <label for="basic-fill-green"><span class="button">#289819</span></label>
-                    <label for="basic-fill-blue"><span class="button">#3faef8</span></label>
+                    <label for="basic-fillrule-nonzero"><span class="button">nonzero</span></label>
+                    <label for="basic-fillrule-evenodd"><span class="button">evenodd</span></label>
                 </div>
                 <div class="selector-i">
-                    <label for="basic-description-fill"><span class="button">i</span></label>
+                    <label for="basic-description-fillrule"><span class="button">i</span></label>
                 </div>
             </div>
-            <div id="basic-stroke-group" class="selector-group">
+            <div id="basic-strokewidth-group" class="selector-group">
                 <div class="selector-label">
-                    <span>stroke:</span>
+                    <span>stroke-width:</span>
                 </div>
                 <div class="selector-buttons">
-                    <label for="basic-stroke-white"><span class="button">white</span></label>
-                    <label for="basic-stroke-black"><span class="button">black</span></label>
-                    <label for="basic-stroke-green"><span class="button">#289819</span></label>
-                    <label for="basic-stroke-blue"><span class="button">#3faef8</span></label>
+                    <label for="basic-strokewidth-10"><span class="button">10</span></label>
+                    <label for="basic-strokewidth-20"><span class="button">20</span></label>
+                    <label for="basic-strokewidth-5pc"><span class="button">5%</span></label>
+                    <label for="basic-strokewidth-10pc"><span class="button">10%</span></label>
                 </div>
                 <div class="selector-i">
-                    <label for="basic-description-stroke"><span class="button">i</span></label>
+                    <label for="basic-description-strokewidth"><span class="button">i</span></label>
+                </div>
+            </div>
+            <div id="basic-fillopacity-group" class="selector-group">
+                <div class="selector-label">
+                    <span>fill-opacity:</span>
+                </div>
+                <div class="selector-buttons">
+                    <label for="basic-fillopacity-p5"><span class="button">0.5</span></label>
+                    <label for="basic-fillopacity-80pc"><span class="button">80%</span></label>
+                    <label for="basic-fillopacity-1"><span class="button">1.0</span></label>
+                </div>
+                <div class="selector-i">
+                    <label for="basic-description-fillopacity"><span class="button">i</span></label>
+                </div>
+            </div>
+            <div id="basic-strokeopacity-group" class="selector-group">
+                <div class="selector-label">
+                    <span>stroke-opacity:</span>
+                </div>
+                <div class="selector-buttons">
+                    <label for="basic-strokeopacity-p5"><span class="button">0.5</span></label>
+                    <label for="basic-strokeopacity-80pc"><span class="button">80%</span></label>
+                    <label for="basic-strokeopacity-1"><span class="button">1.0</span></label>
+                </div>
+                <div class="selector-i">
+                    <label for="basic-description-strokeopacity"><span class="button">i</span></label>
                 </div>
             </div>
 
@@ -244,16 +277,218 @@
             <label for="basic-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="basic-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="basic-description-fill-text">The 'fill' property determines the inner color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0")</p>
-                <p id="basic-description-stroke-text">The 'stroke' property determines the border or line color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0")</p>
+                <p id="basic-description-fillrule-text">1</p>
+                <p id="basic-description-strokewidth-text">2</p>
+                <p id="basic-description-fillopacity-text">3</p>
+                <p id="basic-description-strokeopacity-text">4</p>
             </div>
         </section>
     </article>
     <article id="linecaps">
-        <!-- todo -->
+
+        <input type="radio" id="linecaps-fill-white" name="linecaps-fill-select" checked>
+        <input type="radio" id="linecaps-fill-black" name="linecaps-fill-select">
+        <input type="radio" id="linecaps-fill-green" name="linecaps-fill-select">
+        <input type="radio" id="linecaps-fill-blue" name="linecaps-fill-select">
+
+        <input type="radio" id="linecaps-stroke-white" name="linecaps-stroke-select">
+        <input type="radio" id="linecaps-stroke-black" name="linecaps-stroke-select" checked>
+        <input type="radio" id="linecaps-stroke-green" name="linecaps-stroke-select">
+        <input type="radio" id="linecaps-stroke-blue" name="linecaps-stroke-select">
+
+        <input type="radio" id="linecaps-description-none" name="linecaps-description-select" checked>
+        <input type="radio" id="linecaps-description-fill" name="linecaps-description-select">
+        <input type="radio" id="linecaps-description-stroke" name="linecaps-description-select">
+
+        <figure class="example content-box">
+            <svg viewBox="0 0 120 120">
+                <circle class="shape" cx="60" cy="60" r="50" stroke-width="10"/>
+            </svg>
+        </figure>
+        <section class="show-code content-box compact-element">
+            <div class="selector-buttons">
+                <label for="code-show"><span class="button">Show Code</span></label>
+            </div>
+        </section>
+        <section class="properties content-box">
+            <h2>Properties</h2>
+            <div id="linecaps-fill-group" class="selector-group">
+                <div class="selector-label">
+                    <span>fill:</span>
+                </div>
+                <div class="selector-buttons">
+                    <label for="linecaps-fill-white"><span class="button">white</span></label>
+                    <label for="linecaps-fill-black"><span class="button">black</span></label>
+                    <label for="linecaps-fill-green"><span class="button">#289819</span></label>
+                    <label for="linecaps-fill-blue"><span class="button">#3faef8</span></label>
+                </div>
+                <div class="selector-i">
+                    <label for="linecaps-description-fill"><span class="button">i</span></label>
+                </div>
+            </div>
+            <div id="linecaps-stroke-group" class="selector-group">
+                <div class="selector-label">
+                    <span>stroke:</span>
+                </div>
+                <div class="selector-buttons">
+                    <label for="linecaps-stroke-white"><span class="button">white</span></label>
+                    <label for="linecaps-stroke-black"><span class="button">black</span></label>
+                    <label for="linecaps-stroke-green"><span class="button">#289819</span></label>
+                    <label for="linecaps-stroke-blue"><span class="button">#3faef8</span></label>
+                </div>
+                <div class="selector-i">
+                    <label for="linecaps-description-stroke"><span class="button">i</span></label>
+                </div>
+            </div>
+
+        </section>
+        <section class="code content-box">
+            <h2>Code</h2>
+            <label for="code-none" class="code-close-outer close-outer compact-element"></label>
+            <label for="code-none" class="code-close-inner close-inner compact-element">X</label>
+            <div class="code-frame">
+                <code id="linecaps-code-text">
+                    <code class="code-tag">
+                        &ltsvg&gt<br>
+                    </code>
+                    <code class="code-layer">
+                        <code class="code-tag">
+                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>cy=<code class="code-string">"60"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
+                            <code class="code-string">
+                                <code id="linecaps-code-fill-white-text" class="linecaps-code-fill-text linecaps-code-dynamic-text code-dynamic-text">"white"</code>
+                                <code id="linecaps-code-fill-black-text" class="linecaps-code-fill-text linecaps-code-dynamic-text code-dynamic-text">"black"</code>
+                                <code id="linecaps-code-fill-green-text" class="linecaps-code-fill-text linecaps-code-dynamic-text code-dynamic-text">"#289819"</code>
+                                <code id="linecaps-code-fill-blue-text" class="linecaps-code-fill-text linecaps-code-dynamic-text code-dynamic-text">"#3faef8"</code>
+                            </code></span>
+                            <span>stroke=
+                            <code class="code-string">
+                                <code id="linecaps-code-stroke-white-text" class="linecaps-code-stroke-text linecaps-code-dynamic-text code-dynamic-text">"white"</code>
+                                <code id="linecaps-code-stroke-black-text" class="linecaps-code-stroke-text linecaps-code-dynamic-text code-dynamic-text">"black"</code>
+                                <code id="linecaps-code-stroke-green-text" class="linecaps-code-stroke-text linecaps-code-dynamic-text code-dynamic-text">"#289819"</code>
+                                <code id="linecaps-code-stroke-blue-text" class="linecaps-code-stroke-text linecaps-code-dynamic-text code-dynamic-text">"#3faef8"</code>
+                            </code></span>
+                            <span>stroke-width=<code class="code-string">"10"</code></span>
+                            /&gt<br>
+                        </code>
+                    </code>
+                    <code class="code-tag">
+                        &lt/svg&gt<br>
+                    </code>
+                </code>
+            </div>
+        </section>
+        <section class="description content-box">
+            <h2>Description</h2>
+            <label for="linecaps-description-none" class="description-close-outer close-outer compact-element"></label>
+            <label for="linecaps-description-none" class="description-close-inner close-inner compact-element">X</label>
+            <div class="description-frame">
+                <p id="linecaps-description-fill-text">The 'fill' property determines the inner color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0")</p>
+                <p id="linecaps-description-stroke-text">The 'stroke' property determines the border or line color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0")</p>
+            </div>
+        </section>
     </article>
     <article id="dash">
-        <!-- todo -->
+
+        <input type="radio" id="dash-fill-white" name="dash-fill-select" checked>
+        <input type="radio" id="dash-fill-black" name="dash-fill-select">
+        <input type="radio" id="dash-fill-green" name="dash-fill-select">
+        <input type="radio" id="dash-fill-blue" name="dash-fill-select">
+
+        <input type="radio" id="dash-stroke-white" name="dash-stroke-select">
+        <input type="radio" id="dash-stroke-black" name="dash-stroke-select" checked>
+        <input type="radio" id="dash-stroke-green" name="dash-stroke-select">
+        <input type="radio" id="dash-stroke-blue" name="dash-stroke-select">
+
+        <input type="radio" id="dash-description-none" name="dash-description-select" checked>
+        <input type="radio" id="dash-description-fill" name="dash-description-select">
+        <input type="radio" id="dash-description-stroke" name="dash-description-select">
+
+        <figure class="example content-box">
+            <svg viewBox="0 0 120 120">
+                <circle class="shape" cx="60" cy="60" r="50" stroke-width="10"/>
+            </svg>
+        </figure>
+        <section class="show-code content-box compact-element">
+            <div class="selector-buttons">
+                <label for="code-show"><span class="button">Show Code</span></label>
+            </div>
+        </section>
+        <section class="properties content-box">
+            <h2>Properties</h2>
+            <div id="dash-fill-group" class="selector-group">
+                <div class="selector-label">
+                    <span>fill:</span>
+                </div>
+                <div class="selector-buttons">
+                    <label for="dash-fill-white"><span class="button">white</span></label>
+                    <label for="dash-fill-black"><span class="button">black</span></label>
+                    <label for="dash-fill-green"><span class="button">#289819</span></label>
+                    <label for="dash-fill-blue"><span class="button">#3faef8</span></label>
+                </div>
+                <div class="selector-i">
+                    <label for="dash-description-fill"><span class="button">i</span></label>
+                </div>
+            </div>
+            <div id="dash-stroke-group" class="selector-group">
+                <div class="selector-label">
+                    <span>stroke:</span>
+                </div>
+                <div class="selector-buttons">
+                    <label for="dash-stroke-white"><span class="button">white</span></label>
+                    <label for="dash-stroke-black"><span class="button">black</span></label>
+                    <label for="dash-stroke-green"><span class="button">#289819</span></label>
+                    <label for="dash-stroke-blue"><span class="button">#3faef8</span></label>
+                </div>
+                <div class="selector-i">
+                    <label for="dash-description-stroke"><span class="button">i</span></label>
+                </div>
+            </div>
+
+        </section>
+        <section class="code content-box">
+            <h2>Code</h2>
+            <label for="code-none" class="code-close-outer close-outer compact-element"></label>
+            <label for="code-none" class="code-close-inner close-inner compact-element">X</label>
+            <div class="code-frame">
+                <code id="dash-code-text">
+                    <code class="code-tag">
+                        &ltsvg&gt<br>
+                    </code>
+                    <code class="code-layer">
+                        <code class="code-tag">
+                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>cy=<code class="code-string">"60"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
+                            <code class="code-string">
+                                <code id="dash-code-fill-white-text" class="dash-code-fill-text dash-code-dynamic-text code-dynamic-text">"white"</code>
+                                <code id="dash-code-fill-black-text" class="dash-code-fill-text dash-code-dynamic-text code-dynamic-text">"black"</code>
+                                <code id="dash-code-fill-green-text" class="dash-code-fill-text dash-code-dynamic-text code-dynamic-text">"#289819"</code>
+                                <code id="dash-code-fill-blue-text" class="dash-code-fill-text dash-code-dynamic-text code-dynamic-text">"#3faef8"</code>
+                            </code></span>
+                            <span>stroke=
+                            <code class="code-string">
+                                <code id="dash-code-stroke-white-text" class="dash-code-stroke-text dash-code-dynamic-text code-dynamic-text">"white"</code>
+                                <code id="dash-code-stroke-black-text" class="dash-code-stroke-text dash-code-dynamic-text code-dynamic-text">"black"</code>
+                                <code id="dash-code-stroke-green-text" class="dash-code-stroke-text dash-code-dynamic-text code-dynamic-text">"#289819"</code>
+                                <code id="dash-code-stroke-blue-text" class="dash-code-stroke-text dash-code-dynamic-text code-dynamic-text">"#3faef8"</code>
+                            </code></span>
+                            <span>stroke-width=<code class="code-string">"10"</code></span>
+                            /&gt<br>
+                        </code>
+                    </code>
+                    <code class="code-tag">
+                        &lt/svg&gt<br>
+                    </code>
+                </code>
+            </div>
+        </section>
+        <section class="description content-box">
+            <h2>Description</h2>
+            <label for="dash-description-none" class="description-close-outer close-outer compact-element"></label>
+            <label for="dash-description-none" class="description-close-inner close-inner compact-element">X</label>
+            <div class="description-frame">
+                <p id="dash-description-fill-text">The 'fill' property determines the inner color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0")</p>
+                <p id="dash-description-stroke-text">The 'stroke' property determines the border or line color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0")</p>
+            </div>
+        </section>
     </article>
 </main>
 <footer>Copyright © 2021 • Wiggel</footer>

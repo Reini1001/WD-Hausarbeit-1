@@ -276,7 +276,24 @@ article {
 #paint-stroke-white:checked ~ * #paint-code-stroke-white-text,
 #paint-stroke-black:checked ~ * #paint-code-stroke-black-text,
 #paint-stroke-green:checked ~ * #paint-code-stroke-green-text,
-#paint-stroke-blue:checked ~ * #paint-code-stroke-blue-text
+#paint-stroke-blue:checked ~ * #paint-code-stroke-blue-text,
+
+
+#basic-fillrule-nonzero:checked ~ * #basic-code-fillrule-nonzero-text,
+#basic-fillrule-evenodd:checked ~ * #basic-code-fillrule-evenodd-text,
+
+#basic-strokewidth-10:checked ~ * #basic-code-strokewidth-10-text,
+#basic-strokewidth-20:checked ~ * #basic-code-strokewidth-20-text,
+#basic-strokewidth-5pc:checked ~ * #basic-code-strokewidth-5pc-text,
+#basic-strokewidth-10pc:checked ~ * #basic-code-strokewidth-10pc-text,
+
+#basic-fillopacity-p5:checked ~ * #basic-code-fillopacity-p5-text,
+#basic-fillopacity-80pc:checked ~ * #basic-code-fillopacity-80pc-text,
+#basic-fillopacity-1:checked ~ * #basic-code-fillopacity-1-text,
+
+#basic-strokeopacity-p5:checked ~ * #basic-code-strokeopacity-p5-text,
+#basic-strokeopacity-80pc:checked ~ * #basic-code-strokeopacity-80pc-text,
+#basic-strokeopacity-1:checked ~ * #basic-code-strokeopacity-1-text
 {
     display: inline;
 }
@@ -287,7 +304,12 @@ article {
     display: none;
 }
 #paint-description-fill:checked ~ * #paint-description-fill-text,
-#paint-description-stroke:checked ~ * #paint-description-stroke-text
+#paint-description-stroke:checked ~ * #paint-description-stroke-text,
+
+#basic-description-fillrule:checked ~ * #basic-description-fillrule-text,
+#basic-description-strokewidth:checked ~ * #basic-description-strokewidth-text,
+#basic-description-fillopacity:checked ~ * #basic-description-fillopacity-text,
+#basic-description-strokeopacity:checked ~ * #basic-description-strokeopacity-text
 {
     display: block;
 }
@@ -322,7 +344,41 @@ article {
 
 
 /* Basic */
-/*todo*/
+#basic .shape {
+    transition: all 0.6s ease;
+    fill-rule: nonzero;
+    stroke-width: 10;
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+}
+
+#basic-fillrule-evenodd:checked ~ .example .shape {
+    fill-rule: evenodd;
+}
+
+#basic-strokewidth-20:checked ~ .example .shape {
+    stroke-width: 20;
+}
+#basic-strokewidth-5pc:checked ~ .example .shape {
+    stroke-width: 5%;
+}
+#basic-strokewidth-10pc:checked ~ .example .shape {
+    stroke-width: 10%;
+}
+
+#basic-fillopacity-80pc:checked ~ .example .shape {
+    fill-opacity: 80%;
+}
+#basic-fillopacity-1:checked ~ .example .shape {
+    fill-opacity: 1.0;
+}
+
+#basic-strokeopacity-80pc:checked ~ .example .shape {
+    stroke-opacity: 80%;
+}
+#basic-strokeopacity-1:checked ~ .example .shape {
+    stroke-opacity: 1.0;
+}
 
 /* Linecaps */
 /*todo*/
@@ -348,7 +404,28 @@ article {
 #paint-stroke-blue:checked ~ * label[for="paint-stroke-blue"],
 
 #paint-description-fill:checked ~ * label[for="paint-description-fill"],
-#paint-description-stroke:checked ~ * label[for="paint-description-stroke"]
+#paint-description-stroke:checked ~ * label[for="paint-description-stroke"],
+
+#basic-fillrule-nonzero:checked ~ * label[for="basic-fillrule-nonzero"],
+#basic-fillrule-evenodd:checked ~ * label[for="basic-fillrule-evenodd"],
+
+#basic-strokewidth-10:checked ~ * label[for="basic-strokewidth-10"],
+#basic-strokewidth-20:checked ~ * label[for="basic-strokewidth-20"],
+#basic-strokewidth-5pc:checked ~ * label[for="basic-strokewidth-5pc"],
+#basic-strokewidth-10pc:checked ~ * label[for="basic-strokewidth-10pc"],
+
+#basic-fillopacity-p5:checked ~ * label[for="basic-fillopacity-p5"],
+#basic-fillopacity-80pc:checked ~ * label[for="basic-fillopacity-80pc"],
+#basic-fillopacity-1:checked ~ * label[for="basic-fillopacity-1"],
+
+#basic-strokeopacity-p5:checked ~ * label[for="basic-strokeopacity-p5"],
+#basic-strokeopacity-80pc:checked ~ * label[for="basic-strokeopacity-80pc"],
+#basic-strokeopacity-1:checked ~ * label[for="basic-strokeopacity-1"],
+
+#basic-description-fillrule:checked ~ * label[for="basic-description-fillrule"],
+#basic-description-strokewidth:checked ~ * label[for="basic-description-strokewidth"],
+#basic-description-fillopacity:checked ~ * label[for="basic-description-fillopacity"],
+#basic-description-strokeopacity:checked ~ * label[for="basic-description-strokeopacity"]
 {
     background-color: var(--buttonActiveColor);
 }
@@ -379,7 +456,10 @@ article {
         animation: popup 0.1s cubic-bezier(0.71, 0.99, 1, 0.4);
     }
     .code,
-    #paint-description-none:checked ~ .description
+    #paint-description-none:checked ~ .description,
+    #basic-description-none:checked ~ .description,
+    #linecaps-description-none:checked ~ .description,
+    #dash-description-none:checked ~ .description
     {
         display: none;
     }
