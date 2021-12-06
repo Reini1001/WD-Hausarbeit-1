@@ -310,7 +310,11 @@ article {
 #basic-description-fillrule:checked ~ * #basic-description-fillrule-text,
 #basic-description-strokewidth:checked ~ * #basic-description-strokewidth-text,
 #basic-description-fillopacity:checked ~ * #basic-description-fillopacity-text,
-#basic-description-strokeopacity:checked ~ * #basic-description-strokeopacity-text
+#basic-description-strokeopacity:checked ~ * #basic-description-strokeopacity-text,
+
+#linecaps-description-strokelinecap:checked ~ * #linecaps-description-strokelinecap-text,
+#linecaps-description-strokelinejoin:checked ~ * #linecaps-description-strokelinejoin-text,
+#linecaps-description-strokemiterlimit:checked ~ * #linecaps-description-strokemiterlimit-text
 {
     display: block;
 }
@@ -382,7 +386,36 @@ article {
 }
 
 /* Linecaps */
-/*todo*/
+#linecaps .shape {
+    transition: 0.5s linear;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 4;
+}
+
+#linecaps-strokelinecap-round:checked ~ .example .shape {
+    stroke-linecap: round;
+}
+#linecaps-strokelinecap-square:checked ~ .example .shape {
+    stroke-linecap: square;
+}
+
+#linecaps-strokelinejoin-round:checked ~ .example .shape {
+    stroke-linejoin: round;
+}
+#linecaps-strokelinejoin-bevel:checked ~ .example .shape {
+    stroke-linejoin: bevel;
+}
+
+#linecaps-strokelinejoin-miterlimit-1:checked ~ .example .shape {
+    stroke-miterlimit: 1;
+}
+#linecaps-strokelinejoin-miterlimit-2:checked ~ .example .shape {
+    stroke-miterlimit: 2;
+}
+#linecaps-strokelinejoin-miterlimit-8:checked ~ .example .shape {
+    stroke-miterlimit: 8;
+}
 
 /* Dash */
 /*todo*/
@@ -426,7 +459,27 @@ article {
 #basic-description-fillrule:checked ~ * label[for="basic-description-fillrule"],
 #basic-description-strokewidth:checked ~ * label[for="basic-description-strokewidth"],
 #basic-description-fillopacity:checked ~ * label[for="basic-description-fillopacity"],
-#basic-description-strokeopacity:checked ~ * label[for="basic-description-strokeopacity"]
+#basic-description-strokeopacity:checked ~ * label[for="basic-description-strokeopacity"],
+
+#linecaps-strokelinecap-butt:checked ~ * label[for="linecaps-strokelinecap-butt"],
+#linecaps-strokelinecap-round:checked ~ * label[for="linecaps-strokelinecap-round"],
+#linecaps-strokelinecap-square:checked ~ * label[for="linecaps-strokelinecap-square"],
+
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-round:checked ~ * label[for="linecaps-strokelinejoin-round"],
+#linecaps-strokelinejoin-bevel:checked ~ * label[for="linecaps-strokelinejoin-bevel"],
+
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * label[for="linecaps-strokelinejoin-miterlimit-1"],
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * label[for="linecaps-strokelinejoin-miterlimit-2"],
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * label[for="linecaps-strokelinejoin-miterlimit-4"],
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * label[for="linecaps-strokelinejoin-miterlimit-8"],
+
+#linecaps-description-strokelinecap:checked ~ * label[for="linecaps-description-strokelinecap"],
+#linecaps-description-strokelinejoin:checked ~ * label[for="linecaps-description-strokelinejoin"],
+#linecaps-description-strokemiterlimit:checked ~ * label[for="linecaps-description-strokemiterlimit"]
 {
     background-color: var(--buttonActiveColor);
 }
