@@ -120,6 +120,7 @@ article {
 }
 
 footer {
+    background-color: var(--backgroundColor);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -390,7 +391,7 @@ article {
     transition: 0.5s linear;
     stroke-linecap: butt;
     stroke-linejoin: miter;
-    stroke-miterlimit: 4;
+    stroke-miterlimit: 1;
 }
 
 #linecaps-strokelinecap-round:checked ~ .example .shape {
@@ -407,11 +408,11 @@ article {
     stroke-linejoin: bevel;
 }
 
-#linecaps-strokelinejoin-miterlimit-1:checked ~ .example .shape {
-    stroke-miterlimit: 1;
-}
 #linecaps-strokelinejoin-miterlimit-2:checked ~ .example .shape {
     stroke-miterlimit: 2;
+}
+#linecaps-strokelinejoin-miterlimit-4:checked ~ .example .shape {
+    stroke-miterlimit: 4;
 }
 #linecaps-strokelinejoin-miterlimit-8:checked ~ .example .shape {
     stroke-miterlimit: 8;
@@ -465,10 +466,10 @@ article {
 #linecaps-strokelinecap-round:checked ~ * label[for="linecaps-strokelinecap-round"],
 #linecaps-strokelinecap-square:checked ~ * label[for="linecaps-strokelinecap-square"],
 
-#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-strokelinejoin-miter-label,
-#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-strokelinejoin-miter-label,
-#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-strokelinejoin-miter-label,
-#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
 #linecaps-strokelinejoin-round:checked ~ * label[for="linecaps-strokelinejoin-round"],
 #linecaps-strokelinejoin-bevel:checked ~ * label[for="linecaps-strokelinejoin-bevel"],
 
@@ -498,10 +499,6 @@ article {
 
 /* Small Screen Only */
 @media screen and (max-width: 769px) {
-
-    footer {
-        background-color: var(--backgroundColor);
-    }
 
     .description,
     #code-show:checked ~ * .code
