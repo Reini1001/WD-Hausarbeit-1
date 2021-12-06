@@ -236,6 +236,7 @@ input[type="radio"] {
 /* Code Formatting */
 code span {
     white-space: nowrap;
+    overflow: scroll;
 }
 .code-layer {
     margin-left: 2em;

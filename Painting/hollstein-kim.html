@@ -108,11 +108,12 @@
             <div class="code-frame">
                 <code id="paint-code-text">
                     <code class="code-tag">
-                        &ltsvg&gt<br>
+                        &ltsvg <span>viewBox=<code class="code-string">"0 0 120 120"</code></span>&gt<br>
                     </code>
                     <code class="code-layer">
                         <code class="code-tag">
-                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>cy=<code class="code-string">"60"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
+                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>cy=<code class="code-string">"60"</code></span> <span>r=<code class="code-string">"50"</code></span>
+                            <span>fill=
                             <code class="code-string">
                                 <code id="paint-code-fill-white-text" class="paint-code-fill-text paint-code-dynamic-text code-dynamic-text">"white"</code>
                                 <code id="paint-code-fill-black-text" class="paint-code-fill-text paint-code-dynamic-text code-dynamic-text">"black"</code>
@@ -126,8 +127,7 @@
                                 <code id="paint-code-stroke-green-text" class="paint-code-stroke-text paint-code-dynamic-text code-dynamic-text">"#289819"</code>
                                 <code id="paint-code-stroke-blue-text" class="paint-code-stroke-text paint-code-dynamic-text code-dynamic-text">"#3faef8"</code>
                             </code></span>
-                            <span>stroke-width=<code class="code-string">"10"</code></span>
-                            /&gt<br>
+                            <span>stroke-width=<code class="code-string">"10"</code></span>/&gt<br>
                         </code>
                     </code>
                     <code class="code-tag">
@@ -172,8 +172,8 @@
 
         <figure class="example content-box">
             <svg viewBox="0 0 220 230">
-                <circle cx="110" cy="121" r="60" stroke-width="10" fill="white" stroke="#CC2222"/>
-                <polygon class="shape" points="110,20 50,208 200,88 20,88 170,208" stroke-linejoin="round" fill="#2b2b35" stroke="#CC8844"/>
+                <circle cx="110" cy="121" r="60" fill="white" stroke="#CC2222" stroke-width="10"/>
+                <polygon class="shape" points="110,20 50,208 200,88 20,88 170,208" fill="#2b2b35" stroke="#CC8844" stroke-linejoin="round"/>
             </svg>
         </figure>
         <section class="show-code content-box compact-element">
@@ -244,26 +244,38 @@
             <div class="code-frame">
                 <code id="basic-code-text">
                     <code class="code-tag">
-                        &ltsvg&gt<br>
+                        &ltsvg <span>viewBox=<code class="code-string">"0 0 220 230"</code></span>&gt<br>
                     </code>
                     <code class="code-layer">
                         <code class="code-tag">
-                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>cy=<code class="code-string">"60"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
+                            &ltcircle <span>cx=<code class="code-string">"110"</code></span> <span>cy=<code class="code-string">"121"</code></span> <span>r=<code class="code-string">"60"</code></span> <span>fill=<code class="code-string">"white"</code></span> <span>stroke=<code class="code-string">"#CC2222"</code></span> <span>stroke-width=<code class="code-string">"10"</code></span>/&gt<br>
+                        </code>
+                        <code class="code-tag">
+                            &ltpolygon <span>points=<code class="code-string">"110,20 50,208 200,88 20,88 170,208"</code></span> <span>fill=<code class="code-string">"#2b2b35"</code></span> <span>stroke=<code class="code-string">"#CC8844"</code></span> <span>stroke-linejoin=<code class="code-string">"round"</code></span>
+                            <span>fill-rule=
                             <code class="code-string">
-                                <code id="basic-code-fill-white-text" class="basic-code-fill-text basic-code-dynamic-text code-dynamic-text">"white"</code>
-                                <code id="basic-code-fill-black-text" class="basic-code-fill-text basic-code-dynamic-text code-dynamic-text">"black"</code>
-                                <code id="basic-code-fill-green-text" class="basic-code-fill-text basic-code-dynamic-text code-dynamic-text">"#289819"</code>
-                                <code id="basic-code-fill-blue-text" class="basic-code-fill-text basic-code-dynamic-text code-dynamic-text">"#3faef8"</code>
+                                <code id="basic-code-fillrule-nonzero-text" class="basic-code-fillrule-text basic-code-dynamic-text code-dynamic-text">"nonzero"</code>
+                                <code id="basic-code-fillrule-evenodd-text" class="basic-code-fillrule-text basic-code-dynamic-text code-dynamic-text">"evenodd"</code>
                             </code></span>
-                            <span>stroke=
+                            <span>stroke-width=
                             <code class="code-string">
-                                <code id="basic-code-stroke-white-text" class="basic-code-stroke-text basic-code-dynamic-text code-dynamic-text">"white"</code>
-                                <code id="basic-code-stroke-black-text" class="basic-code-stroke-text basic-code-dynamic-text code-dynamic-text">"black"</code>
-                                <code id="basic-code-stroke-green-text" class="basic-code-stroke-text basic-code-dynamic-text code-dynamic-text">"#289819"</code>
-                                <code id="basic-code-stroke-blue-text" class="basic-code-stroke-text basic-code-dynamic-text code-dynamic-text">"#3faef8"</code>
+                                <code id="basic-code-strokewidth-10-text" class="basic-code-strokewidth-text basic-code-dynamic-text code-dynamic-text">"10"</code>
+                                <code id="basic-code-strokewidth-20-text" class="basic-code-strokewidth-text basic-code-dynamic-text code-dynamic-text">"20"</code>
+                                <code id="basic-code-strokewidth-5pc-text" class="basic-code-strokewidth-text basic-code-dynamic-text code-dynamic-text">"5%"</code>
+                                <code id="basic-code-strokewidth-10pc-text" class="basic-code-strokewidth-text basic-code-dynamic-text code-dynamic-text">"10%"</code>
                             </code></span>
-                            <span>stroke-width=<code class="code-string">"10"</code></span>
-                            /&gt<br>
+                            <span>fill-opacity=
+                            <code class="code-string">
+                                <code id="basic-code-fillopacity-p5-text" class="basic-code-fillopacity-text basic-code-dynamic-text code-dynamic-text">"0.5"</code>
+                                <code id="basic-code-fillopacity-80pc-text" class="basic-code-fillopacity-text basic-code-dynamic-text code-dynamic-text">"80%"</code>
+                                <code id="basic-code-fillopacity-1-text" class="basic-code-fillopacity-text basic-code-dynamic-text code-dynamic-text">"1.0"</code>
+                            </code></span>
+                            <span>stroke-opacity=
+                            <code class="code-string">
+                                <code id="basic-code-strokeopacity-p5-text" class="basic-code-strokeopacity-text basic-code-dynamic-text code-dynamic-text">"0.5"</code>
+                                <code id="basic-code-strokeopacity-80pc-text" class="basic-code-strokeopacity-text basic-code-dynamic-text code-dynamic-text">"80%"</code>
+                                <code id="basic-code-strokeopacity-1-text" class="basic-code-strokeopacity-text basic-code-dynamic-text code-dynamic-text">"1.0"</code>
+                            </code></span>/&gt<br>
                         </code>
                     </code>
                     <code class="code-tag">
@@ -277,10 +289,10 @@
             <label for="basic-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="basic-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="basic-description-fillrule-text">1</p>
-                <p id="basic-description-strokewidth-text">2</p>
-                <p id="basic-description-fillopacity-text">3</p>
-                <p id="basic-description-strokeopacity-text">4</p>
+                <p id="basic-description-fillrule-text">1<!-- todo--></p>
+                <p id="basic-description-strokewidth-text">2<!-- todo--></p>
+                <p id="basic-description-fillopacity-text">3<!-- todo--></p>
+                <p id="basic-description-strokeopacity-text">4<!-- todo--></p>
             </div>
         </section>
     </article>
