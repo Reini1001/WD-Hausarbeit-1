@@ -42,6 +42,7 @@
 
     --codeStringColor: #ff4141;
     --codeDynamicColor: #49eeee;
+    --codeDynamicPropertyColor: #dec1c1;
 
 }
 
@@ -255,6 +256,9 @@ code span {
 .code-dynamic-text {
     color: var(--codeDynamicColor);
 }
+.code-dynamic-property {
+    color: var(--codeDynamicPropertyColor);
+}
 
 .code-min {
     font-size: 0;
@@ -289,7 +293,7 @@ article {
 
 
 /* Display Code */
-.code-dynamic-text {
+.code-dynamic-text, .code-dynamic-property {
     display:none;
 }
 #paint-fill-white:checked ~ * #paint-code-fill-white-text,
@@ -317,7 +321,28 @@ article {
 
 #basic-strokeopacity-p5:checked ~ * #basic-code-strokeopacity-p5-text,
 #basic-strokeopacity-80pc:checked ~ * #basic-code-strokeopacity-80pc-text,
-#basic-strokeopacity-1:checked ~ * #basic-code-strokeopacity-1-text
+#basic-strokeopacity-1:checked ~ * #basic-code-strokeopacity-1-text,
+
+#linecaps-strokelinecap-butt:checked ~ * #linecaps-code-strokelinecap-butt-text,
+#linecaps-strokelinecap-round:checked ~ * #linecaps-code-strokelinecap-round-text,
+#linecaps-strokelinecap-square:checked ~ * #linecaps-code-strokelinecap-square-text,
+
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-code-strokelinejoin-miter-text,
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-code-strokelinejoin-miter-text,
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-code-strokelinejoin-miter-text,
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-code-strokelinejoin-miter-text,
+#linecaps-strokelinejoin-round:checked ~ * #linecaps-code-strokelinejoin-round-text,
+#linecaps-strokelinejoin-bevel:checked ~ * #linecaps-code-strokelinejoin-bevel-text,
+
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-code-strokemiterlimit-1-text,
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-code-strokemiterlimit-2-text,
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-code-strokemiterlimit-4-text,
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-code-strokemiterlimit-8-text,
+
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-code-strokemiterlimit-property-text,
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-code-strokemiterlimit-property-text,
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-code-strokemiterlimit-property-text,
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-code-strokemiterlimit-property-text
 {
     display: inline;
 }
