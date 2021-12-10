@@ -342,7 +342,22 @@ article {
 #linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-code-strokemiterlimit-property-text,
 #linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-code-strokemiterlimit-property-text,
 #linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-code-strokemiterlimit-property-text,
-#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-code-strokemiterlimit-property-text
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-code-strokemiterlimit-property-text,
+
+#dash-strokedasharray-1:checked ~ * #dash-code-strokedasharray-1-text,
+#dash-strokedasharray-2:checked ~ * #dash-code-strokedasharray-2-text,
+#dash-strokedasharray-3:checked ~ * #dash-code-strokedasharray-3-text,
+#dash-strokedasharray-4:checked ~ * #dash-code-strokedasharray-4-text,
+#dash-strokedasharray-5:checked ~ * #dash-code-strokedasharray-5-text,
+#dash-strokedasharray-6:checked ~ * #dash-code-strokedasharray-6-text,
+#dash-strokedasharray-7:checked ~ * #dash-code-strokedasharray-7-text,
+#dash-strokedasharray-8:checked ~ * #dash-code-strokedasharray-8-text,
+#dash-strokedasharray-9:checked ~ * #dash-code-strokedasharray-9-text,
+
+#dash-strokedashoffset-1:checked ~ * #dash-code-strokedashoffset-1-text,
+#dash-strokedashoffset-2:checked ~ * #dash-code-strokedashoffset-2-text,
+#dash-strokedashoffset-3:checked ~ * #dash-code-strokedashoffset-3-text,
+#dash-strokedashoffset-4:checked ~ * #dash-code-strokedashoffset-4-text
 {
     display: inline;
 }

@@ -441,7 +441,7 @@
 
         <figure class="example content-box">
             <svg viewBox="-5 0 80 36">
-                <path class="shape" fill="#222222" stroke="white" stroke-width="3" d="m 30.332662,1.1341507 v 4.6441597 c -4.031244,0.1228487 -8.648245,0.5713254 -13.97589,1.4614102 -5.366571,2.1044773 12.154684,10.7535454 -5.782076,9.4728054 -5.7738196,-0.412268 -20.685768,9.933903 5.782076,11.44478 6.322095,0.360886 7.403159,0.06177 7.561295,-0.10077 -0.03797,0.249095 -0.05991,0.500354 -0.05994,0.752409 1.67e-4,2.761187 2.238507,4.999527 4.999693,4.999696 2.761388,1.17e-4 5.000046,-2.238308 5.000213,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 h 20.142441 c -0.04742,0.277749 -0.07128,0.559006 -0.07132,0.840774 1.67e-4,2.761388 2.238825,4.999813 5.000212,4.999696 2.761187,-1.66e-4 4.99953,-2.238509 4.999697,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 0,0 5.039711,1.554199 6.593911,0 3.905721,-3.905721 3.244262,-9.924518 0,-16.570566 C 58.442958,22.901032 61.205163,8.2578875 38.553348,6.02119 V 1.1341507 Z"/>
+                <path class="shape" d="m 30.332662,1.1341507 v 4.6441597 c -4.031244,0.1228487 -8.648245,0.5713254 -13.97589,1.4614102 -5.366571,2.1044773 12.154684,10.7535454 -5.782076,9.4728054 -5.7738196,-0.412268 -20.685768,9.933903 5.782076,11.44478 6.322095,0.360886 7.403159,0.06177 7.561295,-0.10077 -0.03797,0.249095 -0.05991,0.500354 -0.05994,0.752409 1.67e-4,2.761187 2.238507,4.999527 4.999693,4.999696 2.761388,1.17e-4 5.000046,-2.238308 5.000213,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 h 20.142441 c -0.04742,0.277749 -0.07128,0.559006 -0.07132,0.840774 1.67e-4,2.761388 2.238825,4.999813 5.000212,4.999696 2.761187,-1.66e-4 4.99953,-2.238509 4.999697,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 0,0 5.039711,1.554199 6.593911,0 3.905721,-3.905721 3.244262,-9.924518 0,-16.570566 C 58.442958,22.901032 61.205163,8.2578875 38.553348,6.02119 V 1.1341507 Z" fill="#222222" stroke="white" stroke-width="3"/>
             </svg>
         </figure>
         <section class="show-code content-box compact-element">
@@ -493,26 +493,29 @@
             <div class="code-frame">
                 <code id="dash-code-text">
                     <code class="code-tag">
-                        &ltsvg&gt<br>
+                        &ltsvg <span>viewBox=<code class="code-string">"-5 0 80 36"</code></span>&gt<br>
                     </code>
                     <code class="code-layer">
                         <code class="code-tag">
-                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>d=<code class="code-string code-min">"m 30.332662,1.1341507 v 4.6441597 c -4.031244,0.1228487 -8.648245,0.5713254 -13.97589,1.4614102 -5.366571,2.1044773 12.154684,10.7535454 -5.782076,9.4728054 -5.7738196,-0.412268 -20.685768,9.933903 5.782076,11.44478 6.322095,0.360886 7.403159,0.06177 7.561295,-0.10077 -0.03797,0.249095 -0.05991,0.500354 -0.05994,0.752409 1.67e-4,2.761187 2.238507,4.999527 4.999693,4.999696 2.761388,1.17e-4 5.000046,-2.238308 5.000213,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 h 20.142441 c -0.04742,0.277749 -0.07128,0.559006 -0.07132,0.840774 1.67e-4,2.761388 2.238825,4.999813 5.000212,4.999696 2.761187,-1.66e-4 4.99953,-2.238509 4.999697,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 0,0 5.039711,1.554199 6.593911,0 3.905721,-3.905721 3.244262,-9.924518 0,-16.570566 C 58.442958,22.901032 61.205163,8.2578875 38.553348,6.02119 V 1.1341507 Z"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
+                            &ltpath <span>d=<code class="code-string code-min">"m 30.332662,1.1341507 v 4.6441597 c -4.031244,0.1228487 -8.648245,0.5713254 -13.97589,1.4614102 -5.366571,2.1044773 12.154684,10.7535454 -5.782076,9.4728054 -5.7738196,-0.412268 -20.685768,9.933903 5.782076,11.44478 6.322095,0.360886 7.403159,0.06177 7.561295,-0.10077 -0.03797,0.249095 -0.05991,0.500354 -0.05994,0.752409 1.67e-4,2.761187 2.238507,4.999527 4.999693,4.999696 2.761388,1.17e-4 5.000046,-2.238308 5.000213,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 h 20.142441 c -0.04742,0.277749 -0.07128,0.559006 -0.07132,0.840774 1.67e-4,2.761388 2.238825,4.999813 5.000212,4.999696 2.761187,-1.66e-4 4.99953,-2.238509 4.999697,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 0,0 5.039711,1.554199 6.593911,0 3.905721,-3.905721 3.244262,-9.924518 0,-16.570566 C 58.442958,22.901032 61.205163,8.2578875 38.553348,6.02119 V 1.1341507 Z"</code></span> <span>fill=<code class="code-string">"#222222"</code></span> <span>stroke=<code class="code-string">"white"</code></span> <span>stroke-width=<code class="code-string">"3"</code></span> <span>stroke-dasharray=
                             <code class="code-string">
-                                <code id="dash-code-fill-white-text" class="code-dynamic-text">"white"</code>
-                                <code id="dash-code-fill-black-text" class="code-dynamic-text">"black"</code>
-                                <code id="dash-code-fill-green-text" class="code-dynamic-text">"#289819"</code>
-                                <code id="dash-code-fill-blue-text" class="code-dynamic-text">"#3faef8"</code>
+                                <code id="dash-code-strokedasharray-1-text" class="code-dynamic-text">"5 1"</code>
+                                <code id="dash-code-strokedasharray-2-text" class="code-dynamic-text">"5 2"</code>
+                                <code id="dash-code-strokedasharray-3-text" class="code-dynamic-text">"1 8"</code>
+                                <code id="dash-code-strokedasharray-4-text" class="code-dynamic-text">"8 2 1 2"</code>
+                                <code id="dash-code-strokedasharray-5-text" class="code-dynamic-text">"9 1 2"</code>
+                                <code id="dash-code-strokedasharray-6-text" class="code-dynamic-text">"5 5"</code>
+                                <code id="dash-code-strokedasharray-7-text" class="code-dynamic-text">"5 5%"</code>
+                                <code id="dash-code-strokedasharray-8-text" class="code-dynamic-text">"5% 5"</code>
+                                <code id="dash-code-strokedasharray-9-text" class="code-dynamic-text">"5% 5%"</code>
                             </code></span>
-                            <span>stroke=
+                            <span>stroke-dashoffset=
                             <code class="code-string">
-                                <code id="dash-code-stroke-white-text" class="code-dynamic-text">"white"</code>
-                                <code id="dash-code-stroke-black-text" class="code-dynamic-text">"black"</code>
-                                <code id="dash-code-stroke-green-text" class="code-dynamic-text">"#289819"</code>
-                                <code id="dash-code-stroke-blue-text" class="code-dynamic-text">"#3faef8"</code>
-                            </code></span>
-                            <span>stroke-width=<code class="code-string">"10"</code></span>
-                            /&gt<br>
+                                <code id="dash-code-strokedashoffset-1-text" class="code-dynamic-text">"0"</code>
+                                <code id="dash-code-strokedashoffset-2-text" class="code-dynamic-text">"3"</code>
+                                <code id="dash-code-strokedashoffset-3-text" class="code-dynamic-text">"10"</code>
+                                <code id="dash-code-strokedashoffset-4-text" class="code-dynamic-text">"10%"</code>
+                            </code></span>/&gt<br>
                         </code>
                     </code>
                     <code class="code-tag">
