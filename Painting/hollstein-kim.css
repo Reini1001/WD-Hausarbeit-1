@@ -235,6 +235,10 @@ input[type="radio"] {
 
 
 /* Code Formatting */
+.code-frame {
+    user-select: all;
+}
+
 code span {
     white-space: nowrap;
     overflow: scroll;
@@ -251,6 +255,24 @@ code span {
 .code-dynamic-text {
     color: var(--codeDynamicColor);
 }
+
+.code-min {
+    font-size: 0;
+}
+
+.code-min::before {
+    content: "[...]";
+    font-size: medium;
+}
+
+.code-min:hover {
+    font-size: medium;
+    white-space: break-spaces;
+}
+.code-min:hover::before {
+    content: "";
+}
+
 
 
 /* Display Property Tabs */
@@ -315,7 +337,10 @@ article {
 
 #linecaps-description-strokelinecap:checked ~ * #linecaps-description-strokelinecap-text,
 #linecaps-description-strokelinejoin:checked ~ * #linecaps-description-strokelinejoin-text,
-#linecaps-description-strokemiterlimit:checked ~ * #linecaps-description-strokemiterlimit-text
+#linecaps-description-strokemiterlimit:checked ~ * #linecaps-description-strokemiterlimit-text,
+
+#dash-description-strokedasharray:checked ~ * #dash-description-strokedasharray-text,
+#dash-description-strokedashoffset:checked ~ * #dash-description-strokedashoffset-text
 {
     display: block;
 }
@@ -419,7 +444,48 @@ article {
 }
 
 /* Dash */
-/*todo*/
+#dash .shape {
+    transition: 0.9s linear;
+    stroke-dasharray: 5 1;
+    stroke-dashoffset: 0;
+}
+
+#dash-strokedasharray-2:checked  ~ .example .shape {
+    stroke-dasharray: 5 2;
+}
+#dash-strokedasharray-3:checked  ~ .example .shape {
+    stroke-dasharray: 1 8;
+}
+#dash-strokedasharray-4:checked  ~ .example .shape {
+    stroke-dasharray: 8 2 1 2;
+}
+#dash-strokedasharray-5:checked  ~ .example .shape {
+    stroke-dasharray: 9 1 2;
+}
+#dash-strokedasharray-6:checked  ~ .example .shape {
+    stroke-dasharray: 5 5;
+}
+#dash-strokedasharray-7:checked  ~ .example .shape {
+    stroke-dasharray: 5 5%;
+}
+#dash-strokedasharray-8:checked  ~ .example .shape {
+    stroke-dasharray: 5% 5;
+}
+#dash-strokedasharray-9:checked  ~ .example .shape {
+    stroke-dasharray: 5% 5%;
+}
+
+#dash-strokedashoffset-2:checked  ~ .example .shape {
+    stroke-dashoffset: 3;
+}
+#dash-strokedashoffset-3:checked  ~ .example .shape {
+    stroke-dashoffset: 10;
+}
+#dash-strokedashoffset-4:checked  ~ .example .shape {
+    stroke-dashoffset: 10%;
+}
+
+
 
 
 /* Button Active State */
@@ -480,7 +546,25 @@ article {
 
 #linecaps-description-strokelinecap:checked ~ * label[for="linecaps-description-strokelinecap"],
 #linecaps-description-strokelinejoin:checked ~ * label[for="linecaps-description-strokelinejoin"],
-#linecaps-description-strokemiterlimit:checked ~ * label[for="linecaps-description-strokemiterlimit"]
+#linecaps-description-strokemiterlimit:checked ~ * label[for="linecaps-description-strokemiterlimit"],
+
+#dash-strokedasharray-1:checked ~ * label[for="dash-strokedasharray-1"],
+#dash-strokedasharray-2:checked ~ * label[for="dash-strokedasharray-2"],
+#dash-strokedasharray-3:checked ~ * label[for="dash-strokedasharray-3"],
+#dash-strokedasharray-4:checked ~ * label[for="dash-strokedasharray-4"],
+#dash-strokedasharray-5:checked ~ * label[for="dash-strokedasharray-5"],
+#dash-strokedasharray-6:checked ~ * label[for="dash-strokedasharray-6"],
+#dash-strokedasharray-7:checked ~ * label[for="dash-strokedasharray-7"],
+#dash-strokedasharray-8:checked ~ * label[for="dash-strokedasharray-8"],
+#dash-strokedasharray-9:checked ~ * label[for="dash-strokedasharray-9"],
+
+#dash-strokedashoffset-1:checked ~ * label[for="dash-strokedashoffset-1"],
+#dash-strokedashoffset-2:checked ~ * label[for="dash-strokedashoffset-2"],
+#dash-strokedashoffset-3:checked ~ * label[for="dash-strokedashoffset-3"],
+#dash-strokedashoffset-4:checked ~ * label[for="dash-strokedashoffset-4"],
+
+#dash-description-strokedasharray:checked ~ * label[for="dash-description-strokedasharray"],
+#dash-description-strokedashoffset:checked ~ * label[for="dash-description-strokedashoffset"]
 {
     background-color: var(--buttonActiveColor);
 }

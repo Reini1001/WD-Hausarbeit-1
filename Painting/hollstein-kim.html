@@ -417,23 +417,28 @@
     </article>
     <article id="dash">
 
-        <input type="radio" id="dash-fill-white" name="dash-fill-select" checked>
-        <input type="radio" id="dash-fill-black" name="dash-fill-select">
-        <input type="radio" id="dash-fill-green" name="dash-fill-select">
-        <input type="radio" id="dash-fill-blue" name="dash-fill-select">
+        <input type="radio" id="dash-strokedasharray-1" name="dash-strokedasharray-select" checked>
+        <input type="radio" id="dash-strokedasharray-2" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-3" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-4" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-5" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-6" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-7" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-8" name="dash-strokedasharray-select">
+        <input type="radio" id="dash-strokedasharray-9" name="dash-strokedasharray-select">
 
-        <input type="radio" id="dash-stroke-white" name="dash-stroke-select">
-        <input type="radio" id="dash-stroke-black" name="dash-stroke-select" checked>
-        <input type="radio" id="dash-stroke-green" name="dash-stroke-select">
-        <input type="radio" id="dash-stroke-blue" name="dash-stroke-select">
+        <input type="radio" id="dash-strokedashoffset-1" name="dash-strokedashoffset-select">
+        <input type="radio" id="dash-strokedashoffset-2" name="dash-strokedashoffset-select" checked>
+        <input type="radio" id="dash-strokedashoffset-3" name="dash-strokedashoffset-select">
+        <input type="radio" id="dash-strokedashoffset-4" name="dash-strokedashoffset-select">
 
         <input type="radio" id="dash-description-none" name="dash-description-select" checked>
-        <input type="radio" id="dash-description-fill" name="dash-description-select">
-        <input type="radio" id="dash-description-stroke" name="dash-description-select">
+        <input type="radio" id="dash-description-strokedasharray" name="dash-description-select">
+        <input type="radio" id="dash-description-strokedashoffset" name="dash-description-select">
 
         <figure class="example content-box">
-            <svg viewBox="0 0 120 120">
-                <circle class="shape" cx="60" cy="60" r="50" stroke-width="10"/>
+            <svg viewBox="-5 0 80 36">
+                <path class="shape" fill="#222222" stroke="white" stroke-width="3" d="m 30.332662,1.1341507 v 4.6441597 c -4.031244,0.1228487 -8.648245,0.5713254 -13.97589,1.4614102 -5.366571,2.1044773 12.154684,10.7535454 -5.782076,9.4728054 -5.7738196,-0.412268 -20.685768,9.933903 5.782076,11.44478 6.322095,0.360886 7.403159,0.06177 7.561295,-0.10077 -0.03797,0.249095 -0.05991,0.500354 -0.05994,0.752409 1.67e-4,2.761187 2.238507,4.999527 4.999693,4.999696 2.761388,1.17e-4 5.000046,-2.238308 5.000213,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 h 20.142441 c -0.04742,0.277749 -0.07128,0.559006 -0.07132,0.840774 1.67e-4,2.761388 2.238825,4.999813 5.000212,4.999696 2.761187,-1.66e-4 4.99953,-2.238509 4.999697,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 0,0 5.039711,1.554199 6.593911,0 3.905721,-3.905721 3.244262,-9.924518 0,-16.570566 C 58.442958,22.901032 61.205163,8.2578875 38.553348,6.02119 V 1.1341507 Z"/>
             </svg>
         </figure>
         <section class="show-code content-box compact-element">
@@ -445,30 +450,35 @@
             <h2>Properties</h2>
             <div id="dash-fill-group" class="selector-group">
                 <div class="selector-label">
-                    <span>fill:</span>
+                    <span>stroke-dasharray:</span>
                 </div>
                 <div class="selector-buttons">
-                    <label for="dash-fill-white"><span class="button">white</span></label>
-                    <label for="dash-fill-black"><span class="button">black</span></label>
-                    <label for="dash-fill-green"><span class="button">#289819</span></label>
-                    <label for="dash-fill-blue"><span class="button">#3faef8</span></label>
+                    <label for="dash-strokedasharray-1"><span class="button">5 1</span></label>
+                    <label for="dash-strokedasharray-2"><span class="button">5 2</span></label>
+                    <label for="dash-strokedasharray-3"><span class="button">1 8</span></label>
+                    <label for="dash-strokedasharray-4"><span class="button">8 2 1 2</span></label>
+                    <label for="dash-strokedasharray-5"><span class="button">9 1 2</span></label>
+                    <label for="dash-strokedasharray-6"><span class="button">5 5</span></label>
+                    <label for="dash-strokedasharray-7"><span class="button">5 5%</span></label>
+                    <label for="dash-strokedasharray-8"><span class="button">5% 5</span></label>
+                    <label for="dash-strokedasharray-9"><span class="button">5% 5%</span></label>
                 </div>
                 <div class="selector-i">
-                    <label for="dash-description-fill"><span class="button">i</span></label>
+                    <label for="dash-description-strokedasharray"><span class="button">i</span></label>
                 </div>
             </div>
             <div id="dash-stroke-group" class="selector-group">
                 <div class="selector-label">
-                    <span>stroke:</span>
+                    <span>stroke-dashoffset:</span>
                 </div>
                 <div class="selector-buttons">
-                    <label for="dash-stroke-white"><span class="button">white</span></label>
-                    <label for="dash-stroke-black"><span class="button">black</span></label>
-                    <label for="dash-stroke-green"><span class="button">#289819</span></label>
-                    <label for="dash-stroke-blue"><span class="button">#3faef8</span></label>
+                    <label for="dash-strokedashoffset-1"><span class="button">0</span></label>
+                    <label for="dash-strokedashoffset-2"><span class="button">3</span></label>
+                    <label for="dash-strokedashoffset-3"><span class="button">10</span></label>
+                    <label for="dash-strokedashoffset-4"><span class="button">10%</span></label>
                 </div>
                 <div class="selector-i">
-                    <label for="dash-description-stroke"><span class="button">i</span></label>
+                    <label for="dash-description-strokedashoffset"><span class="button">i</span></label>
                 </div>
             </div>
 
@@ -484,7 +494,7 @@
                     </code>
                     <code class="code-layer">
                         <code class="code-tag">
-                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>cy=<code class="code-string">"60"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
+                            &ltcircle <span>cx=<code class="code-string">"60"</code></span> <span>d=<code class="code-string code-min">"m 30.332662,1.1341507 v 4.6441597 c -4.031244,0.1228487 -8.648245,0.5713254 -13.97589,1.4614102 -5.366571,2.1044773 12.154684,10.7535454 -5.782076,9.4728054 -5.7738196,-0.412268 -20.685768,9.933903 5.782076,11.44478 6.322095,0.360886 7.403159,0.06177 7.561295,-0.10077 -0.03797,0.249095 -0.05991,0.500354 -0.05994,0.752409 1.67e-4,2.761187 2.238507,4.999527 4.999693,4.999696 2.761388,1.17e-4 5.000046,-2.238308 5.000213,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 h 20.142441 c -0.04742,0.277749 -0.07128,0.559006 -0.07132,0.840774 1.67e-4,2.761388 2.238825,4.999813 5.000212,4.999696 2.761187,-1.66e-4 4.99953,-2.238509 4.999697,-4.999696 -3.7e-5,-0.281768 -0.02389,-0.563025 -0.07131,-0.840774 0,0 5.039711,1.554199 6.593911,0 3.905721,-3.905721 3.244262,-9.924518 0,-16.570566 C 58.442958,22.901032 61.205163,8.2578875 38.553348,6.02119 V 1.1341507 Z"</code></span> <span>r=<code class="code-string">"50"</code></span> <span>fill=
                             <code class="code-string">
                                 <code id="dash-code-fill-white-text" class="dash-code-fill-text dash-code-dynamic-text code-dynamic-text">"white"</code>
                                 <code id="dash-code-fill-black-text" class="dash-code-fill-text dash-code-dynamic-text code-dynamic-text">"black"</code>
@@ -513,8 +523,8 @@
             <label for="dash-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="dash-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="dash-description-fill-text"></p>
-                <p id="dash-description-stroke-text"></p>
+                <p id="dash-description-strokedasharray-text">1</p>
+                <p id="dash-description-strokedashoffset-text">2</p>
             </div>
         </section>
     </article>
