@@ -1,36 +1,35 @@
 :root {
-    --fontColor: hsl(0deg, 0%, 100%);
-    --backgroundColor: hsl(155, 23%, 21%);
-    --borderColor: hsl(0deg, 0%, 100%);
+    /* General */
+    --fontColor: #ffffff;
+    --backgroundColor: #294238;
 
-    --contentBoxColor: hsl(0, 4%, 32%);
-    --tabGroupColor: hsl(0, 0%, 12%);
-    --boxBorderColor: hsl(0, 0%, 0%);
-    --propertyBoxColor: hsl(240, 1%, 20%);
+    /* Nav */
+    --navBgColor: #262027;
+    --navBorderColor: #ffffff;
+    --navHoverColor: #3d3d4c;
+    --navActivColor: #006000;
+
+    /* Scrollbar */
+    --scrollBgColor: #22222a;
+    --scrollThumbColor: #505062;
+    --scrollHoverColor: #ffffff;
+
+    /* Boxes */
+    --contentBoxColor: #554e4e;
+    --tabGroupColor: #1f1f1f;
+    --boxBorderColor: #000000;
+    --propertyBoxColor: #323234;
     --transparentBackplate: #6B6B6BAA;
 
-
-
-    /* --nav-- */
-    --navBgColor: hsl(291, 10%, 14%);
-    --navBorderColor: hsl(0deg, 0%, 100%);
-    --navHoverColor: hsl(240, 11%, 27%);
-    --navActivColor: hsl(120deg, 100%, 18.75%);
-
-    /* --scrollbar-- */
-    --scrollBgColor: hsl(240deg, 10%, 15%);
-    --scrollThumbColor: hsl(240deg, 10%, 35%);
-    --scrollHoverColor: hsl(0deg, 0%, 100%);
-
-
+    /* Buttons */
     --buttonNormalColor: #236700;
     --buttonHoverColor: #17a10d;
     --buttonClickColor: #00540b;
     --buttonActiveColor: #128c8c;
 
-    --tabGroupButtonNormalColor: hsl(0, 0%, 29%);
-    --tabGroupButtonHoverColor: hsl(0, 0%, 39%);
-    --tabGroupButtonClickColor: hsl(0, 0%, 14%);
+    --tabGroupButtonNormalColor: #4a4a4a;
+    --tabGroupButtonHoverColor: #636363;
+    --tabGroupButtonClickColor: #242424;
 
     --iButtonNormalColor: #2222EE;
     --iButtonHoverColor: #4545ee;
@@ -40,6 +39,7 @@
     --closeButtonHoverColor: #fd2727;
     --closeButtonClickColor: #c50000;
 
+    /* Code */
     --codeStringColor: #ff4141;
     --codeDynamicColor: #49eeee;
     --codeDynamicPropertyColor: #dec1c1;
@@ -99,7 +99,7 @@ article {
 
 .example {
     grid-area: example;
-    display:flex;
+    display: flex;
     align-content: center;
 }
 .example svg {
@@ -183,7 +183,7 @@ input[type="radio"] {
 .selector-i {
     flex-basis: 10%;
     flex-grow: 1;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-content: center;
 }
@@ -207,7 +207,7 @@ input[type="radio"] {
 .selector-buttons {
     flex-basis: 50%;
     flex-grow: 4;
-    display:flex;
+    display: flex;
     gap: 3px;
     justify-content: center;
 }
@@ -263,12 +263,10 @@ code span {
 .code-min {
     font-size: 0;
 }
-
 .code-min::before {
     content: "[...]";
     font-size: medium;
 }
-
 .code-min:hover {
     font-size: medium;
     white-space: break-spaces;
@@ -294,7 +292,7 @@ article {
 
 /* Display Code */
 .code-dynamic-text, .code-dynamic-property {
-    display:none;
+    display: none;
 }
 #paint-fill-white:checked ~ * #paint-code-fill-white-text,
 #paint-fill-black:checked ~ * #paint-code-fill-black-text,
@@ -716,7 +714,8 @@ article {
 }
 
 /* Large Screen Only */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 770px) {
+
     .compact-element {
         display: none;
     }
