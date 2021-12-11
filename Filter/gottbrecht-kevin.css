@@ -9,6 +9,8 @@
 body {
     background-color: darkslategray;
     margin: 0;
+    text-decoration-color: white;
+    text-decoration: none;
 }
 
 nav {
@@ -39,6 +41,7 @@ grid-gap: 1rem;
     border-radius: 2em;
     background-color: rgb(31, 54, 54);
     margin-bottom: 1em;
+
 }
 .example {
     padding: 1em;
@@ -115,7 +118,7 @@ nav{
             font-family: Verdana, sans-serif;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows:    auto 1fr 1fr;
+            grid-template-rows:    auto 1fr;
         ;}
 
         nav{
