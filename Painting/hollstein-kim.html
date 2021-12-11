@@ -440,13 +440,19 @@
             <label for="linecaps-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
                 <p id="linecaps-description-strokelinecap-text">
-                    1<!-- todo-->
+                    The 'stroke-linecap' property determines the shape of line endpoints.<br>
+                    These can be cut off with 'butt' or have a cap with 'square' or 'round'.
                 </p>
                 <p id="linecaps-description-strokelinejoin-text">
-                    2<!-- todo-->
+                    The 'stroke-linejoin' property determines how two meeting lines connect.<br>
+                    They can be cut off with the 'bevel' join or be rounded off with the 'round' join.<br><br>
+                    The 'miter' join makes the lines continue until their bounds meet in a point.<br>
+                    If this point exceeds the specified miterlimit, the lines will instead be cut off using the 'bevel' join.
                 </p>
                 <p id="linecaps-description-strokemiterlimit-text">
-                    3<!-- todo-->
+                    The 'stroke-miterlimit' property is used in determining whether the 'miter' join will join up two lines.<br>
+                    It specifies the ratio of the maximum miter length to the 'stroke-width'.<br>
+                    For example, a value of 2 would allow miters to have twice the length of the 'stroke-width'.
                 </p>
             </div>
         </section>
@@ -563,10 +569,17 @@
             <label for="dash-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
                 <p id="dash-description-strokedasharray-text">
-                    1<!-- todo-->
+                    The 'stroke-dasharray' property determines the width of line segments and gaps on the stroke.<br>
+                    The given list of lengths will be repeated along the line.<br>
+                    It will always alternate between reading the length of one line segment and reading the length of one gap.<br>
+                    In the list you can use an Integer specifying units or a percentage relative to the viewport.<br><br>
+                    &gt <a target="_blank" rel="noopener noreferrer" href="https://oreillymedia.github.io/Using_SVG/extras/ch05-percentages.html">more information on percentages</a>
                 </p>
                 <p id="dash-description-strokedashoffset-text">
-                    2<!-- todo-->
+                    The 'stroke-dasharray' property determines the starting position within the pattern.<br>
+                    You can use an Integer specifying units or a percentage relative to the viewport.<br><br>
+                    &gt <a target="_blank" rel="noopener noreferrer" href="https://oreillymedia.github.io/Using_SVG/extras/ch05-percentages.html">more information on percentages</a>
+
                 </p>
             </div>
         </section>
