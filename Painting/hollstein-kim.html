@@ -35,7 +35,11 @@
 
     <header class="content-box">
         <h1>Painting</h1>
-        <p>Painting operations allow for adjusting visuals of svg-elements like basic shapes, paths and texts. They are specified as properties of the element within inline-svg. This Page will outline the basic painting operations.</p>
+        <p>
+            Painting operations allow for adjusting visuals of svg-elements like basic shapes, paths and texts.
+            They are specified as properties of the element within inline-svg.
+            This Page will outline the basic painting operations.
+        </p>
     </header>
     <section id="property-tab-group" class="selector-group">
         <label for="property-tab-paint"><span class="button">Paint</span></label>
@@ -141,8 +145,14 @@
             <label for="paint-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="paint-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="paint-description-fill-text">The 'fill' property determines the inner color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0").</p>
-                <p id="paint-description-stroke-text">The 'stroke' property determines the border or line color of the element it is applied on.<br> You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0").</p>
+                <p id="paint-description-fill-text">
+                    The 'fill' property determines the inner color of the element it is applied on.<br>
+                    You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0").
+                </p>
+                <p id="paint-description-stroke-text">
+                    The 'stroke' property determines the border or line color of the element it is applied on.<br>
+                    You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0").
+                </p>
             </div>
         </section>
     </article>
@@ -289,10 +299,27 @@
             <label for="basic-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="basic-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="basic-description-fillrule-text">1<!-- todo--></p>
-                <p id="basic-description-strokewidth-text">2<!-- todo--></p>
-                <p id="basic-description-fillopacity-text">3<!-- todo--></p>
-                <p id="basic-description-strokeopacity-text">4<!-- todo--></p>
+                <p id="basic-description-fillrule-text">
+                    The 'fill-rule' property determines which parts of a shape are considered inside and therefore filled.<br>
+                    To determine if a point is inside, a ray is drawn to infinty from that point.<br><br>
+                    The 'nonzero' rule adds up all crossed lines where crossing the ray from left to right adds 1 and crossing it from right to left subtracts 1.
+                    If the result is nonzero, the point is inside.<br><br>
+                    The 'evenodd' rule counts the number of crossed lines.
+                    If this number is odd, the point is inside.
+                </p>
+                <p id="basic-description-strokewidth-text">
+                    The 'stroke-width' property determines the width of the stroke.<br>
+                    You can use an Integer specifying units or a percentage relative to the viewport.<br><br>
+                    &gt <a target="_blank" rel="noopener noreferrer" href="https://oreillymedia.github.io/Using_SVG/extras/ch05-percentages.html">more information on percentages</a>
+                </p>
+                <p id="basic-description-fillopacity-text">
+                    The 'fill-opacity' property determines the opacity of the fill.<br>
+                    You can use a decimal between 0.0 and 1.0 or a percentage, both mapping to the same range.
+                </p>
+                <p id="basic-description-strokeopacity-text">
+                    The 'stroke-opacity' property determines the opacity of the stroke.<br>
+                    You can use a decimal between 0.0 and 1.0 or a percentage, both mapping to the same range.
+                </p>
             </div>
         </section>
     </article>
@@ -412,9 +439,15 @@
             <label for="linecaps-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="linecaps-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="linecaps-description-strokelinecap-text">1</p>
-                <p id="linecaps-description-strokelinejoin-text">2</p>
-                <p id="linecaps-description-strokemiterlimit-text">3</p>
+                <p id="linecaps-description-strokelinecap-text">
+                    1<!-- todo-->
+                </p>
+                <p id="linecaps-description-strokelinejoin-text">
+                    2<!-- todo-->
+                </p>
+                <p id="linecaps-description-strokemiterlimit-text">
+                    3<!-- todo-->
+                </p>
             </div>
         </section>
     </article>
@@ -529,8 +562,12 @@
             <label for="dash-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="dash-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
-                <p id="dash-description-strokedasharray-text">1</p>
-                <p id="dash-description-strokedashoffset-text">2</p>
+                <p id="dash-description-strokedasharray-text">
+                    1<!-- todo-->
+                </p>
+                <p id="dash-description-strokedashoffset-text">
+                    2<!-- todo-->
+                </p>
             </div>
         </section>
     </article>

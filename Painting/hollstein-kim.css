@@ -44,6 +44,11 @@
     --codeDynamicColor: #49eeee;
     --codeDynamicPropertyColor: #dec1c1;
 
+    /* Link */
+    --linkNormalColor: #83bdff;
+    --linkHoverColor: #bad2f8;
+    --linkClickColor: #507fb2;
+
 }
 
 /* General Formatting */
@@ -128,6 +133,17 @@ footer {
     padding: 0.5rem;
     width: 100%;
     text-align: center;
+}
+
+/* Link Formatting */
+main a, main a:visited {
+    color: var(--linkNormalColor);
+}
+main a:hover {
+    color: var(--linkHoverColor);
+}
+main a:active {
+    color: var(--linkClickColor);
 }
 
 /* Button Formatting */
