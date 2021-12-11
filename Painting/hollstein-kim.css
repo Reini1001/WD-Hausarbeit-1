@@ -69,7 +69,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* space for fixed footer */
 }
 
 main > * {
@@ -90,13 +90,6 @@ article {
 
 .content-box {
     background-color: var(--contentBoxColor);
-    padding: 1vw;
-    border: 0.2vw solid var(--boxBorderColor);
-    border-radius: 1vw;
-}
-
-#property-tab-group {
-    background-color: var(--tabGroupColor);
     padding: 1vw;
     border: 0.2vw solid var(--boxBorderColor);
     border-radius: 1vw;
@@ -135,6 +128,10 @@ footer {
     text-align: center;
 }
 
+.compact-element {
+    display: none; /* mobile only */
+}
+
 /* Link Formatting */
 main a, main a:visited {
     color: var(--linkNormalColor);
@@ -148,10 +145,25 @@ main a:active {
 
 /* Button Formatting */
 input[type="radio"] {
-    display: none;
+    display: none; /* hide inputs for checkbox hack */
+}
+
+.selector-group {
+    background-color: var(--propertyBoxColor);
+    border: 0.2vw solid var(--boxBorderColor);
+    margin: 1vw;
+    padding: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.selector-group > div {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #property-tab-group {
+    background-color: var(--tabGroupColor);
+    border-radius: 1vw;
     gap: 8px;
 }
 #property-tab-group label {
@@ -168,25 +180,6 @@ input[type="radio"] {
 }
 #property-tab-group label:active {
     background-color: var(--tabGroupButtonClickColor);
-}
-
-.show-code {
-    grid-area: show-code;
-    display: flex;
-    align-items: center;
-}
-
-.selector-group {
-    background-color: var(--propertyBoxColor);
-    border: 0.2vw solid var(--boxBorderColor);
-    margin: 1vw;
-    padding: 1vw;
-    display: flex;
-    flex-wrap: wrap;
-}
-.selector-group > div {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .selector-label {
@@ -257,11 +250,11 @@ input[type="radio"] {
 }
 
 code span {
-    white-space: nowrap;
+    white-space: nowrap; /* wrapping between spans will take precedence before allowing for scrolling*/
     overflow: scroll;
 }
 .code-layer {
-    margin-left: 2em;
+    margin-left: 2em; /* indents code */
     display: flex;
     flex-direction: column;
 }
@@ -276,8 +269,9 @@ code span {
     color: var(--codeDynamicPropertyColor);
 }
 
+
 .code-min {
-    font-size: 0;
+    font-size: 0; /* show only when hovering */
 }
 .code-min::before {
     content: "[...]";
@@ -295,7 +289,7 @@ code span {
 
 /* Display Property Tabs */
 article {
-    display: none;
+    display: none; /* Checkbox Hack: only display elements when checkbox is active */
 }
 #property-tab-paint:checked ~ #paint,
 #property-tab-basic:checked ~ #basic,
@@ -341,6 +335,11 @@ article {
 #linecaps-strokelinecap-round:checked ~ * #linecaps-code-strokelinecap-round-text,
 #linecaps-strokelinecap-square:checked ~ * #linecaps-code-strokelinecap-square-text,
 
+/*
+To select linejoin:miter when a miterlimit is selected, it doesn't have it's own checkbox, but uses the miterlimit:4 box.
+The button is shown to be active when one of the miterlimit boxes are active. Linejoin and miterlimit share a radio for this purpose.
+Additionally the miterlimit property is only visible when a miterlimit box is checked, as it serves no purpose otherwise.
+*/
 #linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-code-strokelinejoin-miter-text,
 #linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-code-strokelinejoin-miter-text,
 #linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-code-strokelinejoin-miter-text,
@@ -543,6 +542,9 @@ article {
 
 
 /* Button Active State */
+/*
+A button is given the active color when its corresponding box is checked
+*/
 #property-tab-paint:checked ~ * label[for="property-tab-paint"],
 #property-tab-basic:checked ~ * label[for="property-tab-basic"],
 #property-tab-linecaps:checked ~ * label[for="property-tab-linecaps"],
@@ -586,10 +588,13 @@ article {
 #linecaps-strokelinecap-round:checked ~ * label[for="linecaps-strokelinecap-round"],
 #linecaps-strokelinecap-square:checked ~ * label[for="linecaps-strokelinecap-square"],
 
-#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
-#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
-#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
-#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-strokelinejoin-miterlimit-label,
+/*
+The miter label is active when any of the miterlimit boxes are checked
+*/
+#linecaps-strokelinejoin-miterlimit-1:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-2:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-4:checked ~ * #linecaps-strokelinejoin-miter-label,
+#linecaps-strokelinejoin-miterlimit-8:checked ~ * #linecaps-strokelinejoin-miter-label,
 #linecaps-strokelinejoin-round:checked ~ * label[for="linecaps-strokelinejoin-round"],
 #linecaps-strokelinejoin-bevel:checked ~ * label[for="linecaps-strokelinejoin-bevel"],
 
@@ -639,12 +644,12 @@ article {
 @media screen and (max-width: 769px) {
 
     .description,
-    #code-show:checked ~ * .code
+    .code
     {
         display: grid;
         animation: popup 0.1s cubic-bezier(0.71, 0.99, 1, 0.4);
     }
-    .code,
+    #code-none:checked ~ * .code,
     #paint-description-none:checked ~ .description,
     #basic-description-none:checked ~ .description,
     #linecaps-description-none:checked ~ .description,
@@ -657,6 +662,12 @@ article {
         grid-template-areas: "example show-code"
                              "properties properties";
         grid-template-columns: auto min-content;
+    }
+
+    .show-code {
+        grid-area: show-code;
+        display: flex;
+        align-items: center;
     }
 
     .description,
@@ -686,8 +697,8 @@ article {
         border: 1px solid var(--boxBorderColor);
     }
 
-
     .close-inner {
+        display: block;
         grid-area: close;
         background-color: var(--closeButtonNormalColor);
         font-size: 23px;
@@ -704,7 +715,8 @@ article {
 
 
     .close-outer {
-        grid-row: 1/5;
+        display: block;
+        grid-row: 1/5; /* place behind other elements as backdrop*/
         grid-column: 1/5;
         z-index: -4;
         background-color: transparent;
@@ -726,13 +738,5 @@ article {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-}
-
-/* Large Screen Only */
-@media screen and (min-width: 770px) {
-
-    .compact-element {
-        display: none;
     }
 }

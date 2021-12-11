@@ -14,6 +14,8 @@
     <title>Painting</title>
 </head>
 <body>
+
+<!-- Shared Navbar-->
 <nav>
     <div class="nav-item"><a class="nav-link" href="../index.html">Home</a></div>
     <div class="nav-item"><a class="nav-link" href="../Styling/finkler-reinmar.html">Styling</a></div>
@@ -25,6 +27,13 @@
 </nav>
 
 <main>
+    <!-- Global Checkbox Hack Elements
+
+        These inputs, while not visible, have to be before and on a lower layer from the elements it is controlling
+        The Checkbox-Hack uses the general sibling combinator combined with the ':checked' pseudo class
+        Located here are the property tabs and the code-popup controls
+        The code-popup controls are located here because they can be used by any article
+     -->
     <input type="radio" id="property-tab-paint" name="property-tab-select" checked>
     <input type="radio" id="property-tab-basic" name="property-tab-select">
     <input type="radio" id="property-tab-linecaps" name="property-tab-select">
@@ -41,6 +50,7 @@
             This Page will outline the basic painting operations.
         </p>
     </header>
+    <!-- Sections can be toggled via Buttons-->
     <section id="property-tab-group" class="selector-group">
         <label for="property-tab-paint"><span class="button">Paint</span></label>
         <label for="property-tab-basic"><span class="button">Basic</span></label>
@@ -48,7 +58,9 @@
         <label for="property-tab-dash"><span class="button">Dash</span></label>
     </section>
     <article id="paint">
-
+        <!-- Checkbox Hack Elements
+            Located here are the value select controls for the svg and the description controls
+         -->
         <input type="radio" id="paint-fill-white" name="paint-fill-select" checked>
         <input type="radio" id="paint-fill-black" name="paint-fill-select">
         <input type="radio" id="paint-fill-green" name="paint-fill-select">
@@ -69,6 +81,7 @@
             </svg>
         </figure>
         <section class="show-code content-box compact-element">
+            <!-- Show Code Button for mobile version-->
             <div class="selector-buttons">
                 <label for="code-show"><span class="button">Show Code</span></label>
             </div>
@@ -107,6 +120,7 @@
         </section>
         <section class="code content-box">
             <h2>Code</h2>
+            <!-- Close Code controls for mobile version-->
             <label for="code-none" class="code-close-outer close-outer compact-element"></label>
             <label for="code-none" class="code-close-inner close-inner compact-element">X</label>
             <div class="code-frame">
@@ -142,9 +156,11 @@
         </section>
         <section class="description content-box">
             <h2>Description</h2>
+            <!-- Close Descriptions controls for mobile version-->
             <label for="paint-description-none" class="description-close-outer close-outer compact-element"></label>
             <label for="paint-description-none" class="description-close-inner close-inner compact-element">X</label>
             <div class="description-frame">
+                <!-- Descriptions can be toggled via Buttons-->
                 <p id="paint-description-fill-text">
                     The 'fill' property determines the inner color of the element it is applied on.<br>
                     You can use a predefined color like "white" and "black", or give any color in hexadecimal rgb format (eg. "#ee23f0").
@@ -309,7 +325,7 @@
                 </p>
                 <p id="basic-description-strokewidth-text">
                     The 'stroke-width' property determines the width of the stroke.<br>
-                    You can use an Integer specifying units or a percentage relative to the viewport.<br><br>
+                    You can use an Integer specifying units or a percentage relative to the view box.<br><br>
                     &gt <a target="_blank" rel="noopener noreferrer" href="https://oreillymedia.github.io/Using_SVG/extras/ch05-percentages.html">more information on percentages</a>
                 </p>
                 <p id="basic-description-fillopacity-text">
@@ -372,7 +388,7 @@
                     <span>stroke-linejoin:</span>
                 </div>
                 <div class="selector-buttons">
-                    <label for="linecaps-strokelinejoin-miterlimit-4" id="linecaps-strokelinejoin-miterlimit-label"><span class="button">miter</span></label>
+                    <label for="linecaps-strokelinejoin-miterlimit-4" id="linecaps-strokelinejoin-miter-label"><span class="button">miter</span></label>
                     <label for="linecaps-strokelinejoin-round"><span class="button">round</span></label>
                     <label for="linecaps-strokelinejoin-bevel"><span class="button">bevel</span></label>
                 </div>
@@ -572,12 +588,12 @@
                     The 'stroke-dasharray' property determines the width of line segments and gaps on the stroke.<br>
                     The given list of lengths will be repeated along the line.<br>
                     It will always alternate between reading the length of one line segment and reading the length of one gap.<br>
-                    In the list you can use an Integer specifying units or a percentage relative to the viewport.<br><br>
+                    In the list you can use an Integer specifying units or a percentage relative to the view box.<br><br>
                     &gt <a target="_blank" rel="noopener noreferrer" href="https://oreillymedia.github.io/Using_SVG/extras/ch05-percentages.html">more information on percentages</a>
                 </p>
                 <p id="dash-description-strokedashoffset-text">
                     The 'stroke-dasharray' property determines the starting position within the pattern.<br>
-                    You can use an Integer specifying units or a percentage relative to the viewport.<br><br>
+                    You can use an Integer specifying units or a percentage relative to the view box.<br><br>
                     &gt <a target="_blank" rel="noopener noreferrer" href="https://oreillymedia.github.io/Using_SVG/extras/ch05-percentages.html">more information on percentages</a>
 
                 </p>
@@ -586,7 +602,6 @@
     </article>
 </main>
 <footer>Copyright © 2021 • Wiggel</footer>
-
 
 </body>
 </html>
