@@ -185,8 +185,19 @@ input[type="radio"] {
 .selector-label {
     flex-basis: 10%;
     flex-grow: 1;
-    min-width: 5em;
     align-content: center;
+}
+#paint .selector-label {
+    min-width: 4em;
+}
+#basic .selector-label {
+    min-width: 5em;
+}
+#linecaps .selector-label {
+    min-width: 7em;
+}
+#dash .selector-label {
+    min-width: 7em;
 }
 
 .selector-i {
