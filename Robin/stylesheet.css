@@ -159,12 +159,12 @@ footer {
 .scale:hover {
     transform: scale(1.4,1.4);
 }
-
+/* Hier durch werden alle Inhalte in den rechtecken von der Mitte aus verändert */
 rect {
     transform-origin: center;
 }
 
-/* Anpassungen für mobile Versionen */
+/* Anpassungen für Handy Version*/
 
 @media all and (max-width: 650px) {
 
@@ -182,7 +182,7 @@ rect {
     }
 
 }
-
+/* Anpassungen für die Tablet Version */
 @media all and (max-width: 1000px) {
     main {
         grid-template-columns: 1fr 1fr;
