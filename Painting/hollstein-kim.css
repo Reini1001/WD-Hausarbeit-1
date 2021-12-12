@@ -250,7 +250,7 @@ input[type="radio"] {
 }
 
 code span {
-    white-space: nowrap; /* wrapping between spans will take precedence before allowing for scrolling*/
+    white-space: nowrap; /* wrapping between spans will take precedence before allowing for scrolling */
     overflow: scroll;
 }
 .code-layer {
@@ -271,7 +271,7 @@ code span {
 
 
 .code-min {
-    font-size: 0; /* show only when hovering */
+    font-size: 0; /* show text only when hovering, but make it still possible to select it */
 }
 .code-min::before {
     content: "[...]";
@@ -466,7 +466,7 @@ Additionally the miterlimit property is only visible when a miterlimit box is ch
 
 /* Linecaps */
 #linecaps .shape {
-    transition: 0.5s linear;
+    transition: all 0.5s linear;
     stroke-linecap: butt;
     stroke-linejoin: miter;
     stroke-miterlimit: 1;
@@ -498,43 +498,43 @@ Additionally the miterlimit property is only visible when a miterlimit box is ch
 
 /* Dash */
 #dash .shape {
-    transition: 0.9s linear;
+    transition: all 0.9s linear;
     stroke-dasharray: 5 1;
     stroke-dashoffset: 0;
 }
 
-#dash-strokedasharray-2:checked  ~ .example .shape {
+#dash-strokedasharray-2:checked ~ .example .shape {
     stroke-dasharray: 5 2;
 }
-#dash-strokedasharray-3:checked  ~ .example .shape {
+#dash-strokedasharray-3:checked ~ .example .shape {
     stroke-dasharray: 1 8;
 }
-#dash-strokedasharray-4:checked  ~ .example .shape {
+#dash-strokedasharray-4:checked ~ .example .shape {
     stroke-dasharray: 8 2 1 2;
 }
-#dash-strokedasharray-5:checked  ~ .example .shape {
+#dash-strokedasharray-5:checked ~ .example .shape {
     stroke-dasharray: 9 1 2;
 }
-#dash-strokedasharray-6:checked  ~ .example .shape {
+#dash-strokedasharray-6:checked ~ .example .shape {
     stroke-dasharray: 5 5;
 }
-#dash-strokedasharray-7:checked  ~ .example .shape {
+#dash-strokedasharray-7:checked ~ .example .shape {
     stroke-dasharray: 5 5%;
 }
-#dash-strokedasharray-8:checked  ~ .example .shape {
+#dash-strokedasharray-8:checked ~ .example .shape {
     stroke-dasharray: 5% 5;
 }
-#dash-strokedasharray-9:checked  ~ .example .shape {
+#dash-strokedasharray-9:checked ~ .example .shape {
     stroke-dasharray: 5% 5%;
 }
 
-#dash-strokedashoffset-2:checked  ~ .example .shape {
+#dash-strokedashoffset-2:checked ~ .example .shape {
     stroke-dashoffset: 3;
 }
-#dash-strokedashoffset-3:checked  ~ .example .shape {
+#dash-strokedashoffset-3:checked ~ .example .shape {
     stroke-dashoffset: 10;
 }
-#dash-strokedashoffset-4:checked  ~ .example .shape {
+#dash-strokedashoffset-4:checked ~ .example .shape {
     stroke-dashoffset: 10%;
 }
 
