@@ -18,35 +18,38 @@
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
 <main>
+    <!-- Einleitung in das Thema -->
     <h1>Animation</h1>
-    <p>
+    <p class="textbox">
         Animating with SVGs is similar to animating in CSS. You can, in fact, even animate some SVG-properties with CSS,
         though we won’t be taking a look at that, since it's the same as any other CSS animation. In this tutorial,
         I’ll try to showcase some of the most important functions when animating with SVGs using these examples:
     </p>
-    <p>
+    <!-- Links, die zu abschnitten auf der selben Seite führen -->
+    <p class="textbox">
         <a href="#example_one">The Vanishing Square</a><br>
         <a href="#example_two">Two Clockhands</a><br>
         <a href="#example_three">A Moving Circle</a>
     </p>
-    <p>
+    <p class="textbox">
         It is however important to mention that Animation is a huge topic and that I cannot cover all of it.
         There will be some links in the <a href="#afterword">afterword</a> for you to get more information.
     </p>
 
     <div class="spacer1"></div>
+    <!-- Erstes Beispiel, die Überschrift hat einen anchor für einen der Links von oben -->
     <h2><a id="example_one">Example 1: Vanishing Square</a></h2>
-    <p>
+    <p class="textbox">
         Before we can animate a shape in <span class="code_in_text">SVG</span>, we need to define it. In this case, it's a <span class="code_in_text">18em</span>
         square in the middle of the <span class="code_in_text">SVG</span>.
         <span class="note">Note: you can look at the code by clicking the button below.</span>
     </p>
-    <p>
+    <p class="textbox">
         Next, you need to define an <span class="code_in_text">animate</span>-tag. I usually do this inside the tag of
         the shape I’m animating <span class="note">(in this case the <span class="code_in_text">rect</span>)</span>,
         but we’ll be looking at another way later.
     </p>
-    <p>
+    <p class="textbox">
         We’re animating the <span class="code_in_text">opacity</span>, which is a CSS-property, so we have to define the
         <span class="code_in_text">attributeType</span> as <span class="code_in_text">CSS</span>. The
         <span class="code_in_text">attributeName</span> is always required and refers to what we’re animating
@@ -58,16 +61,17 @@
         Finally, the <span class="code_in_text">repeatCount</span> defines how often the animation plays
         <span class="note">(in this case an infinite amount of times)</span>.
     </p>
-    <p>
+    <p class="textbox">
         Using CSS I simply defined that the square is <span class="code_in_text">fill</span>ed with a <span class="code_in_text">var</span>iable
         called green, that its frame <span class="note">(<span class="code_in_text">stroke</span>)</span> is
         <span class="code_in_text">3px</span> wide and that said frame has the color of the
         <span class="code_in_text">var</span>iable darkest.
     </p>
-    <div class="image-expander">
-        <button class="expander">Show code</button>
+    <!-- Zeigt den <code>, im <pre> an, wenn der button gedrückt wird (mehr dazu im CSS) -->
+    <div class="expander">
+        <button class="expand-button">Show code</button>
         <!-- Das SVG vom Quadrat, escaped mit https://www.freeformatter.com/html-escape.html, gefärbt per Hand, basierend auf
-        meinen IDE-Farben. Egal wie man das macht, es ist unübersichtlich ohne js, also am besten den <code> einfach zuklappen. -->
+        meinen IDE-Farben. Es ist in der IDE sehr unübersichtlich, also am besten den <pre> oder <code> einfach zuklappen. -->
         <pre class="expand-this">
             <code>
 HTML:
@@ -91,6 +95,7 @@ CSS:
             </code>
         </pre>
     </div>
+    <!-- Das tatsächliche SVG vom Quadrat. Ich glaube der Text, den man im browser sieht, erklärt das gut genug -->
     <svg xmlns="http://www.w3.org/2000/svg" id="square" width="20em" height="20em">
         <rect height="18em" width="18em" x="1em" y="1em">
             <animate attributeType="CSS"
@@ -103,8 +108,9 @@ CSS:
     </svg>
 
     <div class="spacer2"></div>
+    <!-- Zweites Beispiel, die Überschrift hat einen anchor für einen der Links von oben -->
     <h2><a id="example_two">Example 2: Clockhands</a></h2>
-    <p>
+    <p class="textbox">
         The clock is just a big white <span class="code_in_text">circle</span> with a black border, six <span class="code_in_text">line</span>s
         that are <span class="code_in_text">rotate</span>d to fit the hour positions, another white <span class="code_in_text">circle</span>
         to cut the <span class="code_in_text">line</span>s off and a black <span class="code_in_text">circle</span> as a
@@ -112,7 +118,7 @@ CSS:
         <span class="note">One thing to note here is, that you can use <span class="code_in_text">%</span> instead of
         <span class="code_in_text">em</span> or <span class="code_in_text">px</span> for almost every attribute, as shown in this example</span>
     </p>
-    <p>
+    <p class="textbox">
         The clock hands are <span class="code_in_text">line</span>s that are rotating. This is done using
         <span class="code_in_text">animateTransform</span> instead of a normal <span class="code_in_text">animate</span>.
         The <span class="code_in_text">attributeName</span> needs to be <span class="code_in_text">transform</span> for
@@ -120,7 +126,7 @@ CSS:
         The <span class="code_in_text">type</span> is used to define which <span class="code_in_text">transform</span>ation
         we want to use <span class="note">(in this case, <span class="code_in_text">rotate</span>)</span>.
     </p>
-    <p>
+    <p class="textbox">
         The attributes <span class="code_in_text">from</span> and <span class="code_in_text">to</span> are used when you
         only want to define a starting and an ending point in your animation. Since we only want the clock hands to spin
         in a circle, defining them as <span class="code_in_text">0</span> and <span class="code_in_text">360</span>
@@ -128,16 +134,17 @@ CSS:
         <span class="note">(5 seconds and 60 seconds respectively)</span> and a <span class="code_in_text">repeatCount</span>
         <span class="note">(<span class="code_in_text">indefinite</span>)</span>.
     </p>
-    <p>
+    <p class="textbox">
         Using CSS, we make sure to set the <span class="code_in_text">transform-origin</span> to <span class="code_in_text">center</span>.
         The <span class="code_in_text">transform-origin</span> defines the point from which all <span class="code_in_text">transform</span>ations
         originate and resides in the top left corner of the <span class="code_in_text">SVG</span> by default. Setting it to <span class="code_in_text">center</span>
         for the <span class="code_in_text">line</span>s makes sure that they <span class="code_in_text">rotate</span> properly.
     </p>
-    <div class="image-expander">
-        <button class="expander">Show code</button>
+    <!-- Zeigt den <code>, im <pre> an, wenn der button gedrückt wird (mehr dazu im CSS) -->
+    <div class="expander">
+        <button class="expand-button">Show code</button>
         <!-- Das SVG von der Uhr, escaped mit https://www.freeformatter.com/html-escape.html, gefärbt per Hand, basierend auf
-        meinen IDE-Farben. Egal wie man das macht, es ist unübersichtlich ohne js, also am besten den <code> einfach zuklappen. -->
+        meinen IDE-Farben. Es ist in der IDE sehr unübersichtlich, also am besten den <pre> oder <code> einfach zuklappen. -->
         <pre class="expand-this">
             <code>
 HTML:
@@ -184,6 +191,7 @@ CSS:
             </code>
         </pre>
     </div>
+    <!-- Das tatsächliche SVG von der Uhr. Ich glaube der Text, den man im browser sieht, erklärt das gut genug -->
     <svg xmlns="http://www.w3.org/2000/svg" id="clock" width="20em" height="20em">
         <!-- Die Uhr selber -->
         <circle r="40%" cx="50%" cy="50%" fill="white" stroke-width="2%" stroke="black"></circle>
@@ -217,8 +225,9 @@ CSS:
     </svg>
 
     <div class="spacer2"></div>
+    <!-- Drittes Beispiel, die Überschrift hat einen anchor für einen der Links von oben -->
     <h2><a id="example_three">Example 3: Moving Circle</a></h2>
-    <p>
+    <p class="textbox">
         In this final example, we’re moving a <span class="code_in_text">circle</span> from left to right when it's
         <span class="code_in_text">click</span>ed. This time we’re animating the <span class="code_in_text">circle</span>
         with a <span class="purple">xlink</span> instead of simply nesting it inside the element. To do this, we need to
@@ -229,19 +238,19 @@ CSS:
         <span class="code_in_text">class</span>, though the hashtag would need to be replaced with a period
         <span class="note">(<span class="code_in_text">.moving_circle</span> instead of <span class="code_in_text">#moving_circle</span>)</span>.
     </p>
-    <p>
+    <p class="textbox">
         Another notable difference we have here is the <span class="code_in_text">begin</span> attribute, which specifies
         an event <span class="note">(here it’s <span class="code_in_text">click</span>)</span>. Only after that event
         occurs, does the animation start. Since the <span class="code_in_text">repeatCount</span> is set to
         <span class="code_in_text">1</span>, the animation will play once, every time the <span class="code_in_text">circle</span>
         is <span class="code_in_text">click</span>ed.
     </p>
-    <p>
+    <p class="textbox">
         Additionally we have defined the <span class="code_in_text">restart</span> attribute as
         <span class="code_in_text">whenNotActive</span>. This means, that that <span class="code_in_text">click</span>ing
         the <span class="code_in_text">circle</span> does nothing, as long as it's still moving.
     </p>
-    <p>
+    <p class="textbox">
         Finally, we used CSS to style the <span class="code_in_text">circle</span> <span class="note">(<span class="code_in_text">#moving_circle</span>)</span>
         and the <span class="code_in_text">SVG</span> <span class="note">(<span class="code_in_text">#circle</span>)</span>.
         The circle is styled just like the square in <a href="#example_one">example 1</a>
@@ -249,10 +258,11 @@ CSS:
         the <span class="code_in_text">SVG</span> has a white, semi-transparent <span class="code_in_text">background-color</span>,
         a <span class="code_in_text">border</span> and a <span class="code_in_text">border-radius</span>.
     </p>
-    <div class="image-expander">
-        <button class="expander">Show code</button>
+    <!-- Zeigt den <code>, im <pre> an, wenn der button gedrückt wird (mehr dazu im CSS) -->
+    <div class="expander">
+        <button class="expand-button">Show code</button>
         <!-- Das SVG vom Kreis, escaped mit https://www.freeformatter.com/html-escape.html, gefärbt per Hand, basierend auf
-        meinen IDE-Farben. Egal wie man das macht, es ist unübersichtlich ohne js, also am besten den <code> einfach zuklappen. -->
+        meinen IDE-Farben. Es ist in der IDE sehr unübersichtlich, also am besten den <pre> oder <code> einfach zuklappen. -->
         <pre class="expand-this">
             <code>
 HTML:
@@ -287,6 +297,7 @@ CSS:
             </code>
         </pre>
     </div>
+    <!-- Das tatsächliche SVG vom Kreis. Ich glaube der Text, den man im browser sieht, erklärt das gut genug -->
     <svg xmlns="http://www.w3.org/2000/svg" id="circle" width="20em" height="6em">
         <circle id="moving_circle" r="2em" cx="2.5em" cy="3em" />
         <!-- The animation is linked with an xlink instead of being nested in the circle -->
@@ -300,21 +311,23 @@ CSS:
                  restart="whenNotActive" />
     </svg>
 
+    <div class="spacer2"></div>
+    <!-- Das Nachwort, die Überschrift hat einen anchor für einen der Links von oben -->
     <h2><a id="afterword">Afterword</a></h2>
-    <p>
+    <p class="textbox">
         I hope that this Tutorial was enough to get you started on animating SVGs. As I’ve stated above, animating is a
         huge topic and I couldn’t cover all of it, so if you’d like a more expansive tutorial, you can find one here:
     </p>
-    <p>
+    <p class="textbox">
         <a href="https://css-tricks.com/guide-svg-animations-smil">animation-tutorial</a>
     </p>
-    <p>
-        Additionally, you can read up on the properties in detail on the Mozilla-developer portal:
+    <p class="textbox">
+        Additionally, you can read up on the properties in detail on the Mozilla developer portal:
     </p>
-    <p class="center_this">
+    <!-- Die Textbox hat einen <br> und musste deswegen gecentered werden, sieht sonst komisch aus -->
+    <p class="textbox center_this">
         <a href="https://developer.mozilla.org/en-US/docs/web/svg/element/animate">animate</a><br>
         <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform">animateTransform</a>
-
     </p>
 </main>
 <footer>

@@ -1,3 +1,4 @@
+/* Variablen für verschiedene Farben. Dadurch kann ich das gesamte layout sehr einfach umfärben */
 :root {
     --green: #0A5;
     --red: #DC143C;                 /* Crimson, aber als Hex falls ich ähnliche Farben bauen möchte */
@@ -20,43 +21,18 @@
     --link-color-active: #AAA;
 }
 
+/* damit sämtlicher text standartmäßig weiß und in Jetbrains Mono ist (oder monospace fals der import nicht funktioniert) */
 * {
     color: var(--fontColor);
     font-family: JetBrainsMono, "JetBrains Mono", monospace;
 }
 
-a[href] {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
+/* Die überschriften, zu denen die Links linken sind auch <a>, deswegen style ich speziell die <a>, die ein href enthalten */
+a[href] {color: var(--link-color); text-decoration: none;}
 a:hover[href] {color: var(--link-color-hover);}
-
 a:active[href] {color: var(--link-color-active);}
 
-h2, h2:hover, h2:active {color: var(--fontColor);}
-
-#clock > line {transform-origin: center;}
-
-#square > rect {
-    fill: var(--green);
-    stroke: var(--darkest);
-    stroke-width: 3px;
-}
-
-#circle {
-    background-color: #FFFFFF4F;
-    border: 3px solid var(--darkest);
-    border-radius: 1rem;
-    margin-top: 1rem;
-}
-
-#circle > #moving_circle {
-    fill: var(--red);
-    stroke: var(--darkest);
-    stroke-width: 3px;
-}
-
+/* Custom style von der Scrollbar, damit sie zur Seite passt */
 ::-webkit-scrollbar {width: 1rem;}
 ::-webkit-scrollbar-track {background: var(--medium-dark);}
 ::-webkit-scrollbar-thumb {background: var(--darkest);}
@@ -64,9 +40,10 @@ h2, h2:hover, h2:active {color: var(--fontColor);}
 ::-webkit-scrollbar-thumb:active {background: var(--darkest-active);}
 
 /* Generische spacer, habe ich immer dabei falls ich die mal brauche */
-.line_spacer {width: 100%; border-bottom: solid var(--darkest) 0.1em; display: block}
 .spacer1 {height: 1em; display: block}
 .spacer2 {height: 2em; display: block}
+.spacer3 {height: 3em; display: block}
+.spacer4 {height: 4em; display: block}
 
 /* Farben für <span> elemente um Code in farbe zu zeigen */
 .cyan {color: #1f8880;}
@@ -76,15 +53,18 @@ h2, h2:hover, h2:active {color: var(--fontColor);}
 .orange{color: #ca6f2e;}
 .purple {color: #5e66a9;}
 
+/* Um Teile im text als Notizen zu kennzeichnen, hauptsächlich text der in Klammern steht (das hier) */
 .note {
     font-size: 0.9em;
     color: var(--link-color);
 }
 
-.center_this {
+/* genau das, wonach es aussieht, wird benutzt bei der einen Textbox mit 2 links im Nachwort */
+p.center_this {
     text-align: center;
 }
 
+/* Der Hauptteil der Seite, eigentlich nichts besonderes */
 main {
     padding: 1rem 4vw;
     text-align: center;
@@ -93,7 +73,14 @@ main {
     background: var(--light-dark);
 }
 
-p {
+/* Damit Scalen die SVGs im Mobile-layout ohne alles kaputt zu machen */
+svg {
+    font-size: 3vw;
+}
+
+/* War uhrsprünglich auf alle <p> angewendet, ich habe es aber auf diese Klasse ausgelagert, falls ich mal ein <p> mit normalem Style brauche. */
+/* Der Style sorgt eigentlich nur dafür, dass man den Text besser lesen kann, weil er nicht mehr in riesigen Blöcken steht */
+.textbox {
     background-color: var(--medium-dark);
     box-shadow: 0 0 0.8em 0.1em var(--medium-dark);
     text-align: left;
@@ -103,6 +90,7 @@ p {
     border-radius: 1em;
 }
 
+/* Der body ist eigentlich nur der hintergrund von der Seite. In der Mobile-Ansicht kann man ihn nichtmal sehen. */
 body {
     background: var(--medium-dark);
     display: flex;
@@ -111,7 +99,8 @@ body {
     padding: 0;
 }
 
-.expander {
+/* Der Knopf, den man drückt um den Code anzuzeigen */
+.expand-button {
     background-color: var(--medium-dark);
     border: 0.2em solid var(--darkest);
     border-radius: 1em;
@@ -119,12 +108,14 @@ body {
     font-size: 16px;
 }
 
-.expander:hover {
+/* wird dunkler beim Hovern */
+.expand-button:hover {
     background-color: var(--medium-dark-hover);
     border: 0.2em solid var(--darkest-hover);
 }
 
-.expander:active {
+/* und noch dunkler beim Klicken */
+.expand-button:active {
     background-color: var(--medium-dark-active);
     border: 0.2em solid var(--darkest-active);
 }
@@ -132,13 +123,6 @@ body {
 .expand-this {
     width: auto;
     height: 9vh;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%) translateY(-52%);
-    top: 50%;
-    opacity: 0;
-    transition: opacity 350ms ease-in-out, width 350ms ease-in-out, height 350ms ease-in-out, background-color 350ms ease-in-out;
-    pointer-events: none;
     z-index: 100;
     border-radius: 1em;
     border: 0.2rem ;
@@ -146,10 +130,22 @@ body {
     font-size: 15px;
     padding: 0 1em;
     overflow: hidden;
+    /* Sorgt dafür, dass das div gecentered und leicht nach oben verschoben ist */
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-55%);
+    /* Sorgt dafür, dass das div unsichtbar ist und man nicht damit interagieren kann */
+        opacity: 0;
+        pointer-events: none;
+    /* Transition für die deckkraft, breite, höhe und hintergrundfarbe */
+        transition: opacity 350ms ease-in-out, width 350ms ease-in-out, height 350ms ease-in-out, background-color 350ms ease-in-out;
 }
 
 /* Mit JS könnte man dies ein wenig besser Lösen, aber das hier ist das beste mit purem CSS */
-.image-expander > .expander:focus + .expand-this {
+/* Wenn der expand-button, welcher ein direktes Kind vom expander ist, fokusiert wird, soll der Nachbar expand-this vom expand-button */
+/* Groß und sichtbar werden */
+.expander > .expand-button:focus + .expand-this {
     opacity: 1;
     pointer-events: auto;
     width: fit-content;
@@ -159,6 +155,7 @@ body {
     overflow: auto;
 }
 
+/* Die Navbar selber, im Mobile-layout */
 nav {
     margin: 0;
     padding: 0;
@@ -189,14 +186,13 @@ nav {
     text-align: center;
 }
 
-/*Laptop (klein)*/
+/* Die Änderungen am Layout, sobald man aus dem Mobile-Layout rausgeht */
 @media screen and (min-width: 800px) {
+    /* Die Navbar ist jetzt horizontal */
+    /* Außerdem skaliert die Schriftgröße aufgrund der Bildschrimbreite */
     nav {
         font-size: calc(0.3rem + 0.83vw);
-        position: fixed;
-        box-shadow: 0 0 0.6em 0.8em var(--medium-dark);
     }
-
     .nav-item {
         float: left;
         border-bottom: 0;
@@ -207,30 +203,26 @@ nav {
         border-right: 0;
     }
 
+    /* Der Hauptteil ist dank diesem Style ein hellerer bereich in der Mitte vom Bildschirm */
+    /* Die Schriftgröße skaliert auch aufgrund deer Bildschrimbreite, aber mit anderer Formel als die Navbar */
     main {
         width: fit-content;
         font-size: calc(0.6rem + 0.5vw);
         max-width: 32em;
-        margin: 4em auto;
+        margin: 2em auto 4em auto;
         border-radius: 1.5em;
         border: solid var(--darkest) 0.2em;
         padding: 1em;
     }
 
+    /* Zwei kleine Font-größen änderungen von der Mobilen zur Desktop ansicht */
+    svg {
+        font-size: revert;
+    }
     .expand-this {
         font-size: 0.75em;
     }
 }
-/*Laptop (groß)*/
-@media screen and (min-width: 900px) {
-
-}
-
-@media screen and (min-width: 1024px) {
-
-}
-
-/* footer ab hier */
 
 footer {
     box-sizing: border-box;
@@ -241,4 +233,26 @@ footer {
     text-align: center;
     background-color: var(--medium-dark);
     box-shadow: 0 0 1.2em 1.5em var(--medium-dark);
+}
+
+/* Ab hier sind die verschiedenen Styles für die SVGs, erklärt auf der Seite selber */
+#clock > line {transform-origin: center;}
+
+#square > rect {
+    fill: var(--green);
+    stroke: var(--darkest);
+    stroke-width: 3px;
+}
+
+#circle {
+    background-color: #FFFFFF4F;
+    border: 3px solid var(--darkest);
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+#circle > #moving_circle {
+    fill: var(--red);
+    stroke: var(--darkest);
+    stroke-width: 3px;
 }
