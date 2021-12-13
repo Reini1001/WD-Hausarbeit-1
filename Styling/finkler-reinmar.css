@@ -1,3 +1,4 @@
+/*keyframes für die Beispiele.*/
 @keyframes font-size-demo {
     0% { font-size: 0.5rem; }
     25% { font-size: 0.5rem; }
@@ -7,6 +8,15 @@
     0% {font-size: 1.5rem;}
     25% {font-size: 1.5rem;}
     100% {font-size: 0.5rem;}
+}
+
+@keyframes fill-demo {
+    from {
+        fill: hotpink;
+    }
+    to {
+        fill: darkslateblue;
+    }
 }
 
 @keyframes fill-opacity-demo {
@@ -41,60 +51,69 @@
     95% {color: hsl(342, 50%, 50%);}
     100% {color: hsl(360, 50%, 50%);}
 }
+
+/*öfter oder in den anderen Dateien verwendete Farben in Variablen speichern.*/
 :root {
+    /* --Diese Seite-- */
     --fontColor: hsl(0, 0%, 100%);
     --backgroundColor: hsl(240deg, 10%, 18.75%);
     --borderColor: hsl(0deg, 0%, 100%);
 
+    --hrColor: hsl(240deg, 10%, 35%);
+
+    --svgBgColor: hsl(240deg, 10%, 15%);
+    --svgBorderColor: hsl(240deg, 10%, 35%);
     /* --nav-- */
     --navBgColor: hsl(240deg, 10%, 35%);
     --navBorderColor: hsl(0deg, 0%, 100%);
     --navHoverColor: hsl(240deg, 10%, 15%);
     --navActivColor: hsl(120deg, 100%, 18.75%);
-
     /* --scrollbar-- */
     --scrollBgColor: hsl(240deg, 10%, 15%);
     --scrollThumbColor: hsl(240deg, 10%, 35%);
     --scrollHoverColor: hsl(0deg, 0%, 100%);
-
-    /* --styling-- */
-    --hrColor: hsl(240deg, 10%, 35%);
-
-    --svgBgColor: hsl(240deg, 10%, 15%);
-    --svgBorderColor: hsl(240deg, 10%, 35%);
 }
+/*
+Margin und Padding auf 0 zu setzen macht es einfacher die seite so zu design wie ich das möchte.
+Font für alle Element einstellen.
+*/
 * {
     padding: 0;
     margin: 0;
     font-family: JetBrainsMono, monospace;
 }
 
+/*html und body height auf 100% setzen, damit der body immer den gesamten Anzeigebereich einnimmt.*/
 html, body {
     height: 100%;
 }
+/*flex body zum positionieren vom nav, main und footer*/
 body {
     display: flex;
     flex-direction: column;
     background-color: var(--backgroundColor);
     color: var(--fontColor);
 }
-
+/*wenn benötigt nav styling hier*/
 nav {
-    position: sticky;
-}
 
+}
+/*main padding für bessere Lesbarkeit*/
 main {
     padding: 2rem 10%;
 }
+/*Seiten Überschrift "Styling"*/
 h1 {
     margin-bottom: 1rem;
     text-align: center;
 }
 
+/*Einleitungstext*/
 #TopicIntroduction {
     margin-bottom: 1rem;
 }
 
+/*Abschnitte [Beispiele, Weitere Tags]*/
 .topic {
     margin-bottom: 1rem;
 }
@@ -102,6 +121,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/*Hervorheben der Eigenschaften*/
 .propertyTag {
     padding: 0.2rem 0.4rem;
     line-height: 2rem;
@@ -111,6 +131,7 @@ h1 {
     white-space: nowrap;
 }
 
+/*Bespiele*/
 article {
     display: grid;
     padding: 1rem;
@@ -124,7 +145,6 @@ article {
             "hr";
     grid-gap: 1rem;
 }
-
 article h2 {
     grid-area: headline;
 }
@@ -146,15 +166,18 @@ article svg {
     border: 2px solid var(--svgBorderColor);
     border-radius: 1rem;
 }
+/*Trennlinie zwischen den Beispielen*/
 article hr {
     grid-area: hr;
     border: 1px solid var(--hrColor);
     border-radius: 1px;
 }
+
 svg text {
     fill: var(--fontColor);
-    transition: font-size 0.5s ease;
 }
+
+/*Farben für die bessere Darstellung vom Code*/
 .cGreen {
     color: #84c170;
 }
@@ -173,6 +196,7 @@ svg text {
 .cYellow {
     color: #d8b034;
 }
+/*Einrückung vom Code durch padding*/
 .space {
     padding-left: 0.5rem;
 }
@@ -182,6 +206,8 @@ svg text {
 .tab2 {
     padding-left: 4rem;
 }
+
+/*styling und animation von den SVG's*/
 #font-size-demo {
     animation: font-size-demo 2.5s infinite alternate;
 }
@@ -197,7 +223,7 @@ svg text {
 }
 
 #fill-demo {
-    fill: black;
+    animation: fill-demo 2.5s infinite alternate-reverse linear;
 }
 
 #fill-opacity-demo {
@@ -212,6 +238,7 @@ svg text {
     writing-mode: tb;
 }
 
+/*footer ganz unten auf der Seite*/
 footer {
     box-sizing: border-box;
     width: 100%;
@@ -226,17 +253,22 @@ footer {
 @media screen
 and (min-width: 300px) {
     :root {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
 /*Tablets*/
 @media screen
 and (min-width: 426px) {
-
+    :root {
+        font-size: 14px;
+    }
 }
 
-/*Laptop*/
+/*Laptop
+    Umstellung der Beispiele auf 2-spaltige Design.
+    Abwechslung der Beispiel-layouts mit der "grid-odd" Klasse.
+*/
 @media screen
 and (min-width: 769px) {
     :root {

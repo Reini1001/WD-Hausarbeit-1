@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="../images/HSF-favicon.ico" rel="shortcut icon" type="image/icon">
+    <link href="../images/HSF-favicon.ico" rel="shortcut icon" type="image/icon"><!--HSF icon als Tab-bild-->
 
-    <link href="finkler-reinmar.css" rel="stylesheet" type="text/css">
-    <link href="../Reinis-reichhaltigen-Ressourcen/JetBrainsMono-font-nav-footer.css" rel="stylesheet" type="text/css">
-    <link href="../Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css">
-    <link href="../Reinis-reichhaltigen-Ressourcen/navbar-style.css" rel="stylesheet" type="text/css">
+    <link href="finkler-reinmar.css" rel="stylesheet" type="text/css"><!--Stylesheet für diese Seite-->
+    <link href="../Reinis-reichhaltigen-Ressourcen/JetBrainsMono-font-nav-footer.css" rel="stylesheet" type="text/css"><!--Stylesheet: Inport von JetBrainsMono-->
+    <link href="../Reinis-reichhaltigen-Ressourcen/navbar-style.css" rel="stylesheet" type="text/css"><!--Stylesheet: Custom Navbar-->
+    <link href="../Reinis-reichhaltigen-Ressourcen/scrollbar.css" rel="stylesheet" type="text/css"><!--Stylesheet: Custom Scrollbar-->
     <title>Styling</title>
 </head>
 <body>
@@ -17,24 +17,38 @@
     <div class="nav-item active"><a class="nav-link" href="">Styling</a></div>
     <div class="nav-item"><a class="nav-link" href="../Animation/walter-leon.html">Animation</a></div>
     <div class="nav-item"><a class="nav-link" href="../Filter/gottbrecht-kevin.html">Filter</a></div>
-    <div class="nav-item"><a class="nav-link" href="#">Painting</a></div>
-    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems, Transformations and
-        Units</a></div>
+    <div class="nav-item"><a class="nav-link" href="../Painting/hollstein-kim.html">Painting</a></div>
+    <div class="nav-item"><a class="nav-link" href="../Robin/robin.html">Coordinate Systems and Transformations</a></div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
 <main>
+    <!--Einleitungstext-->
     <h1>Styling</h1>
     <p id="TopicIntroduction">
-        <!--TODO: Introduction-->
+        SVG's consist of content-elements (e.g., text, lines, and shapes). How this content is rendered is mostly defined through styling properties.
+        SVG is based on XML and shares a lot of properties with CSS2/CSS3. <br>
+        This side shows some examples of styling-properties in HTML and CSS3.
     </p>
     <div class="topic">
-        <h2><!--TODO: Headline--></h2>
+        <!--Beispiele-->
+        <h2>Examples</h2>
         <article>
             <h3>Font-size</h3>
             <p>
-                <!--TODO: write tutorial text-->
+                The <span class="propertyTag">font-size</span> property determines the size of the font.<br>
+                <br>
+                The value can be an absolute-size, relative-size or length-percentage. The default value is "medium".<br>
+                <br>
+                The <span class="propertyTag">font-size</span> property is animatable.<br>
+                <br>
+                You can use this property in the elements:<br>
+                &lt;altGlyph&gt;,<br>
+                &lt;text&gt;,<br>
+                &lt;textPath&gt;,<br>
+                &lt;tref&gt;<br>
+                and &lt;tspan&gt;.
             </p>
-            <code>
+            <code><!--Code Block mit Syntaxeinfärbung-->
                 HTML:<br>
                 <span class="cYellow">&lt;</span><span class="cRed">svg</span><span class="cYellow">&gt;</span><br>
                 <span class="cBlue tab">&lt;</span><span class="cRed">text</span><span class="cOrange space">id</span><span class="cGreen">="font-size-demo"</span><span class="cOrange space">x</span><span class="cGreen">="50"</span><span class="cOrange space">y</span><span class="cGreen">="80"</span><span class="cOrange space">font-size</span><span class="cGreen">="0.5rem"</span><span class="cBlue">&gt;</span>test text<span class="cBlue">&lt;/</span><span class="cRed">text</span><span class="cBlue">&gt;</span><br>
@@ -49,12 +63,23 @@
                 <text id="font-size-demo" x="5%" y="25%">small then big</text>
                 <text id="font-size-demo-reverse" x="5%" y="50%">big then small</text>
             </svg>
-            <hr>
+            <hr><!--Trennlinie-->
         </article>
         <article class="grid-odd">
             <h3>Direction</h3>
             <p>
-                <!--TODO: write tutorial text-->
+                The <span class="propertyTag">direction</span> property specifies the direction in witch the Text propagates.<br>
+                <br>
+                The value can be ltr (left to right) or rtl (right to left). The default value is ltr.<br>
+                <br>
+                The <span class="propertyTag">direction</span> property is animatable.<br>
+                <br>
+                You can use this property in the elements:<br>
+                &lt;altGlyph&gt;,<br>
+                &lt;text&gt;,<br>
+                &lt;textPath&gt;,<br>
+                &lt;tref&gt;<br>
+                and &lt;tspan&gt;.
             </p>
             <code>
                 HTML:<br>
@@ -77,7 +102,40 @@
         <article>
             <h3>Fill</h3>
             <p>
-                <!--TODO: write tutorial text-->
+                The <span class="propertyTag">fill</span> property has two different use-cases.<br>
+                1. Color<br>
+                In this use-case the <span class="propertyTag">fill</span> property specifies the color of Text and shapes.<br>
+                <br>
+                It's values can be a color. The default value is black.<br>
+                And it is animatable.<br>
+                <br>
+                In this use-case the property can be used in thees elements:<br>
+                &lt;altGlyph&gt;,<br>
+                &lt;circle&gt;,<br>
+                &lt;ellipse&gt;,<br>
+                &lt;path&gt;,<br>
+                &lt;polygone&gt;,<br>
+                &lt;ployline&gt;,<br>
+                &lt;rect&gt;,<br>
+                &lt;text&gt;,<br>
+                &lt;textPath&gt;,<br>
+                &lt;tref&gt;<br>
+                and &lt;tspan&gt;.<br>
+                <br>
+                2. Animation<br>
+                In this use-case the <span class="propertyTag">fill</span> property defines the state of the animation<br>
+                <br>
+                It's values can be freeze or remove. The default value is remove.<br>
+                And it is NOT animatable.<br>
+                <br>
+                In this use-case the property can be used in thees elements:<br>
+                &lt;animate&gt;,<br>
+                &lt;animateColor&gt;,<br>
+                &lt;animateMotion&gt;,<br>
+                &lt;animateTransform&gt;,<br>
+                and &lt;set&gt;<br>
+                <br>
+                <i>The visual and code examples are for the first use-case.</i>
             </p>
             <code>
                 HTML:<br>
@@ -98,7 +156,24 @@
         <article class="grid-odd">
             <h3>Fill-opacity</h3>
             <p>
-                <!--TODO: write tutorial text-->
+                The <span class="propertyTag">fill-opacity</span> property defines the opacity of colors.<br>
+                <br>
+                The value can be numbers from 0 to 1 or percentage numbers. The default value is 1 (100%).<br>
+                <br>
+                The <span class="propertyTag">fill-opacity</span> property is animatable.<br>
+                <br>
+                You can use this property in the elements:<br>
+                &lt;altGlyph&gt;,<br>
+                &lt;circle&gt;,<br>
+                &lt;ellipse&gt;,<br>
+                &lt;path&gt;,<br>
+                &lt;polygone&gt;,<br>
+                &lt;ployline&gt;,<br>
+                &lt;rect&gt;,<br>
+                &lt;text&gt;,<br>
+                &lt;textPath&gt;,<br>
+                &lt;tref&gt;<br>
+                and &lt;tspan&gt;.<br>
             </p>
             <code>
                 HTML:<br>
@@ -120,7 +195,13 @@
         <article>
             <h3>Color</h3>
             <p>
-                <!--TODO: write tutorial text-->
+                The <span class="propertyTag">color</span> property provides a color for other properties like <span class="propertyTag">fill</span>, <span class="propertyTag">stroke</span> and <span class="propertyTag">stop-color</span>.<br>
+                <br>
+                The value can be a color or inherit. The default value is user agent dependent.<br>
+                <br>
+                The <span class="propertyTag">color</span> property is animatable.<br>
+                <br>
+                You can use this property in any element<br>
             </p>
             <code>
                 HTML:<br>
@@ -146,7 +227,18 @@
         <article class="grid-odd">
             <h3>Writing-mode</h3>
             <p>
-                <!--TODO: write tutorial text-->
+                The <span class="propertyTag">writing-mode</span> property specifies the inline-progression-direction.<br>
+                <br>
+                The value can be horizontal-tb | vertical-rl | vertical-lr. The default value is horizontal-tb.<br>
+                <br>
+                The <span class="propertyTag">writing-mode</span> property is animatable.<br>
+                <br>
+                You can use this property in the elements:<br>
+                &lt;altGlyph&gt;,<br>
+                &lt;text&gt;,<br>
+                &lt;textPath&gt;,<br>
+                &lt;tref&gt;<br>
+                and &lt;tspan&gt;.
             </p>
             <code>
                 HTML:<br>
@@ -165,7 +257,7 @@
         </article>
     </div>
     <div class="topic">
-        <h2>SVG's styling properties</h2>
+        <h2>More SVG's styling properties</h2>
         <p>
             Font properties: <br>
             <span class="propertyTag">‘font’</span>
@@ -175,8 +267,7 @@
             <span class="propertyTag">‘font-stretch’</span>
             <span class="propertyTag">‘font-style’</span>
             <span class="propertyTag">‘font-variant’</span>
-            <span class="propertyTag">‘font-weight’</span>
-            <br>
+            <span class="propertyTag">‘font-weight’</span><br>
             <br>
             Text properties: <br>
             <span class="propertyTag">‘direction’</span>
@@ -191,8 +282,7 @@
             <span class="propertyTag">‘glyph-orientation-vertical’</span>
             <span class="propertyTag">‘kerning’</span>
             <span class="propertyTag">‘text-anchor’</span>
-            <span class="propertyTag">‘writing-mode’</span>
-            <br>
+            <span class="propertyTag">‘writing-mode’</span><br>
             <br>
             Other properties for visual media: <br>
             <span class="propertyTag">‘clip’</span>
@@ -200,32 +290,27 @@
             <span class="propertyTag">‘cursor’</span>
             <span class="propertyTag">‘display’</span>
             <span class="propertyTag">‘overflow’</span>
-            <span class="propertyTag">‘visibility’</span>
-            <br>
+            <span class="propertyTag">‘visibility’</span><br>
             <br>
             Clipping, Masking and Compositing properties: <br>
             <span class="propertyTag">‘clip-path’</span>
             <span class="propertyTag">‘clip-rule’</span>
             <span class="propertyTag">‘mask’</span>
-            <span class="propertyTag">‘opacity’</span>
-            <br>
+            <span class="propertyTag">‘opacity’</span><br>
             <br>
             Filter Effects properties: <br>
             <span class="propertyTag">‘enable-background’</span>
             <span class="propertyTag">‘filter’</span>
             <span class="propertyTag">‘flood-color’</span>
             <span class="propertyTag">‘flood-opacity’</span>
-            <span class="propertyTag">‘lighting-color’</span>
-            <br>
+            <span class="propertyTag">‘lighting-color’</span><br>
             <br>
             Gradient properties: <br>
             <span class="propertyTag">‘stop-color’</span>
-            <span class="propertyTag">‘stop-opacity’</span>
-            <br>
+            <span class="propertyTag">‘stop-opacity’</span><br>
             <br>
             Interactivity properties: <br>
-            <span class="propertyTag">‘pointer-events’</span>
-            <br>
+            <span class="propertyTag">‘pointer-events’</span><br>
             <br>
             Color and Painting properties: <br>
             <span class="propertyTag">‘color-interpolation’</span>
