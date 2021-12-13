@@ -412,12 +412,12 @@ Additionally the miterlimit property is only visible when a miterlimit box is ch
 
 /* Paint */
 #paint .shape {
-    transition: all 0.6s ease;
-    fill: white;
+    transition: all 0.6s ease; /* set transition between different states */
+    fill: white; /* default states */
     stroke: white;
 }
 
-#paint-fill-black:checked ~ .example .shape {
+#paint-fill-black:checked ~ .example .shape { /* states controlled by checkboxes */
     fill: black;
 }
 #paint-fill-green:checked ~ .example .shape {
@@ -641,7 +641,7 @@ The miter label is active when any of the miterlimit boxes are checked
 
 
 /* Animations */
-@keyframes popup {
+@keyframes popup { /* animation fill fade in element */
     from {
         opacity: 0;
     }
@@ -658,7 +658,7 @@ The miter label is active when any of the miterlimit boxes are checked
     .code
     {
         display: grid;
-        animation: popup 0.1s cubic-bezier(0.71, 0.99, 1, 0.4);
+        animation: popup 0.1s cubic-bezier(0.71, 0.99, 1, 0.4); /* use popup animation to fade in the popup */
     }
     #code-none:checked ~ * .code,
     #paint-description-none:checked ~ .description,
