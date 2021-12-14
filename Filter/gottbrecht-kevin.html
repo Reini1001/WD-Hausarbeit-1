@@ -25,45 +25,37 @@
     <div id="headline" class="headline"><h1>SVG Filters</h1></div>
     <div id="text" class="text">
         <p>
-            SVG filters can modify both SVG and HTML parts of a Website.
-            The following tutorial will show two showcases.
+            SVG Filters are a simple way to style elements in more ways than possible with CSS. This small tutorial will
+            show usecases in both SVG and uses in HTML. SVG filters mostly find their use in Text and Background
+            styling.
         <ol>
-            <li>Usage of filters in SVG elements</li>
-            <li>Usage of filters in HTML shown by &lt;img&gt; tag pictures</li>
+            <li>Usage of filters in Graphics</li>
+            <li>Usages in Text</li>
         </ol>
         A base structure is needed to use SVG filters, one example is the following:
         <br>
         <pre>
-           &lt;svg&gt;
-    &lt;filter id="filterName"&gt;
-        &lt;filterType filterArgs=""&gt;&lt;/filterType&gt;
-    &lt;/filter&gt;
-            &lt;/svg&gt;
+&lt;svg&gt;
+&lt;filter id="filterName"&gt;
+    &lt;filterType filterArgs=""&gt;&lt;/filterType&gt;
+&lt;/filter&gt;
+&lt;/svg&gt;
         </pre>
         A list full of Filter types and arguments can be found <a
             href="https://wiki.selfhtml.org/wiki/SVG/Tutorials/Filter">here!</a>
         Those filters can be used in CSS as follows:
         <pre>
-            #HTMLfilter:hover
+            #HTMLfilter
             {
     filter: url(#filterName)
             }
-
         </pre>
-
-        </p>
+        <p> To apply filters to the examples shown, simply hover over them!</p>
     </div>
 
     <div class="example" id="example1">
-        <h3>Use in SVG</h3>
+        <h3>Use in Graphics</h3>
         <div id="svg1">
-            <svg id="svgfilter">
-                <rect width="300" height="300" fill="blue"/>
-                <text fill="#ffffff" font-size="50" font-family="Verdana" x="75" y="75">Hover</text>
-            </svg>
-
-        </div>
-        <div id="svg2">
             <svg height="400px" width="300px">
                 <rect width="300px" height="400px" fill="lightblue"></rect>
                 <rect width="300px" height="40px" fill="green" x="0" y="360"></rect>
@@ -71,26 +63,74 @@
                 <circle r="65" fill="green" cx="52%" cy="180"></circle>
             </svg>
         </div>
+        <p>This example will show how SVG filters can also be applied to SVG graphics.
+            This (very simple) tree changes color on hover. The color change is based on the
+            <i><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix">feColorMatrix</a></i>
+            filter. This filter appies changes based on a matrix containing the R, G, B and Alpha channel.
+        </p>
+        <div id="img1" class="img1">
+            <img src="../images/Filter_IMG/Html1.jpg" height="300" width="300" alt="cat"/>
+        </div>
+        <p>Filters can also be applied to img tag integrated pictures. The here used blur filter could be used to hide
+            content. In this case hovering over the picture removes the filter. This <i><a
+                    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a></i>
+            filter
+            the amount of distortion can be changed with the filters arguments</p>
     </div>
 
-
     <div class="example" id="example2">
-        <h3>Use in HTML</h3>
-        <img src="../images/Filter_IMG/Html1.jpg" id="HTMLfilter1" alt="" height="300" width="300"><br>
-        <img src="../images/Filter_IMG/hsfl.jpg" id="HTMLfilter2" height="300" width="300" alt=""/></div>
+        <h3>Use in Text</h3><br><br><br><br><br>
+        <div class="Text1" id="Text1">
+            <svg>
+                <text x="0" y="80" stroke-width="2" stroke="blue">Grafitti</text>
+                <text x="110" y="140" stroke-width="2" stroke="blue">Text</text>
+            </svg>
+        </div><br><br>
+        <p>This example shows multiple filters combined.Firstly this filter uses the <i><a
+                href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence">feTurbulence</a> </i>
+            filter following that the <i><a
+                    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer">feComponentTransfer</a></i>
+            filter wich remapps part of the text pixelwise this is based on the filers arguments. </p>
+        <br><br><br><br><br><br><br><br>
+        <div id="Text2" class="Text1">
+            <svg>
+                <text x="0" y="80" stroke-width="2" stroke="blue">Grafitti</text>
+                <text x="110" y="140" stroke-width="2" stroke="blue">Text</text>
+            </svg><br><br>
+        </div>
+        <p>CSS type <i><a href="https://www.w3schools.com/css/css3_animations.asp">animations</a></i> can also play a
+            part in creating stylized texts. This example shows a simple Rainbow type
+            color loop which changes the color of text. </p>
+    </div>
 </div>
 
-
-<svg>
-    <filter id="blurfilter">
-        <feGaussianBlur stdDeviation="4"></feGaussianBlur>
-    </filter>
-    <filter id="colorfilter">
-        <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 1 0, 0 0 0 1 0"/>
-    </filter>
-</svg>
+<!-- Footer -->
 <footer>
     Copyright &copy; 2021 &#8226; Kevin Gottbrecht
 </footer>
 </body>
 </html>
+
+
+<!-- SVG Filters -->
+<svg>
+    <filter id="blurfilter">
+        <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+    </filter>
+    <filter id="colorfilter">
+        <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 1 0, 0 0 0 1 0"/>
+    </filter>
+
+    <filter id="text1">
+        <feTurbulence type="fractalNoise" baseFrequency="1.95" numOctaves="4" seed="11865"
+                      stitchTiles="noStitch"/>
+        <feComponentTransfer result="in2">
+            <feFuncR type="linear" slope="2" intercept="-0.7"/>
+            <feFuncG type="linear" slope="1.5" intercept="-0.5"/>
+            <feFuncB type="linear" slope="1.5" intercept="-0.5"/>
+            <feFuncA type="linear" slope="0" intercept="1"/>
+        </feComponentTransfer>
+        <feDisplacementMap in="SourceGraphic" in2="in2" result="V"
+                           scale="20" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+</svg>
