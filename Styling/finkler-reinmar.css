@@ -155,6 +155,7 @@ article code {
     grid-area: code;
     padding: 1rem;
     border: 1px solid var(--svgBorderColor);
+    box-shadow: var(--svgBgColor) 0.5rem 0.5rem 0.5rem;
     white-space: nowrap;
     overflow-x: auto;
 }
@@ -207,7 +208,7 @@ svg text {
     padding-left: 4rem;
 }
 
-/*styling und animation von den SVG's*/
+/*styling und animation von den SVG's in den Beispielen*/
 #font-size-demo {
     animation: font-size-demo 2.5s infinite alternate;
 }

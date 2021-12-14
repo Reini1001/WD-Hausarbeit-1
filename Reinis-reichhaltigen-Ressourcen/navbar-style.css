@@ -1,3 +1,4 @@
+/*CSS für die geteilte navbar*/
 nav {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ nav {
     transition: background-color linear 0.25s;
     border-bottom: 1px solid var(--navBorderColor);
 }
+/*verhindern einer doppelte border beim letzten nav-item*/
 .nav-item:last-child {
     border-bottom: 0;
 }
@@ -41,6 +43,7 @@ and (min-width: 426px) {
 /*Laptop*/
 @media screen
 and (min-width: 769px) {
+    /*wechsel zur horizontalen Nav-leiste*/
     .nav-item {
         float: left;
         border-right: 2px solid  var(--navBorderColor);

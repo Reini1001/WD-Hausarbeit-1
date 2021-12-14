@@ -1,3 +1,4 @@
+/*CSS für die auf einigen Seiten verwendete scrollbar*/
 ::-webkit-scrollbar {
     width: 1rem;
 }
