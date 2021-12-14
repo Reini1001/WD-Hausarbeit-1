@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-- References and styles --->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.0">
     <title>SVG Filters</title>
@@ -12,6 +13,7 @@
 
 <body>
 <nav>
+    <!-- Navbar -->
     <div class="nav-item"><a class="nav-link" href="../index.html">Home</a></div>
     <div class="nav-item"><a class="nav-link" href="../Styling/finkler-reinmar.html">Styling</a></div>
     <div class="nav-item"><a class="nav-link" href="../Animation/walter-leon.html">Animation</a></div>
@@ -21,8 +23,10 @@
     </div>
     <div class="nav-item"><a class="nav-link" href="../Smooth-Brain-Gang.html">About us</a></div>
 </nav>
+<!-- Wrapper class for grid design -->
 <div id="wrapper" class="wrapper">
     <div id="headline" class="headline"><h1>SVG Filters</h1></div>
+<!-- First text -->
     <div id="text" class="text">
         <p>
             SVG Filters are a simple way to style elements in more ways than possible with CSS. This small tutorial will
@@ -34,6 +38,7 @@
         </ol>
         A base structure is needed to use SVG filters, one example is the following:
         <br>
+<!-- Preformatted code -->
         <pre>
 &lt;svg&gt;
 &lt;filter id="filterName"&gt;
@@ -45,14 +50,14 @@
             href="https://wiki.selfhtml.org/wiki/SVG/Tutorials/Filter">here!</a>
         Those filters can be used in CSS as follows:
         <pre>
-            #HTMLfilter
-            {
-    filter: url(#filterName)
-            }
+ #HTMLfilter
+  {
+filter: url(#filterName)
+ }
         </pre>
         <p> To apply filters to the examples shown, simply hover over them!</p>
     </div>
-
+<!-- First example SVG tree -->
     <div class="example" id="example1">
         <h3>Use in Graphics</h3>
         <div id="svg1">
@@ -68,16 +73,17 @@
             <i><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix">feColorMatrix</a></i>
             filter. This filter appies changes based on a matrix containing the R, G, B and Alpha channel.
         </p>
+<!-- Second example .img -->
         <div id="img1" class="img1">
             <img src="../images/Filter_IMG/Html1.jpg" height="300" width="300" alt="cat"/>
         </div>
-        <p>Filters can also be applied to img tag integrated pictures. The here used blur filter could be used to hide
+        <p>Filters can also be applied to img tag integrated pictures. The blur filter could be used to hide
             content. In this case hovering over the picture removes the filter. This <i><a
                     href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a></i>
             filter
-            the amount of distortion can be changed with the filters arguments</p>
+            allows modification of the distortion by changing the filters arguments</p>
     </div>
-
+<!-- Text style examples -->
     <div class="example" id="example2">
         <h3>Use in Text</h3><br><br><br><br><br>
         <div class="Text1" id="Text1">
@@ -86,24 +92,23 @@
                 <text x="110" y="140" stroke-width="2" stroke="blue">Text</text>
             </svg>
         </div><br><br>
-        <p>This example shows multiple filters combined.Firstly this filter uses the <i><a
-                href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence">feTurbulence</a> </i>
-            filter following that the <i><a
-                    href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer">feComponentTransfer</a></i>
-            filter wich remapps part of the text pixelwise this is based on the filers arguments. </p>
+        <p>This example shows multiple filters combined.Firstly this filter uses the
+            <i><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence">feTurbulence</a></i>
+            filter following that the
+            <i><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer">feComponentTransfer</a></i>
+            filter which remaps part of the text pixelwise this is based on the filers arguments. </p>
         <br><br><br><br><br><br><br><br>
         <div id="Text2" class="Text1">
             <svg>
-                <text x="0" y="80" stroke-width="2" stroke="blue">Grafitti</text>
+                <text x="0" y="80" stroke-width="2" stroke="blue">Graffiti</text>
                 <text x="110" y="140" stroke-width="2" stroke="blue">Text</text>
             </svg><br><br>
         </div>
         <p>CSS type <i><a href="https://www.w3schools.com/css/css3_animations.asp">animations</a></i> can also play a
             part in creating stylized texts. This example shows a simple Rainbow type
-            color loop which changes the color of text. </p>
+            color loop which changes the color of the text. </p>
     </div>
 </div>
-
 <!-- Footer -->
 <footer>
     Copyright &copy; 2021 &#8226; Kevin Gottbrecht

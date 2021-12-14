@@ -5,7 +5,7 @@
     --navHoverColor: silver;
     --navActivColor: lightslategrey;
 }
-
+/* --- Base design is mobile optimized ---*/
 body {
     background-color: darkslategray;
     margin: 0;
@@ -27,8 +27,6 @@ a {
             "example1"
             "example2";
     grid-gap: 1rem;
-
-
 }
 
 .headline {
@@ -40,8 +38,6 @@ a {
     border-radius: 2em;
     background-color: rgb(31, 54, 54);
     padding: 1em;
-
-
 }
 
 .example {
@@ -127,9 +123,9 @@ footer {
 }
 
 
-/* --- Mobile devices --- */
+/* --- Other devices --- */
 /* Tablet */
-@media screen and (min-width: 541px) {
+@media screen and (min-width: 550px) {
     .wrapper {
         color: white;
         font-family: Verdana, sans-serif;
@@ -167,7 +163,7 @@ footer {
 }
 
 /* Desktop PC*/
-@media screen and (min-width: 1026px) {
+@media screen and (min-width: 1030px) {
     .wrapper {
         color: white;
         font-family: Verdana, sans-serif;
@@ -202,5 +198,3 @@ footer {
         grid-row: 2;
     }
 }
-
-
