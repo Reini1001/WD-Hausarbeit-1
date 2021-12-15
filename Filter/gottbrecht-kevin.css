@@ -109,7 +109,7 @@ footer {
 }
 
 
-/* --- SVG / HTML graphic filter ---*/
+/* --- SVG / HTML image filter ---*/
 #svg1:hover {
     filter: url(#colorfilter);
 }
@@ -169,7 +169,7 @@ footer {
         font-family: Verdana, sans-serif;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows:    auto 1fr;;
+        grid-template-rows:    auto 1fr;
     }
 
     nav {
