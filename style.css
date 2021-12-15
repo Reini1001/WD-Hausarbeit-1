@@ -63,8 +63,12 @@ h1 {
 .article-container article h2 {
     margin-bottom: 1rem;
 }
-.article-container article p {
 
+#svg ul {
+    margin: 0.5rem 0 0 1.5rem;
+}
+#svg ul li {
+    padding: 0.25rem 0;
 }
 /*"Unsere Themen" Karten*/
 #card-container {
